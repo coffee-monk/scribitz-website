@@ -1,8 +1,14 @@
 import * as React from "react"
-import "../styles/main.css"
+
+import Layout from "../components/layout"
+import Form from "../components/input/form"
 
 const IndexPage = () => {
-  return <h3 className="text-center">Hello Everyone!</h3>
+  return (
+    <Layout>
+      <Form />
+    </Layout>
+  )
 }
 
 export default IndexPage
