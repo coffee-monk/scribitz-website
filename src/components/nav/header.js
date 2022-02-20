@@ -4,16 +4,13 @@ const Header = () => {
   return (
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a class="btn btn-ghost normal-case text-xl">Scribitz</a>
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal p-0">
           <li>
-            <a>Item 1</a>
-          </li>
-          <li tabindex="0">
             <a>
-              Parent
+              Services
               <svg
                 class="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +31,10 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>Item 1</a>
+          </li>
+          <li>
+            <a>Contact</a>
           </li>
         </ul>
       </div>
