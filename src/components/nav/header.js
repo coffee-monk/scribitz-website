@@ -2,25 +2,43 @@ import React, { useState } from "react"
 
 const Header = () => {
   return (
-    <nav className="bg-white border-gray-200 px-4 py-2.5 rounded">
-      <div className="flex flex-wrap justify-between items-center">
-        <a href="#" className="text-lg font-semibold whitespace-nowrap">
-          Scribitz
-        </a>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
-      <div className="w-full md:block md:w-auto">
-        <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+      <div class="flex-none">
+        <ul class="menu menu-horizontal p-0">
           <li>
-            <a
-              href="#"
-              className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0  "
-            >
-              Home
+            <a>Item 1</a>
+          </li>
+          <li tabindex="0">
+            <a>
+              Parent
+              <svg
+                class="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
             </a>
+            <ul class="p-2 bg-base-100">
+              <li>
+                <a>Submenu 1</a>
+              </li>
+              <li>
+                <a>Submenu 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>Item 3</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   )
 }
 
