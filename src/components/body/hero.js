@@ -14,11 +14,12 @@ const Hero = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="text-center hero-content text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Welcome to Scribitz!</h1>
+          <h1 className="mb-5 text-5xl font-bold">
+            Your Content, Accessible Everywhere
+          </h1>
           <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Scribitz provides Closed Captions, Live Captions, and Transcription
+            Services to make your videos easily accessible
           </p>
           <button className="btn btn-primary">Get a Quote!</button>
         </div>

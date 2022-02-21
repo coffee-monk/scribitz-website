@@ -1,44 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
 
 const Header = () => {
   return (
-    <div class="navbar bg-base-100">
-      <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl">Scribitz</a>
-      </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal p-0">
-          <li>
-            <a>
-              Services
-              <svg
-                class="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
+    <nav className="m-0 p-0 box-border fixed w-full z-10">
+      <div className="flex justify-content items-center p-[1rem]">
+        <a className="border border-solid p-[5px] text-white hover:bg-red-300">
+          MICHAEL CARNEVALE
+        </a>
+
+        <ul className="list-none">
+          <li className="inline-block px-0 py-[15px] uppercase mb-0">
+            <a className="text-white mb-[0px] decoration-0">Portfolio</a>
+          </li>
+          <li className="inline-block px-0 py-[15px] uppercase mb-0">
+            <a className="text-white mb-[0px] decoration-0">Blog</a>
+          </li>
+          <li className="inline-block px-0 py-[15px] uppercase mb-0">
+            <a className="uppercase text-white p-[7.5px] m-[0px 7.5px] cursor-pointer hover:bg-red">
+              Contact
             </a>
-            <ul class="p-2 bg-base-100">
-              <li>
-                <a>Submenu 1</a>
-              </li>
-              <li>
-                <a>Submenu 2</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Contact</a>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   )
 }
 
