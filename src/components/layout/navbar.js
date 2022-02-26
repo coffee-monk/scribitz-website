@@ -25,14 +25,16 @@ const Navbar = () => {
             <div id="dropdown" className="absolute left-0 top-14 flex flex-col">
               <div id="dropdown-menu">
                 <ul className="text-primary bg-slate-100 rounded">
-                  <li className="p-6 hover:bg-slate-200 border-b hover:rounded">
+                  <li className="p-6 hover:bg-slate-200 border-b hover:rounded-t border-primary">
                     Transcription
                   </li>
-                  <li className="p-6 hover:bg-slate-200 border-b">Captions</li>
-                  <li className="p-6 hover:bg-slate-200 border-b">
+                  <li className="p-6 hover:bg-slate-200 border-b border-primary">
+                    Captions
+                  </li>
+                  <li className="p-6 hover:bg-slate-200 border-b border-primary">
                     Live-Transcription
                   </li>
-                  <li className="p-6 hover:bg-slate-200 hover:rounded">
+                  <li className="p-6 hover:bg-slate-200 hover:rounded-b">
                     Translation
                   </li>
                 </ul>
