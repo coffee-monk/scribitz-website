@@ -1,15 +1,12 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
-import Hero from "../components/body/hero"
-import Pair from "../components/body/pair"
+import Layout from "../components/layout/layout"
+import Showcase from "../components/body/showcase"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Hero />
-      <Pair />
-      <Pair />
+      <Showcase />
     </Layout>
   )
 }

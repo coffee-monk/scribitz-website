@@ -1,18 +1,15 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      white: "#ffffff",
-      purple: "#3f3cbb",
-      midnight: "#121063",
-      metal: "#565584",
-      tahiti: "#3ab7bf",
-      silver: "#ecebff",
-      "bubble-gum": "#ff77e9",
-      bermuda: "#78dcca",
+    extend: {
+      colors: {
+        primary: "#144f5d",
+        secondary: "#f1c232",
+        tertiary: "#8D230F",
+        navy: "#011A27",
+        white: "#e5d1d1",
+        black: "#000000",
+      },
     },
   },
-  plugins: [require("daisyui")],
 }
