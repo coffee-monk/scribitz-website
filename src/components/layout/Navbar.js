@@ -9,7 +9,7 @@ import NavbarMobile from "./NavbarMobile"
 import Logo from "../../images/scribitz-final-logo.svg"
 
 const Navbar = () => {
-  const [navMobile, navMobileToggle] = useState(false)
+  const [navMobile, setNavMobile] = useState(false)
   const [dropdown, setDropdown] = useState(false)
 
   const serviceRef = useRef()
@@ -37,9 +37,11 @@ const Navbar = () => {
 
         <MenuAlt3Icon
           onClick={() => {
-            navMobileToggle(!navMobile)
+            setNavMobile(!navMobile)
           }}
-          className="w-10 h-10 p-2 rounded cursor-pointer hover:text-primary hover:bg-secondary sm:hidden"
+          className={`${
+            navMobile ? "text-primary bg-secondary " : "text-secondary"
+          }     w-10 h-10 p-2 rounded cursor-pointer hover:text-primary hover:bg-secondary sm:hidden`}
         />
 
         <ul className="flex justify-end items-center hidden text-lg sm:flex">
