@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="fixed z-20 w-full text-secondary backdrop-blur-md backdrop-brightness-100">
+    <nav className="fixed z-20 w-full text-secondary backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/20 to-primary/40">
       <div className="flex items-center justify-between w-full p-2">
         <a className="text-xl font-bold">
           <img className="h-10" src={Logo} alt="" />

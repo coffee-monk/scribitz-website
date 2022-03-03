@@ -1,20 +1,44 @@
-import React from "react"
+import React, { useState } from "react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
 const NavbarMobile = () => {
+  const [services, setServices] = useState(false)
+
   return (
-    <ul className="text-lg text-secondary border-white bg-primary sm:hidden">
-      <li className="flex justify-start items-center p-4 font-bold hover:bg-teal-700 border-b hover:cursor-pointer">
+    <ul className="text-lg text-primary bg-slate-100 sm:hidden">
+      <li
+        onClick={() => setServices(!services)}
+        className={`${
+          services ? "bg-slate-200" : ""
+        }    flex justify-start items-center p-4 font-bold border-b border-t border-primary hover:cursor-pointer hover:bg-slate-200`}
+      >
         Services
         <ChevronDownIcon className="w-6 h-5 ml-2" />
       </li>
-      <li className="p-4 font-bold hover:bg-teal-700 border-b hover:cursor-pointer">
+      <ul className={`${services ? "" : "hidden"}`}>
+        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+          Transcription
+        </li>
+        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+          Captions
+        </li>
+        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+          Live-Transcription
+        </li>
+        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+          Live-Captions
+        </li>
+        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+          Translation
+        </li>
+      </ul>
+      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        Pricing
+      </li>
+      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
         About
       </li>
-      <li className="p-4 font-bold hover:bg-teal-700 border-b hover:cursor-pointer">
-        About
-      </li>
-      <li className="p-4 font-bold hover:bg-teal-700 hover:cursor-pointer">
+      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
         Contact
       </li>
     </ul>

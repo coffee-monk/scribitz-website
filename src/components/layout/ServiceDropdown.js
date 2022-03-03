@@ -9,10 +9,13 @@ const ServiceDropdown = () => {
             Transcription
           </li>
           <li className="p-6 hover:bg-slate-200 border-b border-primary">
+            Live-Transcription
+          </li>
+          <li className="p-6 hover:bg-slate-200 border-b border-primary">
             Captions
           </li>
           <li className="p-6 hover:bg-slate-200 border-b border-primary">
-            Live-Transcription
+            Live-Captions
           </li>
           <li className="p-6 hover:bg-slate-200 hover:rounded-b">
             Translation
