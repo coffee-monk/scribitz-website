@@ -1,7 +1,5 @@
 import React from "react"
 
-import Button from "../utils/button"
-
 const Showcase = () => {
   return (
     <section
