@@ -1,6 +1,6 @@
 import React from "react"
 
-const Dropdown = () => {
+const ServiceDropdown = () => {
   return (
     <div id="dropdown" className="flex flex-col absolute left-0 top-14">
       <div id="dropdown-menu rounded">
@@ -23,4 +23,4 @@ const Dropdown = () => {
   )
 }
 
-export default Dropdown
+export default ServiceDropdown

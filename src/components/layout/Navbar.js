@@ -10,7 +10,7 @@ import Logo from "../../images/scribitz-final-logo.svg"
 
 const Navbar = () => {
   const [navMobile, navMobileToggle] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [dropdown, setDropdown] = useState(false)
 
   const serviceRef = useRef()
 
@@ -18,7 +18,7 @@ const Navbar = () => {
   useEffect(() => {
     const closeDropdown = e => {
       if (e.path[0] !== serviceRef.current) {
-        setIsOpen(false)
+        setDropdown(false)
         console.log(e)
       }
     }
@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="fixed z-20 w-full text-secondary">
+    <nav className="fixed z-20 w-full text-secondary backdrop-blur-md backdrop-brightness-100">
       <div className="flex items-center justify-between w-full p-2">
         <a className="text-xl font-bold">
           <img className="h-10" src={Logo} alt="" />
@@ -45,14 +45,14 @@ const Navbar = () => {
         <ul className="flex justify-end items-center hidden text-lg sm:flex">
           <li
             ref={serviceRef}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setDropdown(!dropdown)}
             className={`${
-              isOpen ? "bg-secondary text-primary" : ""
-            }  relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:bg-secondary hover:text-primary hover:cursor-pointer`}
+              dropdown ? "bg-secondary text-primary" : ""
+            } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:bg-secondary hover:text-primary hover:cursor-pointer`}
           >
             Services
             <ChevronDownIcon className="w-6 h-5 ml-2" />
-            {isOpen && <ServiceDropdown />}
+            {dropdown && <ServiceDropdown />}
           </li>
           <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
             Pricing
