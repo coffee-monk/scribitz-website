@@ -11,6 +11,7 @@ import Logo from "../../images/scribitz-final-logo.svg"
 const Navbar = () => {
   const [navMobile, setNavMobile] = useState(false)
   const [dropdown, setDropdown] = useState(false)
+  const [scroll, setScroll] = useState(false)
 
   const serviceRef = useRef()
 
@@ -23,13 +24,28 @@ const Navbar = () => {
       }
     }
 
+    const checkScroll = () => {
+      if (window.scrollY >= 80) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    }
+
     document.body.addEventListener("click", closeDropdown)
+    window.addEventListener("scroll", checkScroll)
 
     return () => document.body.removeEventListener("click", closeDropdown)
   }, [])
 
   return (
-    <nav className="fixed z-20 w-full text-secondary backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/20 to-primary/40">
+    <nav
+      className={` ${
+        scroll
+          ? "backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/20 to-primary/40"
+          : ""
+      }     fixed z-20 w-full text-secondary `}
+    >
       <div className="flex items-center justify-between w-full p-2">
         <a className="text-xl font-bold">
           <img className="h-10" src={Logo} alt="" />

@@ -16,19 +16,34 @@ const NavbarMobile = () => {
         <ChevronDownIcon className="w-6 h-5 ml-2" />
       </li>
       <ul className={`${services ? "" : "hidden"}`}>
-        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        <li
+          className="p-4 pl-14
+    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+        >
           Transcription
         </li>
-        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        <li
+          className="p-4 pl-14
+    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+        >
           Captions
         </li>
-        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        <li
+          className="p-4 pl-14
+    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+        >
           Live-Transcription
         </li>
-        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        <li
+          className="p-4 pl-14
+    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+        >
           Live-Captions
         </li>
-        <li className="p-4 pl-12 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
+        <li
+          className="p-4 pl-14
+    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+        >
           Translation
         </li>
       </ul>

@@ -11,8 +11,8 @@ const Showcase = () => {
       }}
       className="relative flex flex-col items-center justify-around min-h-screen text-center bg-bottom bg-no-repeat bg-cover min-w-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-white before:via-primary before:to-primary before:opacity-80"
     >
-      <div className="z-10 flex flex-col items-center justify-between">
-        <h1 className="text-5xl font-bold text-white">
+      <div className="z-10 flex flex-col mt-10 items-center justify-between">
+        <h1 className="hidden sm:block text-5xl font-bold text-white">
           Your Content,
           <br />
           Accessible Everywhere
