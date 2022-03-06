@@ -1,15 +1,13 @@
 import React, { useState } from "react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
-const NavbarMobile = React.forwardRef((props, navMobileRef) => {
+import useOutsideClick from "../utils/useOutsideClick"
+
+const NavbarMobile = () => {
   const [services, setServices] = useState(false)
 
   return (
-    <ul
-      onClick={e => e.stopPropagation()}
-      ref={navMobileRef}
-      className="text-lg text-primary bg-slate-100 sm:hidden"
-    >
+    <ul className="text-lg text-primary bg-slate-100 sm:hidden">
       <li
         onClick={() => setServices(!services)}
         className={`${
@@ -62,6 +60,6 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
       </li>
     </ul>
   )
-})
+}
 
 export default NavbarMobile

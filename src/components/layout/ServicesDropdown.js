@@ -1,10 +1,10 @@
 import React from "react"
 
-const ServicesDropdown = React.forwardRef((props, servicesRef) => {
+const ServicesDropdown = React.forwardRef((props, serviceRef) => {
   return (
     <div
       onClick={e => e.stopPropagation()}
-      ref={servicesRef}
+      ref={serviceRef}
       id="dropdown"
       className="flex flex-col absolute left-0 top-14"
     >

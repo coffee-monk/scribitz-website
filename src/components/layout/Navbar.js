@@ -3,27 +3,32 @@ import React, { useState, useEffect, useRef } from "react"
 import { MenuAlt3Icon } from "@heroicons/react/solid"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
-import ServiceDropdown from "./ServiceDropdown"
+import ServicesDropdown from "./ServicesDropdown"
 import NavbarMobile from "./NavbarMobile"
 
 import Logo from "../../images/scribitz-final-logo.svg"
+import useOutsideClick from "../utils/useOutsideClick"
 
 const Navbar = () => {
-  const [navMobile, setNavMobile] = useState(false)
-  const [dropdown, setDropdown] = useState(false)
+  const [navbarMobile, setNavbarMobile] = useState(false)
+  const [services, setServices] = useState(false)
   const [scroll, setScroll] = useState(false)
 
-  const serviceRef = useRef()
+  const servicesRef = useRef()
+  const navbarMobileRef = useRef()
 
-  // open/close dropdown on click + click outside
+  // close services dropdown if click outside
+  useOutsideClick(servicesRef, () => {
+    if (services) setServices(false)
+  })
+
+  // close mobile nav if click outside
+  useOutsideClick(navbarMobileRef, () => {
+    if (navbarMobile) setNavbarMobile(false)
+  })
+
   useEffect(() => {
-    const closeDropdown = e => {
-      if (e.path[0] !== serviceRef.current) {
-        setDropdown(false)
-        console.log(e)
-      }
-    }
-
+    // navbar opacity on scroll
     const checkScroll = () => {
       if (window.scrollY >= 80) {
         setScroll(true)
@@ -32,10 +37,11 @@ const Navbar = () => {
       }
     }
 
-    document.body.addEventListener("click", closeDropdown)
     window.addEventListener("scroll", checkScroll)
 
-    return () => document.body.removeEventListener("click", closeDropdown)
+    return () => {
+      window.addEventListener("scroll", checkScroll)
+    }
   }, [])
 
   return (
@@ -53,24 +59,25 @@ const Navbar = () => {
 
         <MenuAlt3Icon
           onClick={() => {
-            setNavMobile(!navMobile)
+            setNavbarMobile(!navbarMobile)
           }}
           className={`${
-            navMobile ? "text-primary bg-secondary " : "text-secondary"
+            navbarMobile ? "text-primary bg-secondary " : "text-secondary"
           }     w-10 h-10 p-2 rounded cursor-pointer hover:text-primary hover:bg-secondary sm:hidden`}
         />
 
         <ul className="flex justify-end items-center hidden text-lg sm:flex">
           <li
-            ref={serviceRef}
-            onClick={() => setDropdown(!dropdown)}
+            onClick={() => {
+              setServices(!services)
+            }}
             className={`${
-              dropdown ? "bg-secondary text-primary" : ""
+              services ? "bg-secondary text-primary" : ""
             } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:bg-secondary hover:text-primary hover:cursor-pointer`}
           >
             Services
             <ChevronDownIcon className="w-6 h-5 ml-2" />
-            {dropdown && <ServiceDropdown />}
+            {services && <ServicesDropdown ref={servicesRef} />}
           </li>
           <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
             Pricing
@@ -86,7 +93,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {navMobile && <NavbarMobile />}
+      {navbarMobile && <NavbarMobile ref={navbarMobileRef} />}
     </nav>
   )
 }
