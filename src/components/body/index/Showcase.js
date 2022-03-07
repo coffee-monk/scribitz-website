@@ -18,11 +18,12 @@ const Showcase = () => {
           Accessible Everywhere
         </h1>
         <h2 className="m-4 text-2xl font-bold text-secondary">
-          Captions, Transcription, & Translation services to make your videos
-          easily accessible
+          Captions, Transcription, & Translation services
+          <br />
+          to make your videos easily accessible
         </h2>
 
-        <ul className="m-4 grid grid-cols-2 gap-4 font-bold lg:grid-cols-4 lg:mx-10">
+        <ul className="m-4 grid grid-cols-2 gap-4 font-bold lg:mx-10">
           <li className="p-4 border-2 rounded-lg text-secondary backdrop-blur-md bg-primary/30 border-secondary">
             99% ACCURACY
             <p className="font-normal text-white">Powered by human experts</p>

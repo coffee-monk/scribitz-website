@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="w-full bg-navy">
-        <div className="p-8 text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4">
+        <div className="max-w-3xl mx-auto p-8 text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4">
           <ul className="flex flex-col">
             <h1 className="mb-4 text-lg font-bold text-secondary">COMPANY</h1>
             <li className="flex items-center justify-start pb-3">

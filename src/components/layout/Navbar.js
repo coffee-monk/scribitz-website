@@ -52,7 +52,7 @@ const Navbar = () => {
           : ""
       }     fixed z-20 w-full text-secondary `}
     >
-      <div className="flex items-center justify-between w-full p-2">
+      <div className="max-w-3xl mx-auto flex items-center justify-between w-full p-2">
         <a className="text-xl font-bold">
           <img className="h-10" src={Logo} alt="" />
         </a>
