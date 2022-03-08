@@ -11,16 +11,19 @@ const Showcase = () => {
       }}
       className="relative flex flex-col items-center justify-around min-h-screen text-center bg-bottom bg-no-repeat bg-cover min-w-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-white before:via-primary before:to-primary before:opacity-80"
     >
-      <div className="z-10 flex flex-col mt-10 items-center justify-between">
+      <div
+        id="Content"
+        className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
+      >
         <h1 className="hidden sm:block text-5xl font-bold text-white">
           Your Content,
           <br />
           Accessible Everywhere
         </h1>
-        <h2 className="m-4 text-2xl font-bold text-secondary">
-          Captions, Transcription, & Translation services
+        <h2 className="my-4 text-2xl font-bold text-secondary">
+          Captions, Transcription, & Translation Services
           <br />
-          to make your videos easily accessible
+          to Make Your Videos Easily Accessible
         </h2>
 
         <ul className="m-4 grid grid-cols-2 gap-4 font-bold lg:mx-10">

@@ -11,7 +11,7 @@ import { PhoneIcon } from "@heroicons/react/solid"
 const Footer = () => {
   return (
     <footer>
-      <div className="w-full bg-navy">
+      <section id="Links_Info" className="w-full bg-navy">
         <div className="max-w-3xl mx-auto p-8 text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4">
           <ul className="flex flex-col">
             <h1 className="mb-4 text-lg font-bold text-secondary">COMPANY</h1>
@@ -64,36 +64,39 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className="flex items-center justify-between w-full px-8 py-3 text-white bg-gray-800">
-        <p>
-          Scribitz Transcription <span>&#169; </span> {new Date().getFullYear()}
-        </p>
-        <div
-          id="social-media-icons"
-          className="flex items-center justify-between"
-        >
-          <a href="www.facebook.com">
-            <FaFacebookSquare
-              size="1.75em"
-              className="ml-4 text-white hover:text-red-400"
-            />
-          </a>
-          <a href="www.facebook.com">
-            <FaTwitterSquare
-              size="1.75em"
-              className="ml-3 text-white hover:text-red-400"
-            />
-          </a>
-          <a href="www.facebook.com">
-            <FaLinkedin
-              size="1.75em"
-              className="text-white hover:text-red-400 ml-3"
-            />
-          </a>
-          <a href="www.facebook.com"></a>
+      </section>
+      <section id="Social" className="w-full text-white bg-gray-800">
+        <div className="flex items-center justify-between max-w-3xl mx-auto p-2">
+          <p>
+            Scribitz Transcription <span>&#169; </span>{" "}
+            {new Date().getFullYear()}
+          </p>
+          <div
+            id="social-media-icons"
+            className="flex items-center justify-between"
+          >
+            <a href="www.facebook.com">
+              <FaFacebookSquare
+                size="1.75em"
+                className="ml-4 text-white hover:text-red-400"
+              />
+            </a>
+            <a href="www.facebook.com">
+              <FaTwitterSquare
+                size="1.75em"
+                className="ml-3 text-white hover:text-red-400"
+              />
+            </a>
+            <a href="www.facebook.com">
+              <FaLinkedin
+                size="1.75em"
+                className="text-white hover:text-red-400 ml-3"
+              />
+            </a>
+            <a href="www.facebook.com"></a>
+          </div>
         </div>
-      </div>
+      </section>
     </footer>
   )
 }
