@@ -1,12 +1,8 @@
 import React from "react"
 
-import { FaLinkedin } from "react-icons/fa"
-import { FaFacebookSquare } from "react-icons/fa"
-import { FaTwitterSquare } from "react-icons/fa"
+import { FaLinkedin, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa"
 
-import { LocationMarkerIcon } from "@heroicons/react/solid"
-import { MailIcon } from "@heroicons/react/solid"
-import { PhoneIcon } from "@heroicons/react/solid"
+import { LocationMarkerIcon, MailIcon, PhoneIcon } from "@heroicons/react/solid"
 
 const Footer = () => {
   return (

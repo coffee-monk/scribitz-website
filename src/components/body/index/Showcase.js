@@ -1,6 +1,25 @@
 import React from "react"
 
 const Showcase = () => {
+  const values = [
+    {
+      title: "99% ACCURACY",
+      caption: "Powered by Human Experts",
+    },
+    {
+      title: "COMPLIANCE",
+      caption: "WCAG 3.0, AODA, & FCC Compliant",
+    },
+    {
+      title: "RELIABLE TURNOVER",
+      caption: "Ready Within 36-48 Hours",
+    },
+    {
+      title: "15+ YEARS EXPERIENCE",
+      caption: "Experience with 20+ Subjects",
+    },
+  ]
+
   return (
     <section
       style={{
@@ -27,26 +46,12 @@ const Showcase = () => {
         </h2>
 
         <ul className="m-4 grid grid-cols-2 gap-4 font-bold lg:mx-10">
-          <li className="p-4 border-2 rounded-lg text-secondary backdrop-blur-md bg-primary/30 border-secondary">
-            99% ACCURACY
-            <p className="font-normal text-white">Powered by human experts</p>
-          </li>
-          <li className="p-4 border-2 rounded-lg text-secondary backdrop-blur-md bg-primary/30 border-secondary">
-            COMPLIANCE
-            <p className="font-normal text-white">
-              WCAG 3.0, AODA, & FCC compliant
-            </p>
-          </li>
-          <li className="p-4 border-2 rounded-lg text-secondary backdrop-blur-md bg-primary/30 border-secondary">
-            RELIABLE TURNOVER
-            <p className="font-normal text-white">Ready within 36-48 hours</p>
-          </li>
-          <li className="p-4 border-2 rounded-lg text-secondary backdrop-blur-md bg-primary/30 border-secondary">
-            15+ YEARS EXPERIENCE
-            <p className="font-normal text-white">
-              Experience with 20+ subjects
-            </p>
-          </li>
+          {values.map(value => (
+            <li className="p-4 shadow shadow-white/60 rounded-lg text-secondary backdrop-blur-md bg-primary/30">
+              {value.title}
+              <p className="font-normal text-white">{value.caption}</p>
+            </li>
+          ))}
         </ul>
 
         <button className="m-3 rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
