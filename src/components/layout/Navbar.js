@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav
       className={` ${
         scroll
-          ? "backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/20 to-primary/40"
+          ? "backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/60 to-primary/70 border-b border-primary"
           : ""
       }     fixed z-20 w-full text-secondary `}
     >

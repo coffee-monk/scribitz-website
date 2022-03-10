@@ -56,7 +56,7 @@ const OurExperts = () => {
       <div className="px-4 py-6">
         <div id="title" className="flex flex-col items-center justify-between">
           <h1 className="text-2xl font-bold text-tertiary">OUR EXPERTS</h1>
-          <h2 className="text-3xl font-bold text-primary">
+          <h2 className="text-3xl font-bold text-primary text-center">
             SPECIALIZED HUMAN & LIVE CLOSED CAPTIONERS
           </h2>
         </div>
