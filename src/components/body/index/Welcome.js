@@ -9,7 +9,7 @@ const Welcome = () => {
         <div className="hidden sm:flex relative justify-center items-center    ">
           <StaticImage
             className="absolute w-full h-full rounded-lg shadow-md"
-            src="../../../images/woman-signing.jpg"
+            src="../../../images/main/woman-signing.jpg"
             alt="woman speaking in sign language"
             placeholder="blurred"
           />
