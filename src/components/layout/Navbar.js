@@ -46,11 +46,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` ${
+      className={`fixed z-20 w-full text-secondary ${
         scroll
           ? "backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/60 to-primary/70 border-b border-primary"
           : ""
-      }     fixed z-20 w-full text-secondary `}
+      }`}
     >
       <div className="max-w-3xl mx-auto flex items-center justify-between w-full p-2">
         <a className="text-xl font-bold">

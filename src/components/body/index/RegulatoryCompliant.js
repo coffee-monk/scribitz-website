@@ -5,10 +5,10 @@ const RegulatoryCompliant = () => {
     <section id="RegulatoryCompliant" className="p-4 bg-primary">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold text-secondary">
-          DON'T GET YOUR PROJECT REJECTED
+          SUBMIT YOUR PROJECT WITH CONFIDENCE
         </h1>
         <h2 className="text-3xl font-bold text-white">
-          MAKE SURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
+          ENSURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
         </h2>
         <p className="text-white mt-2">
           We know there's value in the content you create, that's why our team

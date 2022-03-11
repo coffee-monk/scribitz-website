@@ -52,7 +52,7 @@ const OurExperts = () => {
   ]
 
   return (
-    <section className="bg-white">
+    <section id="Our-Experts" className="bg-rose-100">
       <div className="px-4 py-6">
         <div id="title" className="flex flex-col items-center justify-between">
           <h1 className="text-2xl font-bold text-tertiary">OUR EXPERTS</h1>
@@ -62,12 +62,15 @@ const OurExperts = () => {
         </div>
         <div
           id="topics"
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 mx-auto max-w-2xl md:max-w-4xl mt-10"
+          className="grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-2 md:grid-cols-3 mx-auto max-w-2xl md:max-w-4xl mt-10"
         >
           {subjects.map(subject => (
-            <div className="flex flex-col justify-between items-center bg-rose-50 p-4 shadow shadow rounded-md">
+            <div
+              key={subject.name}
+              className="flex flex-col justify-between items-center bg-rose-50 p-4 shadow shadow rounded-md"
+            >
               {subject.icon}
-              <h1 className="text-xl font-bold text-primary mt-2">
+              <h1 className="text-xl font-bold text-center text-primary mt-2">
                 {subject.name}
               </h1>
               <p className="text-center mt-4">{subject.description}</p>
