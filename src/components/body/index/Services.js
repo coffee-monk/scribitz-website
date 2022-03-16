@@ -47,19 +47,22 @@ const Services = () => {
         <h1 className="text-2xl font-bold text-white">OUR</h1>
         <h2 className="text-3xl font-bold">SERVICES</h2>
 
-        <div className="items-center mt-10 text-center grid grid-cols-2 gap-4">
+        <div className="items-center mt-10 grid grid-cols-1 gap-4">
           {services.map((service, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-between w-full h-full p-6 shadow shadow-white/60 rounded-lg"
+              className="grid grid-cols-2 justify-between w-full h-full p-6 shadow shadow-white/60 rounded-lg"
             >
-              <div className="flex mx-auto text-6xl">
+              <div className="flex flex-col justify-between items-start">
+                <h1 className="text-xl font-bold">{service.service}</h1>
+                <p className="text-white font-bold pr-10">{service.caption}</p>
+              </div>
+
+              <div className="flex justify-end items-center text-6xl">
                 {service.icon1}
                 <BsArrowRightShort className="text-white" />
                 {service.icon2}
               </div>
-              <h1 className="mt-6 text-xl font-bold">{service.service}</h1>
-              <p className="mt-3 text-white font-bold">{service.caption}</p>
             </div>
           ))}
         </div>
