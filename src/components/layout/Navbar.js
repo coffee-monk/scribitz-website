@@ -52,7 +52,7 @@ const Navbar = () => {
           : ""
       }`}
     >
-      <div className="max-w-3xl mx-auto flex items-center justify-between w-full p-2">
+      <div className="flex items-center justify-between w-full max-w-3xl p-2 mx-auto">
         <a className="text-xl font-bold">
           <img className="h-10" src={Logo} alt="" />
         </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
           }     w-10 h-10 p-2 rounded cursor-pointer hover:text-primary hover:bg-secondary sm:hidden`}
         />
 
-        <ul className="flex justify-end items-center hidden text-lg sm:flex">
+        <ul className="flex items-center justify-end hidden text-lg sm:flex">
           <li
             onClick={() => {
               setServices(!services)
@@ -86,13 +86,12 @@ const Navbar = () => {
             About
           </li>
           <li>
-            <button className="p-2 ml-4 font-bold text-primary bg-secondary hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
+            <button className="flex justify-between items-center p-2 ml-4 font-bold text-primary bg-secondary hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
               Contact
             </button>
           </li>
         </ul>
       </div>
-
       {navbarMobile && <NavbarMobile ref={navbarMobileRef} />}
     </nav>
   )

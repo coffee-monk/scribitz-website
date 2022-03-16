@@ -1,5 +1,7 @@
 import React from "react"
 
+import { IoRocketSharp } from "react-icons/io5"
+
 const RegulatoryCompliant = () => {
   return (
     <section id="RegulatoryCompliant" className="p-4 bg-primary">
@@ -8,7 +10,7 @@ const RegulatoryCompliant = () => {
           SUBMIT YOUR PROJECT WITH CONFIDENCE
         </h1>
         <h2 className="text-3xl font-bold text-white">
-          ENSURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
+          MAKE SURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
         </h2>
         <p className="text-white mt-2">
           We know there's value in the content you create, that's why our team
@@ -19,7 +21,11 @@ const RegulatoryCompliant = () => {
           Do you need your captions to meet accessibility regulations?
         </p>
 
-        <button className="rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center mt-4">
+        <button className="flex justify-between items-center rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center mt-4">
+          <IoRocketSharp
+            size="1.25em"
+            className="text-white hover:text-red-400 mr-3"
+          />
           CONTACT US
         </button>
       </div>

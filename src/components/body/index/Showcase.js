@@ -1,5 +1,7 @@
 import React from "react"
 
+import videoURL from "../../../videos/typing.mp4"
+
 import {
   BadgeCheckIcon,
   ClockIcon,
@@ -7,8 +9,10 @@ import {
   BriefcaseIcon,
 } from "@heroicons/react/outline"
 
+import { IoRocketSharp } from "react-icons/io5"
+
 const Showcase = () => {
-  const iconStyles = "text-yellow w-5 mr-4 hidden md:block"
+  const iconStyles = "text-yellow w-5 hidden sm:block"
 
   const values = [
     {
@@ -17,7 +21,7 @@ const Showcase = () => {
       icon: <SearchIcon className={iconStyles} />,
     },
     {
-      name: "COMPLIANCE",
+      name: "100% COMPLIANCE",
       caption: "WCAG 3.0, AODA, & FCC Compliant",
       icon: <BadgeCheckIcon className={iconStyles} />,
     },
@@ -35,14 +39,18 @@ const Showcase = () => {
 
   return (
     <section
-      style={{
-        backgroundImage:
-          "url(" +
-          "https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593324_960_720.jpg" +
-          ")",
-      }}
-      className="relative flex flex-col items-center justify-around min-h-screen text-center bg-bottom bg-no-repeat bg-cover min-w-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-white before:via-primary before:to-primary before:opacity-80"
+      className="relative flex flex-col items-center justify-around min-h-screen text-center overflow-hidden min-w-screen 
+    before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-white before:via-primary before:to-primary before:opacity-80 before:z-10"
     >
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute min-w-full min-h-full top-0 left-0 object-cover"
+      >
+        <source src={videoURL} type="video/mp4"></source>
+      </video>
+
       <div
         id="name"
         className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
@@ -67,15 +75,18 @@ const Showcase = () => {
               key={value.name}
               className="flex flex-col justify-between items-center p-4 shadow shadow-white/60 rounded-lg text-secondary backdrop-blur-md bg-primary/30"
             >
-              <span className="flex justify-between items-center">
-                {value.icon} {value.name}
-              </span>
+              {value.icon}
+              <span className="items-center">{value.name}</span>
               <p className="font-normal text-white">{value.caption}</p>
             </li>
           ))}
         </ul>
 
-        <button className="m-3 rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
+        <button className="flex justify-between items-center m-3 rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
+          <IoRocketSharp
+            size="1.25em"
+            className="text-white hover:text-red-400 mr-3"
+          />
           GET A QUOTE!
         </button>
       </div>

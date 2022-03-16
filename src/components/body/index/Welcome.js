@@ -4,9 +4,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Welcome = () => {
   return (
-    <section id="Welcome" className="p-4 bg-rose-100">
+    <section id="Welcome" className="p-4 bg-primary">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-3xl mx-auto">
-        <div className="hidden sm:flex relative justify-center items-center    ">
+        <div className="hidden sm:flex relative justify-center items-center">
           <StaticImage
             className="absolute w-full h-full rounded-lg shadow-md"
             src="../../../images/main/woman-signing.jpg"
@@ -14,6 +14,7 @@ const Welcome = () => {
             placeholder="blurred"
           />
         </div>
+
         <div className="p-6 rounded-lg bg-rose-50 shadow-md">
           <h1 className="text-2xl font-bold text-tertiary">WELCOME</h1>
           <h2 className="text-3xl font-bold text-primary">WE ARE SCRIBITZ</h2>
@@ -29,11 +30,6 @@ const Welcome = () => {
             <span className="font-bold">most up-to-date techniques</span> in
             order to deliver Closed Captions and Transcription services with{" "}
             <span className="font-bold">99% accuracy</span>.
-          </p>
-          <p className="mt-2">
-            We also offer <span className="font-bold">Live Captioning</span> and{" "}
-            <span className="font-bold">Live Transcription</span> services, so
-            you can be accessible on the go.
           </p>
         </div>
       </div>
