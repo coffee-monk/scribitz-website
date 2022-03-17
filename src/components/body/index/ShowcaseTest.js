@@ -2,8 +2,6 @@ import React from "react"
 
 import videoURL from "../../../videos/typing.mp4"
 
-import { StaticImage } from "gatsby-plugin-image"
-
 import {
   BadgeCheckIcon,
   ClockIcon,
@@ -38,13 +36,6 @@ const ShowcaseTest = () => {
       icon: <BriefcaseIcon className={iconStyles} />,
     },
   ]
-
-  // <StaticImage
-  //   className="absolute w-full h-full left-0"
-  //   src="../../../images/main/components/Showcase/typing-showcase.jpg"
-  //   alt="woman speaking in sign language"
-  //   placeholder="blurred"
-  // />
 
   return (
     <section className="relative flex flex-col items-center justify-around min-h-screen min-w-screen text-center overflow-hidden before:absolute before:w-full before:h-screen before:bg-gradient-to-br before:from-white before:via-primary before:to-primary before:opacity-80 before:z-10">

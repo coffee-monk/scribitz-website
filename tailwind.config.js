@@ -7,6 +7,7 @@ module.exports = {
         secondary: "#f1c232",
         secondaryDark: "#d5a853",
         tertiary: "#8D230F",
+        video: "#11404a",
         navy: "#011A27",
         white: "#e5d1d1",
         black: "#000000",

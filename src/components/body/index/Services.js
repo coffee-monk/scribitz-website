@@ -42,16 +42,19 @@ const Services = () => {
   ]
 
   return (
-    <section id="Section" className="bg-primary text-secondary">
+    <section
+      id="Section"
+      className="bg-gradient-to-b from-video to-primary text-secondary"
+    >
       <div className="flex flex-col items-center justify-between max-w-3xl px-4 py-6 mx-auto">
         <h1 className="text-2xl font-bold text-white">OUR</h1>
         <h2 className="text-3xl font-bold">SERVICES</h2>
 
-        <div className="items-center mt-10 grid grid-cols-1 gap-4">
+        <div className="items-center mt-10 grid grid-cols-1 gap-6">
           {services.map((service, i) => (
             <div
               key={i}
-              className="grid grid-cols-2 justify-between w-full h-full p-6 shadow shadow-white/60 rounded-lg"
+              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-6 shadow shadow-lg shadow-white/30 rounded-lg"
             >
               <div className="flex flex-col justify-between items-start">
                 <h1 className="text-xl font-bold">{service.service}</h1>

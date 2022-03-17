@@ -6,7 +6,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid"
 import ServicesDropdown from "./ServicesDropdown"
 import NavbarMobile from "./NavbarMobile"
 
-import Logo from "../../images/main/scribitz-final-logo.svg"
+import Logo from "../../images/components/Navbar/scribitz-final-logo.svg"
 import useOutsideClick from "../utils/useOutsideClick"
 
 const Navbar = () => {

@@ -9,14 +9,14 @@ import {
   EmojiHappyIcon,
 } from "@heroicons/react/outline"
 
-import itImgURL from "../../../images/main/components/OurExperts/it.jpg"
-import it2ImgURL from "../../../images/main/components/OurExperts/it2.jpg"
-import it3ImgURL from "../../../images/main/components/OurExperts/it3.jpg"
-import medicalImgURL from "../../../images/main/components/OurExperts/medical.jpg"
-import academicImgURL from "../../../images/main/components/OurExperts/academic.jpg"
-import ngoImgURL from "../../../images/main/components/OurExperts/ngo.jpg"
-import lawImgURL from "../../../images/main/components/OurExperts/law.jpg"
-import stemImgURL from "../../../images/main/components/OurExperts/stem.jpg"
+import itImgURL from "../../../images/components/OurExperts/it.jpg"
+import it2ImgURL from "../../../images/components/OurExperts/it2.jpg"
+import it3ImgURL from "../../../images/components/OurExperts/it3.jpg"
+import medicalImgURL from "../../../images/components/OurExperts/medical.jpg"
+import academicImgURL from "../../../images/components/OurExperts/academic.jpg"
+import ngoImgURL from "../../../images/components/OurExperts/ngo.jpg"
+import lawImgURL from "../../../images/components/OurExperts/law.jpg"
+import stemImgURL from "../../../images/components/OurExperts/stem.jpg"
 
 const OurExperts = () => {
   const iconStyles = "w-14 text-secondary z-10"
