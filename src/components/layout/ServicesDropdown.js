@@ -14,13 +14,10 @@ const ServicesDropdown = React.forwardRef((props, serviceRef) => {
             Transcription
           </li>
           <li className="p-6 hover:bg-slate-200 border-b border-primary">
-            Live-Transcription
+            Closed&#8209;Captioning
           </li>
           <li className="p-6 hover:bg-slate-200 border-b border-primary">
-            Captions
-          </li>
-          <li className="p-6 hover:bg-slate-200 border-b border-primary">
-            Live-Captions
+            Live&#8209;Captioning
           </li>
           <li className="p-6 hover:bg-slate-200 hover:rounded-b">
             Translation

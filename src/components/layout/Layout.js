@@ -1,15 +1,9 @@
 import React from "react"
 
 import Navbar from "./Navbar"
-import Footer from "./Footer"
+import Footer from "./Footer/Footer"
 
 import "./Layout.css"
-
-// <>
-//   <Navbar />
-//   <main>{children}</main>
-// <Footer/>
-// </>
 
 const Layout = ({ children }) => {
   return (

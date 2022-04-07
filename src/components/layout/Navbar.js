@@ -6,13 +6,17 @@ import { ChevronDownIcon } from "@heroicons/react/solid"
 import ServicesDropdown from "./ServicesDropdown"
 import NavbarMobile from "./NavbarMobile"
 
+import { debounce } from "../utils/debounce"
+
 import Logo from "../../images/components/Navbar/scribitz-final-logo.svg"
 import useOutsideClick from "../utils/useOutsideClick"
 
 const Navbar = () => {
   const [navbarMobile, setNavbarMobile] = useState(false)
   const [services, setServices] = useState(false)
-  const [scroll, setScroll] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [visible, setVisible] = useState(false)
+  const [opacity, setOpacity] = useState(false)
 
   const servicesRef = useRef()
   const navbarMobileRef = useRef()
@@ -27,29 +31,41 @@ const Navbar = () => {
     if (navbarMobile) setNavbarMobile(false)
   })
 
-  useEffect(() => {
-    // navbar opacity on scroll
-    const checkScroll = () => {
-      if (window.scrollY >= 80) {
-        setScroll(true)
-      } else {
-        setScroll(false)
-      }
-    }
+  // navbar opacity on scroll
+  // https://www.devtwins.com/blog/sticky-navbar-hides-scroll
+  const handleScroll = debounce(() => {
+    const currentScrollPosition = window.pageYOffset
+    // nav hide on scroll down
+    setVisible(
+      (prevScrollPos > currentScrollPosition &&
+        prevScrollPos - currentScrollPosition > 50) ||
+        currentScrollPosition < 80
+    )
+    // nav bg opacity
+    setOpacity(currentScrollPosition >= 80)
+    setPrevScrollPos(currentScrollPosition)
+  }, 70)
 
-    window.addEventListener("scroll", checkScroll)
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    if (window.pageYOffset === 0) {
+      setVisible(true)
+    }
 
     return () => {
-      window.addEventListener("scroll", checkScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
-  }, [])
+  }, [prevScrollPos, visible, handleScroll])
 
   return (
     <nav
-      className={`fixed z-20 w-full text-secondary ${
-        scroll
-          ? "backdrop-blur-md bg-gradient-to-r from-white/90 via-primary/60 to-primary/70 border-b border-primary"
-          : ""
+      className={`fixed z-20 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-10 before:transition before:ease-in before:duration-500 ${
+        visible ? "" : "-translate-y-full"
+      } + " " + ${
+        opacity
+          ? "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:border-b before:border-primary"
+          : "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:opacity-0"
       }`}
     >
       <div className="flex items-center justify-between w-full max-w-3xl p-2 mx-auto">
