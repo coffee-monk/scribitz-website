@@ -3,20 +3,20 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import {
-  DesktopComputerIcon,
+  HomeIcon,
   AcademicCapIcon,
   BeakerIcon,
   HeartIcon,
   ScaleIcon,
-  EmojiHappyIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/outline"
 
-const iconStyles = "w-14 text-secondary z-10"
+const iconStyles = "w-14 text-secondary z-20 mx-auto"
 
 const data = [
   {
-    name: "Information Technology",
-    icon: <DesktopComputerIcon className={iconStyles} />,
+    name: "Urban Planning",
+    icon: <HomeIcon className={iconStyles} />,
     img: (
       <StaticImage
         className="absolute w-full h-full"
@@ -24,9 +24,13 @@ const data = [
         alt=""
       />
     ),
-
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "Responsible development can’t take place without closed captioned community consultations, and live captions encourage full audience participation. We cover:",
+    points: [
+      "Several panelists & participants",
+      "Accurate street names & Urban Planning terminology",
+      "Indigenous languages",
+    ],
   },
   {
     name: "MEDICAL",
@@ -39,7 +43,12 @@ const data = [
       />
     ),
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "We know the impact one typo can make in a medical document. Among our Scribes are seasoned medical transcriptionists and some medical professionals.",
+    points: [
+      "Accurate Medical & Drug nomenclature",
+      "Special care to protect sensitive data",
+      "Client Information & Health Reports",
+    ],
   },
   {
     name: "ACADEMIC",
@@ -52,10 +61,16 @@ const data = [
       />
     ),
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "We’ve served Canada’s colleges and universities for 15+ years. There isn’t a subject we can’t make accessible for your students.",
+    points: [
+      "Pre-recorded & live remote classes",
+      "College, Undergraduate & Masters-level classes",
+      "Staff/Faculty meetings",
+      "Symposiums & Special Events",
+    ],
   },
   {
-    name: "LEGAL & CORPORATE",
+    name: "LEGAL",
     icon: <ScaleIcon className={iconStyles} />,
     img: (
       <StaticImage
@@ -65,7 +80,8 @@ const data = [
       />
     ),
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "When every word counts, lexical and contextual accuracy are critical. Our dedicated legal transcriptionists & live captioners guarantee the highest level of accuracy.",
+    points: ["Private Mediation", "Court proceedings", "Meetings with lawyers"],
   },
   {
     name: "STEM",
@@ -78,11 +94,16 @@ const data = [
       />
     ),
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "Spelling isn’t everything. An AI might spell the words “mesenchymal sesquiterpene” correctly, without realizing the words would never appear together.",
+    points: [
+      "Biology, Chemistry, Physics, Statistics",
+      "Biomedical Engineering, Industrial Design",
+      "Artificial Intelligence, Information Technology",
+    ],
   },
   {
-    name: "NON-PROFIT",
-    icon: <EmojiHappyIcon className={iconStyles} />,
+    name: "Corporate & Non-Profit",
+    icon: <BriefcaseIcon className={iconStyles} />,
     img: (
       <StaticImage
         className="absolute w-full h-full"
@@ -91,7 +112,8 @@ const data = [
       />
     ),
     description:
-      "Amet odio ipsa vitae voluptas rerum Ipsam voluptas laudantium voluptate commodi voluptatum. Eaque quam iste quibusdam accusamus natus. Doloribus deserunt.",
+      "The value and power of information grows indefinitely. Our transcripts can be delivered in many standardized formats, to move critical data through digitized value chains.",
+    points: ["AGM minutes", "Board Meeting summaries", "Captioned Powerpoints"],
   },
 ]
 

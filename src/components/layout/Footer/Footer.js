@@ -28,7 +28,7 @@ const Footer = () => {
                 if (row.pageLink) {
                   return (
                     <li key={i} className="pb-3">
-                      <Link to="#" className="text-gray-400 hover:text-white">
+                      <Link to="#" className="text-gray-400 hover:underline">
                         {row.text}
                       </Link>
                     </li>
@@ -36,7 +36,7 @@ const Footer = () => {
                 } else {
                   return (
                     <li key={i} className="pb-3">
-                      <a href="#" className="text-gray-400 hover:text-white">
+                      <a href="#" className="text-gray-400 hover:underline">
                         {row.text}
                       </a>
                     </li>

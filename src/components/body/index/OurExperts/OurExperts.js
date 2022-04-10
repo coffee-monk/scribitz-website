@@ -15,21 +15,37 @@ const OurExperts = () => {
 
         <div
           id="subjects"
-          className="grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-2xl md:max-w-4xl mt-10 px-4"
+          className="grid grid-cols-1 gap-4 lg:gap-2 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-2xl md:max-w-4xl mt-10 px-4"
         >
           {subjects.map((subject, i) => (
             <div
               key={i}
-              className="relative flex flex-col items-center justify-around text-center before:absolute before:w-full before:h-full before:bg-primary before:opacity-90 before:z-10 p-4"
+              className="relative before:absolute before:w-full before:h-full before:bg-primary before:opacity-95 before:z-10"
             >
               {subject.img}
-              {subject.icon}
-              <h1 className="text-xl font-bold text-center text-secondary mt-2 z-10">
-                {subject.name}
-              </h1>
-              <p className="text-center text-rose-50 font-bold mt-4 z-10">
-                {subject.description}
-              </p>
+              <div className="flex flex-col items-left justify-start text-center p-4">
+                {subject.icon}
+                <h1 className="text-xl font-bold text-center text-secondary mt-2 z-20">
+                  {subject.name}
+                </h1>
+                <p className="text-left text-rose-50 mt-2 z-20">
+                  {subject.description}
+                </p>
+
+                <ul className="flex flex-col items-start justify-start text-white mt-4 z-20">
+                  {subject.points.map((point, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start justify-start text-left"
+                    >
+                      <span className="text-secondary text-xl mr-1">
+                        &#8226;
+                      </span>
+                      <p>{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

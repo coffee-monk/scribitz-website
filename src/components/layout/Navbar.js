@@ -96,9 +96,6 @@ const Navbar = () => {
             {services && <ServicesDropdown ref={servicesRef} />}
           </li>
           <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
-            Pricing
-          </li>
-          <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
             About
           </li>
           <li>

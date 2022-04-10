@@ -6,13 +6,13 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/Layout"
 import Showcase from "../components/body/index/Showcase"
 import Welcome from "../components/body/index/Welcome"
-import RegulatoryCompliant from "../components/body/index/RegulatoryCompliant"
 import OurExperts from "../components/body/index/OurExperts/OurExperts"
 import OurTeam from "../components/body/index/OurTeam"
+import HowItWorks from "../components/body/index/HowItWorks/HowItWorks"
 import CEO from "../components/body/index/CEO/CEO"
-import SamePage from "../components/body/index/SamePage"
 import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
 import Services from "../components/body/index/Services"
+import FAQ from "../components/body/index/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
   console.log(data)
@@ -32,13 +32,13 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Showcase />
       <Services />
-      <SamePage />
+      <HowItWorks />
       <OurTeam />
       <OurExperts />
       <Welcome />
       <CEO />
       <ClientsServed logos={logos} />
-      <RegulatoryCompliant />
+      <FAQ />
     </Layout>
   )
 }

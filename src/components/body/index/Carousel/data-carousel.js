@@ -7,24 +7,26 @@ import img5 from "../../../../images/components/Welcome/Carousel/img5.jpg"
 const data = [
   {
     caption:
-      "We have served the Deaf & Hard of Hearing community for over 15 years. We are passionate about removing barriers to accessibility, clear communication, and client participation.",
+      "Removing barriers to accessibility, communication, and participation for over 15 years",
     imgURL: img1,
   },
   {
     caption:
-      "Our team of human professionals is trained in the most up-to-date techniques in order to deliver Closed Captions and Transcription services with 99% accuracy.",
+      "Our professionals are trained to deliver transcripts and captions with 99%+ accuracy",
     imgURL: img2,
   },
   {
-    caption: "Lorem 3",
+    caption: "Remote work allows people to live a healthy lifestyle",
     imgURL: img3,
   },
   {
-    caption: "Lorem 4",
+    caption:
+      "Transcripts and Captions help teams review content for critical insights and information",
     imgURL: img4,
   },
   {
-    caption: "Lorem 5",
+    caption:
+      "At the leading edge of accessibility technology, we focus on people-oriented solutions",
     imgURL: img5,
   },
 ]

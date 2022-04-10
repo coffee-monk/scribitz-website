@@ -12,12 +12,10 @@ import {
 import ReactCountryFlag from "react-country-flag"
 
 const Services = () => {
-  const iconStyles = "text-white"
-
   const services = [
     {
       service: "Transcription",
-      caption: "Convert your audio & video files to text",
+      caption: "Convert audio & video to text",
       icon1: <FaRegFileAudio />,
       icon2: <CgFileDocument />,
     },
@@ -35,7 +33,7 @@ const Services = () => {
     },
     {
       service: "Translation",
-      caption: "Translate content from one language to another",
+      caption: "Translate from one language to another",
       icon1: <ReactCountryFlag countryCode="US" />,
       icon2: <ReactCountryFlag countryCode="FR" />,
     },
@@ -54,7 +52,7 @@ const Services = () => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-6 shadow shadow-lg shadow-white/30 rounded-lg"
+              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-6 shadow shadow-2xl rounded-lg"
             >
               <div className="flex flex-col justify-between items-start">
                 <h1 className="text-xl font-bold">{service.service}</h1>

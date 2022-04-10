@@ -1,12 +1,10 @@
 import React from "react"
 
-import { IoRocketSharp } from "react-icons/io5"
-
 const FooterTop = () => {
   return (
     <div className="bg-navy mb-4">
-      <div className="max-w-3xl mx-auto text-white grid gap-10 sm:grid-cols-2 py-8">
-        <div className="flex flex-col items-left justify-between">
+      <div className="max-w-3xl mx-auto text-white grid gap-12 sm:grid-cols-2 py-8">
+        <div className="flex flex-col items-left justify-between pr-2">
           <h1 className="font-bold text-lg text-white mb-2">
             READY TO GET STARTED?
           </h1>
@@ -16,10 +14,7 @@ const FooterTop = () => {
             Scribitz you ensure that your captions are regulatory compliant.
           </p>
 
-          <a
-            href="#"
-            className="text-emerald-600 hover:text-emerald-500 mr-auto"
-          >
+          <a href="#" className="text-teal-600 hover:text-teal-500 mr-auto">
             CONTACT US
           </a>
         </div>
@@ -31,11 +26,8 @@ const FooterTop = () => {
             anytime. Apply now to become a Transcriptionist, Captioner, or
             Translator.{" "}
           </p>
-          <a
-            href="#"
-            className="text-emerald-600 hover:text-emerald-500 mr-auto"
-          >
-            LEARN MORE
+          <a href="#" className="text-teal-600 hover:text-teal-500 mr-auto">
+            BECOME A FREELANCER
           </a>
         </div>
       </div>

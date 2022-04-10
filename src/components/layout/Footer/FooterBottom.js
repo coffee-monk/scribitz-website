@@ -15,7 +15,7 @@ const Social = () => {
         </div>
 
         <p className="mt-3">
-          Scribitz Transcription <span>&#169; </span> {new Date().getFullYear()}
+          Scribitz Inc <span>&#169; </span> {new Date().getFullYear()}
         </p>
       </div>
     </div>

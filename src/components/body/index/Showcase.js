@@ -12,7 +12,7 @@ import {
 import { IoRocketSharp } from "react-icons/io5"
 
 const Showcase = () => {
-  const iconStyles = "text-yellow w-5 hidden sm:block"
+  const iconStyles = "text-yellow w-5 mb-2 hidden sm:block"
 
   const values = [
     {
@@ -27,7 +27,7 @@ const Showcase = () => {
     },
     {
       name: "RELIABLE TURNOVER",
-      caption: "Ready Within 36-48 Hours",
+      caption: "Ready Within 24-36 Hours",
       icon: <ClockIcon className={iconStyles} />,
     },
     {
@@ -73,7 +73,7 @@ const Showcase = () => {
           {values.map(value => (
             <li
               key={value.name}
-              className="flex flex-col justify-between items-center p-4 shadow shadow-white/60 rounded-lg text-secondary backdrop-blur-md bg-primary/30"
+              className="flex flex-col justify-between items-center p-4 shadow-xl rounded-lg text-secondary backdrop-blur-sm bg-primary/30"
             >
               {value.icon}
               <span className="items-center">{value.name}</span>

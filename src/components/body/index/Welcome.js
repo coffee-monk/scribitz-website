@@ -5,7 +5,7 @@ import { IoCheckmarkCircle } from "react-icons/io5"
 
 const Welcome = () => {
   const values = [
-    { value: "Ally to the Deaf & Hard of Hearing Community" },
+    { value: "Ally to the Deaf & Hard of Hearing" },
     { value: "Diverse & Inclusive Culture" },
     { value: "Flexible Remote Workforce" },
     { value: "Support Professional Communication" },
@@ -25,7 +25,7 @@ const Welcome = () => {
       </div>
 
       <div className="max-w-3xl grid grid-cols-2 gap-4 mx-auto mt-8">
-        <div className="flex flex-col items-center justify-start text-secondary">
+        <div className="flex flex-col items-center justify-between text-secondary">
           <h1 className="text-xl font-bold">Values</h1>
           <ul className="flex flex-col justify-between items-left text-white mt-3 mb-3 last:mb-0">
             {values.map((value, i) => (
@@ -42,13 +42,13 @@ const Welcome = () => {
 
         <div className="flex flex-col items-center justify-start">
           <h1 className="text-xl font-bold text-secondary">Mission</h1>
-          <p className="text-white mt-3 h-full shadow-lg p-2">
-            Regular Compliant, Premium Captioning Service with top-tier customer
-            service to save you the work of reviewing the product yourself.
-            Ipsum dolorem nulla dolorem perferendis et incidunt Vitae ut error
-            accusantium laudantium deserunt, dolore Labore quis asperiores
-            aliquid odit voluptates Cum quod minus autem aliquid totam?
-            Voluptatem repellendus possimus ex
+          <p className="text-white text-lg mt-3 h-full shadow-lg p-2">
+            To help businesses and organisations save time and create a
+            hearing-friendly digital world. We provide{" "}
+            <span className="text-secondary">premium</span> Live Captions,
+            Closed Captions, Transcription, and Translation. Along with quality
+            customer care, we guarantee compliance with local accessibility
+            standards.
           </p>
         </div>
       </div>
