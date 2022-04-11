@@ -8,7 +8,7 @@ import {
   BeakerIcon,
   HeartIcon,
   ScaleIcon,
-  BriefcaseIcon,
+  OfficeBuildingIcon,
 } from "@heroicons/react/outline"
 
 const iconStyles = "w-14 text-secondary z-20 mx-auto"
@@ -33,7 +33,7 @@ const data = [
     ],
   },
   {
-    name: "MEDICAL",
+    name: "Medical",
     icon: <HeartIcon className={iconStyles} />,
     img: (
       <StaticImage
@@ -51,7 +51,7 @@ const data = [
     ],
   },
   {
-    name: "ACADEMIC",
+    name: "Academic",
     icon: <AcademicCapIcon className={iconStyles} />,
     img: (
       <StaticImage
@@ -70,7 +70,7 @@ const data = [
     ],
   },
   {
-    name: "LEGAL",
+    name: "Legal",
     icon: <ScaleIcon className={iconStyles} />,
     img: (
       <StaticImage
@@ -103,7 +103,7 @@ const data = [
   },
   {
     name: "Corporate & Non-Profit",
-    icon: <BriefcaseIcon className={iconStyles} />,
+    icon: <OfficeBuildingIcon className={iconStyles} />,
     img: (
       <StaticImage
         className="absolute w-full h-full"
