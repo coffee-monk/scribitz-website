@@ -8,7 +8,7 @@ const Social = () => {
   return (
     <div
       id="Social"
-      className="flex items-center justify-between w-full text-white mx-auto max-w-3xl"
+      className="flex items-center justify-between w-full text-white mx-auto max-w-3xl border-t border-white/30"
     >
       <div className="flex flex-col items-left justify-between max-w-3xl mt-4">
         <div id="social-media-icons" className="flex items-start justify-start">

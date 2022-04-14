@@ -2,8 +2,8 @@ import React from "react"
 
 const FooterTop = () => {
   return (
-    <div className="bg-navy mb-4">
-      <div className="max-w-3xl mx-auto text-white grid gap-12 sm:grid-cols-2 py-8">
+    <div className="bg-navy">
+      <div className="max-w-3xl mx-auto text-white grid gap-12 sm:grid-cols-2 py-8 border-t border-white/30">
         <div className="flex flex-col items-left justify-between pr-2">
           <h1 className="font-bold text-lg text-white mb-4">
             READY TO GET STARTED?

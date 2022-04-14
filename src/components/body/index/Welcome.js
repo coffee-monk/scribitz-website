@@ -25,9 +25,9 @@ const Welcome = () => {
       </div>
 
       <div className="max-w-3xl grid grid-cols-2 gap-4 mx-auto mt-8">
-        <div className="flex flex-col items-center justify-start text-secondary">
-          <h1 className="text-xl font-bold">Values</h1>
-          <ul className="flex flex-col justify-between items-left text-white mt-3 mb-3 last:mb-0">
+        <div className="text-secondary">
+          <h1 className="text-xl text-center font-bold mb-3">Values</h1>
+          <ul className="flex flex-col justify-between items-left text-white">
             {values.map((value, i) => (
               <li
                 className="flex items-center justify-start shadow-lg p-2"
@@ -40,16 +40,22 @@ const Welcome = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center justify-start">
-          <h1 className="text-xl font-bold text-secondary">Mission</h1>
-          <p className="text-white text-lg mt-3 h-full shadow-lg p-2">
-            To help businesses and organisations save time and create a
-            hearing-friendly digital world. We provide{" "}
-            <span className="text-secondary">premium</span> Live Captions,
-            Closed Captions, Transcription, and Translation. Along with quality
-            customer care, we guarantee compliance with local accessibility
-            standards.
-          </p>
+        <div className="flex flex-col items-center justify-start ">
+          <h1 className="text-xl font-bold text-secondary text-center mb-3">
+            Mission
+          </h1>
+          <div className="shadow-lg h-full p-2">
+            <p className="text-white mb-2">
+              To help businesses and organisations save time and create a
+              hearing-friendly digital world. We provide{" "}
+              <span className="text-secondary">premium</span> Live Captions,
+              Closed Captions, Transcription, & Translation.
+            </p>
+            <p className="text-white">
+              Along with quality customer care, we guarantee compliance with
+              local accessibility standards.{" "}
+            </p>
+          </div>
         </div>
       </div>
 

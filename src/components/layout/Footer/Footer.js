@@ -13,16 +13,9 @@ const Footer = () => {
     <footer className="bg-navy p-4">
       <FooterCity />
 
-      <div id="divider" className="max-w-3xl mx-auto">
-        <div className="h-[1px] bg-white/30"></div>
-      </div>
-
       <FooterTop />
-      <div id="divider" className="max-w-3xl mx-auto">
-        <div className="h-[1px] bg-white/30"></div>
-      </div>
       <div id="links">
-        <div className="max-w-3xl mx-auto text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 py-8">
+        <div className="max-w-3xl mx-auto text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 py-8 border-t border-white/30">
           <CompanyInfo />
 
           {links.map((column, i) => (
@@ -52,9 +45,6 @@ const Footer = () => {
               })}
             </ul>
           ))}
-        </div>
-        <div id="divider" className="max-w-3xl mx-auto">
-          <div className="h-[1px] bg-white/30"></div>
         </div>
       </div>
 
