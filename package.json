@@ -17,6 +17,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "autoprefixer": "^10.4.2",
+    "axios": "^0.21.4",
     "gatsby": "^4.7.1",
     "gatsby-plugin-image": "^2.9.0",
     "gatsby-plugin-postcss": "^5.7.0",

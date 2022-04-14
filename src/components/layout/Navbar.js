@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import { Link } from "gatsby"
 
 import { MenuAlt3Icon } from "@heroicons/react/solid"
 import { ChevronDownIcon } from "@heroicons/react/solid"
@@ -70,7 +71,9 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between w-full max-w-3xl p-2 mx-auto">
         <a className="text-xl font-bold">
-          <img className="h-10" src={Logo} alt="" />
+          <Link to="/">
+            <img className="h-10" src={Logo} alt="" />
+          </Link>
         </a>
 
         <MenuAlt3Icon
@@ -100,7 +103,7 @@ const Navbar = () => {
           </li>
           <li>
             <button className="flex justify-between items-center p-2 ml-4 font-bold text-primary bg-secondary hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
-              Contact
+              <Link to="/contact/">Contact</Link>
             </button>
           </li>
         </ul>
