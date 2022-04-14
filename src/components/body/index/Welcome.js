@@ -25,9 +25,9 @@ const Welcome = () => {
       </div>
 
       <div className="max-w-3xl grid grid-cols-2 gap-4 mx-auto mt-8">
-        <div className="flex flex-col items-center justify-between text-secondary">
+        <div className="flex flex-col items-center justify-start text-secondary">
           <h1 className="text-xl font-bold">Values</h1>
-          <ul className="flex flex-col justify-start items-left text-white mt-3 mb-3 last:mb-0">
+          <ul className="flex flex-col justify-between items-left text-white mt-3 mb-3 last:mb-0">
             {values.map((value, i) => (
               <li
                 className="flex items-center justify-start shadow-lg p-2"
