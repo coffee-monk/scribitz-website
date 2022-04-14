@@ -4,12 +4,19 @@ import { Link } from "gatsby"
 import CompanyInfo from "./CompanyInfo"
 import FooterBottom from "./FooterBottom"
 import FooterTop from "./FooterTop"
+import FooterCity from "./FooterCity"
 
 import links from "./data-links"
 
 const Footer = () => {
   return (
     <footer className="bg-navy p-4">
+      <FooterCity />
+
+      <div id="divider" className="max-w-3xl mx-auto">
+        <div className="h-[1px] bg-white/30"></div>
+      </div>
+
       <FooterTop />
       <div id="divider" className="max-w-3xl mx-auto">
         <div className="h-[1px] bg-white/30"></div>

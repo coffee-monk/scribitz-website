@@ -60,7 +60,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-20 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-10 before:transition before:ease-in before:duration-500 ${
+      className={`fixed z-30 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-20 before:transition before:ease-in before:duration-500 ${
         visible ? "" : "-translate-y-full"
       } + " " + ${
         opacity

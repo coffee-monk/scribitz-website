@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
-import useOutsideClick from "../utils/useOutsideClick"
-
 const NavbarMobile = () => {
   const [services, setServices] = useState(false)
 
