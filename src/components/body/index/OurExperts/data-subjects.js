@@ -19,7 +19,11 @@ const data = [
     icon: <HomeIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/it.jpg"
         alt=""
       />
@@ -37,7 +41,11 @@ const data = [
     icon: <HeartIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/medical.jpg"
         alt=""
       />
@@ -55,7 +63,11 @@ const data = [
     icon: <AcademicCapIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/academic.jpg"
         alt=""
       />
@@ -74,7 +86,11 @@ const data = [
     icon: <ScaleIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/law.jpg"
         alt=""
       />
@@ -88,7 +104,11 @@ const data = [
     icon: <BeakerIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/stem.jpg"
         alt=""
       />
@@ -106,7 +126,11 @@ const data = [
     icon: <OfficeBuildingIcon className={iconStyles} />,
     img: (
       <StaticImage
-        className="absolute w-full h-full"
+        style={{
+          position: "absolute !important",
+          width: "100%",
+          height: "100%",
+        }}
         src="../../../../images/components/OurExperts/Subjects/ngo.jpg"
         alt=""
       />
