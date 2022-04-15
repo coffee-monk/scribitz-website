@@ -42,8 +42,8 @@ const ContactPage = () => {
         id="contact-page"
         className="flex flex-col items-center justify-around bg-gradient-to-br from-white via-navy to-navy w-full py-16"
       >
-        <div id="contact-form" className="container mx-auto">
-          <div className="max-w-xl p-5 mx-auto my-10 bg-primary rounded-md shadow-sm">
+        <div id="contact-form" className="container mx-auto ">
+          <div className="max-w-xl p-5 mx-auto my-10 bg-primary rounded-md shadow-xl">
             <div className="text-center">
               <h1 className="my-3 text-3xl font-semibold text-secondary">
                 Contact Us

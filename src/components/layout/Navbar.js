@@ -44,6 +44,13 @@ const Navbar = () => {
     )
     // nav bg opacity
     setOpacity(currentScrollPosition >= 80)
+    // close dropdown on scroll
+    if (
+      prevScrollPos - currentScrollPosition > 50 ||
+      currentScrollPosition - prevScrollPos > 50
+    ) {
+      setServices(false)
+    }
     setPrevScrollPos(currentScrollPosition)
   }, 70)
 
