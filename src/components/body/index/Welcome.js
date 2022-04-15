@@ -44,7 +44,7 @@ const Welcome = () => {
           <h1 className="text-xl font-bold text-secondary text-center mb-3">
             Mission
           </h1>
-          <div className="shadow-lg h-full p-2">
+          <div className="shadow-lg rounded-xl h-full p-2">
             <p className="text-white mb-2">
               To help businesses and organisations save time and create a
               hearing-friendly digital world. We provide{" "}

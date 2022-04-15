@@ -28,7 +28,8 @@ const Social = () => {
         </div>
 
         <p className="mt-3">
-          Scribitz Inc <span>&#169; </span> {new Date().getFullYear()}
+          Scribitz Inc <span>&#169; </span> {new Date().getFullYear()} . All
+          Rights Reserved
         </p>
       </div>
       <button onClick={scrollToTop}>
