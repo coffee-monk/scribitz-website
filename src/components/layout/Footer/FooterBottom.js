@@ -5,6 +5,14 @@ import { ArrowCircleUpIcon } from "@heroicons/react/solid"
 import social from "./data-social"
 
 const Social = () => {
+  // Scrtoll to top button
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for smoothly scrolling
+    })
+  }
+
   return (
     <div
       id="Social"
@@ -23,7 +31,9 @@ const Social = () => {
           Scribitz Inc <span>&#169; </span> {new Date().getFullYear()}
         </p>
       </div>
-      <ArrowCircleUpIcon className="w-16 pt-4 cursor-pointer text-teal-600 hover:text-teal-500" />
+      <button onClick={scrollToTop}>
+        <ArrowCircleUpIcon className="w-16 pt-4 cursor-pointer text-teal-600 hover:text-teal-500" />
+      </button>
     </div>
   )
 }
