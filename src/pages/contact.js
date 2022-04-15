@@ -9,14 +9,16 @@ const ContactPage = () => {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
+  const [service, setService] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(name, email, phone, message)
+    console.log(name, email, phone, message, service)
     const data = {
       Name: name,
       Email: email,
       Phone: phone,
+      Service: service,
       Message: message,
     }
     axios
@@ -30,6 +32,7 @@ const ContactPage = () => {
         setEmail("")
         setPhone("")
         setMessage("")
+        setService("")
       })
   }
 
@@ -105,6 +108,26 @@ const ContactPage = () => {
                     className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                   />
                 </div>
+                <div className="mb-6">
+                  <label for="service" className="text-sm text-secondary mr-2">
+                    Choose a Service:
+                  </label>
+                  <select
+                    onChange={e => {
+                      setService(e.target.value)
+                    }}
+                    value={service}
+                    id="service"
+                    name="service"
+                    className="bg-secondary rounded-md text-primary font-bold p-2"
+                  >
+                    <option value="transcription">Transcription</option>
+                    <option value="closed-captioning">Closed-Captioning</option>
+                    <option value="live-captioning">Live-Captions</option>
+                    <option value="translation">Translation</option>
+                  </select>
+                </div>
+
                 <div className="mb-6">
                   <label
                     for="message"
