@@ -24,7 +24,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/it.jpg"
         alt=""
       />
@@ -47,7 +46,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/medical.jpg"
         alt=""
       />
@@ -70,7 +68,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/academic.jpg"
         alt=""
       />
@@ -94,7 +91,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/law.jpg"
         alt=""
       />
@@ -113,7 +109,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/stem.jpg"
         alt=""
       />
@@ -136,7 +131,6 @@ const data = [
           width: "100%",
           height: "100%",
         }}
-        className="absolute w-full h-full"
         src="../../../../images/components/OurExperts/Subjects/ngo.jpg"
         alt=""
       />

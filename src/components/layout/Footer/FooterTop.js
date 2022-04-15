@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "gatsby"
+
 const FooterTop = () => {
   return (
     <div className="bg-navy">
@@ -14,12 +16,12 @@ const FooterTop = () => {
             Scribitz you ensure that your captions are regulatory compliant.
           </p>
 
-          <a
-            href="#"
+          <Link
+            to="/contact/"
             className="text-teal-600 hover:text-teal-500 mr-auto border-2 border-teal-600 hover:border-teal-500 rounded-full py-2 px-3"
           >
             CONTACT US
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-col items-left justify-start">
