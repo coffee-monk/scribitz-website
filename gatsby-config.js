@@ -14,5 +14,12 @@ module.exports = {
         path: `${__dirname}/src/images/components/ClientsServed/logos/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Inter`],
+        display: "swap",
+      },
+    },
   ],
 }
