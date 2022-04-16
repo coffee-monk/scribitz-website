@@ -40,7 +40,7 @@ const ContactPage = () => {
     <Layout>
       <section
         id="contact-page"
-        className="flex flex-col items-center justify-around bg-gradient-to-br from-white via-navy to-navy w-full py-16"
+        className="flex flex-col items-center justify-around bg-gradient-to-br from-white via-navy to-navy w-full py-16 px-4"
       >
         <div id="contact-form" className="container mx-auto ">
           <div className="max-w-xl p-5 mx-auto my-10 bg-primary rounded-md shadow-xl">
@@ -55,12 +55,6 @@ const ContactPage = () => {
             <div>
               <form action="" method="POST" onSubmit={handleSubmit}>
                 <div className="mb-6">
-                  <label
-                    for="name"
-                    className="block mb-2 text-sm text-secondary"
-                  >
-                    Full Name
-                  </label>
                   <input
                     onChange={e => {
                       setName(e.target.value)
@@ -68,7 +62,7 @@ const ContactPage = () => {
                     value={name}
                     type="text"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Full Name"
                     required
                     className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                   />

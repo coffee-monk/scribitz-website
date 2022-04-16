@@ -25,7 +25,7 @@ const OurTeam = () => {
             Our team of human professionals is trained in the most{" "}
             <span className="font-bold">up-to-date techniques</span> in order to
             deliver Closed Captions and Transcription services with{" "}
-            <span className="font-bold">99% accuracy</span>
+            <span className="font-bold">99%+ accuracy</span>
           </p>
           <p className="p-2">
             We deliver your captions{" "}

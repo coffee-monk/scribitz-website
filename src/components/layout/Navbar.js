@@ -68,11 +68,12 @@ const Navbar = () => {
 
   return (
     <nav
+      id="navbar"
       className={`fixed z-30 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-20 before:transition before:ease-in before:duration-500 ${
         visible ? "" : "-translate-y-full"
       } + " " + ${
         opacity
-          ? "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:border-b before:border-primary"
+          ? "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:border-y before:border-primary"
           : "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:opacity-0"
       }`}
     >
@@ -109,7 +110,7 @@ const Navbar = () => {
             About
           </li>
           <li>
-            <button className="flex justify-between items-center p-2 ml-4 font-bold text-primary bg-secondary hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
+            <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
               <Link to="/contact/">Contact</Link>
             </button>
           </li>

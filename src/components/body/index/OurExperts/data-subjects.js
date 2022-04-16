@@ -20,7 +20,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/it.jpg"
+        src="../../../../images/components/OurExperts/Subjects/it-black.jpg"
         alt=""
       />
     ),
@@ -38,7 +38,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/medical.jpg"
+        src="../../../../images/components/OurExperts/Subjects/medical-black.jpg"
         alt=""
       />
     ),
@@ -56,7 +56,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/academic.jpg"
+        src="../../../../images/components/OurExperts/Subjects/academic-black.jpg"
         alt=""
       />
     ),
@@ -75,7 +75,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/law.jpg"
+        src="../../../../images/components/OurExperts/Subjects/law-black.jpg"
         alt=""
       />
     ),
@@ -89,7 +89,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/stem.jpg"
+        src="../../../../images/components/OurExperts/Subjects/stem-black.jpg"
         alt=""
       />
     ),
@@ -107,7 +107,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/ngo.jpg"
+        src="../../../../images/components/OurExperts/Subjects/ngo-black.jpg"
         alt=""
       />
     ),
