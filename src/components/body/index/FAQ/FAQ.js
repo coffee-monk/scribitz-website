@@ -15,11 +15,11 @@ const FAQ = () => {
         </h2>
       </div>
 
-      <ul className="max-w-2xl mx-auto shadow-2xl mt-10 mb-[25vh]">
+      <ul className="max-w-2xl mx-auto mt-10 mb-10 shadow-2xl">
         {data.map((question, i) => (
           <li
             key={i}
-            className="border-b last:rounded-b-lg first:rounded-t-lg bg-amber-50 border-gray-800/50 p-8 border-b-primary last:border-none"
+            className="p-8 border-b last:rounded-b-lg first:rounded-t-lg bg-amber-50 border-gray-800/50 border-b-primary last:border-none"
           >
             <h1 className="font-bold text-lg text-primary mb-4">
               {question.question}

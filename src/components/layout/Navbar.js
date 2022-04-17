@@ -73,7 +73,7 @@ const Navbar = () => {
         visible ? "" : "-translate-y-full"
       } + " " + ${
         opacity
-          ? "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:border-y before:border-primary"
+          ? "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:border-b before:border-primary"
           : "before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 before:opacity-0"
       }`}
     >
