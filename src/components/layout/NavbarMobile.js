@@ -30,19 +30,13 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
           className="p-4 pl-14
     font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
         >
-          Captions
+          Closed-Captioning
         </li>
         <li
           className="p-4 pl-14
     font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
         >
-          Live-Transcription
-        </li>
-        <li
-          className="p-4 pl-14
-    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
-        >
-          Live-Captions
+          Live-Captioning
         </li>
         <li
           className="p-4 pl-14

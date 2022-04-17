@@ -1,5 +1,7 @@
 import React from "react"
 
+import Accordian from "./Accordian"
+
 import data from "./data-FAQ"
 
 const FAQ = () => {
@@ -17,15 +19,11 @@ const FAQ = () => {
 
       <ul className="max-w-2xl mx-auto mt-10 mb-10 shadow-2xl">
         {data.map((question, i) => (
-          <li
-            key={i}
-            className="p-8 border-b last:rounded-b-lg first:rounded-t-lg bg-amber-50 border-gray-800/50 border-b-primary last:border-none"
-          >
-            <h1 className="font-bold text-lg text-primary mb-4">
-              {question.question}
-            </h1>
-            <p className="text-gray-800">{question.answer}</p>
-          </li>
+          <Accordian
+            id={i}
+            question={question.question}
+            answer={question.answer}
+          />
         ))}
       </ul>
     </section>

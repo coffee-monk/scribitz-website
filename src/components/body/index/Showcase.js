@@ -16,7 +16,7 @@ const Showcase = () => {
 
   const values = [
     {
-      name: "99% ACCURACY",
+      name: "99%+ ACCURACY",
       caption: "Powered by Human Experts",
       icon: <SearchIcon className={iconStyles} />,
     },
@@ -73,7 +73,7 @@ const Showcase = () => {
           {values.map(value => (
             <li
               key={value.name}
-              className="flex flex-col justify-between items-center p-4 shadow-xl rounded-lg text-secondary backdrop-blur-sm bg-primary/30"
+              className="flex flex-col justify-start items-center p-4 shadow-xl rounded-lg text-secondary backdrop-blur-sm bg-primary/30"
             >
               {value.icon}
               <span className="items-center">{value.name}</span>

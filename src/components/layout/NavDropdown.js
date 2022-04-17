@@ -38,12 +38,6 @@ const NavbarMobile = () => {
           className="p-4 pl-14
     font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
         >
-          Live-Captions
-        </li>
-        <li
-          className="p-4 pl-14
-    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
-        >
           Translation
         </li>
       </ul>
