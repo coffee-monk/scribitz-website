@@ -9,8 +9,8 @@ const ServicesDropdown = React.forwardRef((services, serviceRef) => {
       onClick={e => e.stopPropagation()}
       ref={serviceRef}
       className={`${
-        services.services ? "" : "opacity-0"
-      } absolute left-0 top-14 transition-opacity`}
+        services.services ? "" : "opacity-0 invisible"
+      } absolute left-0 top-14 transition-opacity duration-300`}
     >
       <div id="services-dropdown rounded">
         <ul className="text-primary bg-slate-100 rounded">

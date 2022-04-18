@@ -108,9 +108,11 @@ const Navbar = () => {
             About
           </li>
           <li>
-            <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
-              <Link to="/contact/">Contact</Link>
-            </button>
+            <Link to="/contact/">
+              <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
+                Contact
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

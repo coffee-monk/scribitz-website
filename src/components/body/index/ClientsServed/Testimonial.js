@@ -2,6 +2,8 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri"
+
 const Testimonial = () => {
   return (
     <div
@@ -30,12 +32,14 @@ const Testimonial = () => {
       </div>
 
       <p className="text-gray-700 mt-4">
-        "With the start of exclusively virtual meetings (due to the pandemic) we
+        <RiDoubleQuotesL className="text-gray-400 text-2xl mr-2 inline" />
+        With the start of exclusively virtual meetings (due to the pandemic) we
         started recording the meetings. To make them accessible we needed to add
         captions. We did not have in-house staff that had experience creating
         captioning files in a format that could be added to the meeting
         recordings (i.e. SRT files). We now have a reliable source for creating
-        the captioning files we require."
+        the captioning files we require.
+        <RiDoubleQuotesR className="text-gray-400 text-2xl ml-2 inline" />
       </p>
     </div>
   )

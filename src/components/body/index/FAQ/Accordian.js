@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { ChevronUpIcon } from "@heroicons/react/solid"
 
-const Accordian = ({ i, question, answer }) => {
+const Accordian = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false)
 
   return (
     <li
       onClick={() => setShowAnswer(!showAnswer)}
-      className="p-8 border-b last:rounded-b-lg first:rounded-t-lg bg-amber-50 border-gray-800/50 border-b-primary last:border-none cursor-pointer"
+      className="border-b last:rounded-b-lg first:rounded-t-lg bg-amber-50 hover:bg-amber-100 border-gray-800/50 border-b-primary last:border-none cursor-pointer p-8"
     >
       <h1 className="flex items-center justify-between font-bold text-lg text-primary">
         {question}
@@ -18,10 +18,12 @@ const Accordian = ({ i, question, answer }) => {
         />
       </h1>
       <p
-        className={`transform ${
-          showAnswer ? "" : "hidden"
-        } transition duration-300 mt-4 text-gray-800`}
+        className={`${
+          showAnswer ? "max-h-40" : "max-h-0"
+        } overflow-hidden transition-[max-height] duration-500 ease-in-out text-gray-800 w-5/6`}
       >
+        <br />
+
         {answer}
       </p>
     </li>
