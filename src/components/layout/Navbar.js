@@ -78,11 +78,9 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center justify-between w-full max-w-3xl p-2 mx-auto">
-        <a className="text-xl font-bold">
-          <Link to="/">
-            <img className="h-10" src={Logo} alt="" />
-          </Link>
-        </a>
+        <Link className="text-xl font-bold" to="/">
+          <img className="h-10" src={Logo} alt="" />
+        </Link>
 
         <MenuAlt3Icon
           onClick={() => {
@@ -104,7 +102,7 @@ const Navbar = () => {
           >
             Services
             <ChevronDownIcon className="w-6 h-5 ml-2" />
-            {services && <ServicesDropdown ref={servicesRef} />}
+            <ServicesDropdown services={services} ref={servicesRef} />
           </li>
           <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
             About

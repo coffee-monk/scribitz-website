@@ -1,14 +1,18 @@
 import React from "react"
 
-const ServicesDropdown = React.forwardRef((props, serviceRef) => {
+const ServicesDropdown = React.forwardRef((services, serviceRef) => {
+  console.log(services.services)
+
   return (
     <div
+      id="dropdown"
       onClick={e => e.stopPropagation()}
       ref={serviceRef}
-      id="dropdown"
-      className="flex flex-col absolute left-0 top-14"
+      className={`${
+        services.services ? "" : "opacity-0"
+      } absolute left-0 top-14 transition-opacity`}
     >
-      <div id="dropdown-menu rounded">
+      <div id="services-dropdown rounded">
         <ul className="text-primary bg-slate-100 rounded">
           <li className="p-6 hover:bg-slate-200 border-b border-primary hover:rounded-t">
             Transcription

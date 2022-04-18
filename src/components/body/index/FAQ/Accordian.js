@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { ChevronUpIcon } from "@heroicons/react/solid"
 
-const Accordian = ({ question, answer }) => {
+const Accordian = ({ i, question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false)
 
   return (

@@ -20,7 +20,7 @@ const FAQ = () => {
       <ul className="max-w-2xl mx-auto mt-10 mb-10 shadow-2xl">
         {data.map((question, i) => (
           <Accordian
-            id={i}
+            key={i}
             question={question.question}
             answer={question.answer}
           />
