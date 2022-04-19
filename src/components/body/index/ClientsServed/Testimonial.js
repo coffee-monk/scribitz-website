@@ -39,7 +39,7 @@ const Testimonial = () => {
         captioning files in a format that could be added to the meeting
         recordings (i.e. SRT files). We now have a reliable source for creating
         the captioning files we require.
-        <RiDoubleQuotesR className="text-gray-400 text-2xl ml-2 inline" />
+        <RiDoubleQuotesR className="text-gray-400 text-2xl ml-1 inline" />
       </p>
     </div>
   )

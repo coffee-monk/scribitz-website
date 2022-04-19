@@ -2,6 +2,8 @@ import React, { useState } from "react"
 
 import axios from "axios"
 
+import { useForm, isRequired } from "../../utils/useForm"
+
 const ContactForm = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
