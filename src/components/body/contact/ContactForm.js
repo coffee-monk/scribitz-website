@@ -1,49 +1,56 @@
-import React, { useState } from "react"
+import React from "react"
 
 import axios from "axios"
 
 import { useForm, isRequired } from "../../utils/useForm"
 
 const ContactForm = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [message, setMessage] = useState("")
-  const [service, setService] = useState("")
+  const initialState = { email: "", name: "", phone: "" }
+  const validations = [
+    ({ email }) => isRequired(email) || { email: "E-mail is required" },
+    ({ name }) => isRequired(name) || { name: "Name is required" },
+    ({ phone }) => isRequired(phone) || { phone: "Phone is required" },
+    ({ message }) => isRequired(message) || { message: "Message is required" },
+  ]
 
-  const handleSubmit = e => {
+  const { values, isValid, errors, changeHandler, submitHandler } = useForm(
+    initialState,
+    validations,
+    submitContact
+  )
+
+  const submitContact = e => {
     e.preventDefault()
-    console.log(name, email, phone, message, service)
-    const data = {
-      Name: name,
-      Email: email,
-      Phone: phone,
-      Service: service,
-      Message: message,
-    }
-    axios
-      .post(
-        "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
-        data
-      )
-      .then(res => {
-        console.log(res)
-        setName("")
-        setEmail("")
-        setPhone("")
-        setMessage("")
-        setService("")
-      })
+    console.log("Submitted")
+    // console.log(name, email, phone, message, service)
+    // const data = {
+    //   Name: name,
+    //   Email: email,
+    //   Phone: phone,
+    //   Service: service,
+    //   Message: message,
+    // }
+    // axios
+    //   .post(
+    //     "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
+    //     data
+    //   )
+    //   .then(res => {
+    //     console.log(res)
+    //     setName("")
+    //     setEmail("")
+    //     setPhone("")
+    //     setMessage("")
+    //     setService("")
+    //   })
   }
 
   return (
-    <form action="" method="POST" onSubmit={handleSubmit}>
+    <form action="" method="POST" onSubmit={submitContact}>
       <div className="mb-6">
         <input
-          onChange={e => {
-            setName(e.target.value)
-          }}
-          value={name}
+          onChange={changeHandler}
+          value={values.name}
           type="text"
           name="name"
           placeholder="Full Name"
@@ -56,10 +63,8 @@ const ContactForm = () => {
           Email Address
         </label>
         <input
-          onChange={e => {
-            setEmail(e.target.value)
-          }}
-          value={email}
+          onChange={changeHandler}
+          value={values.email}
           type="email"
           name="email"
           placeholder="you@email.com"
@@ -72,10 +77,8 @@ const ContactForm = () => {
           Phone Number
         </label>
         <input
-          onChange={e => {
-            setPhone(e.target.value)
-          }}
-          value={phone}
+          onChange={changeHandler}
+          value={values.phone}
           type="text"
           name="phone"
           placeholder="91 1234-567"
@@ -88,10 +91,10 @@ const ContactForm = () => {
           Choose a Service:
         </label>
         <select
-          onChange={e => {
-            setService(e.target.value)
+          onChange={() => {
+            console.log("service")
           }}
-          value={service}
+          value={values.service}
           id="service"
           name="service"
           className="bg-secondary rounded-md text-primary font-bold p-2"
@@ -109,10 +112,8 @@ const ContactForm = () => {
         </label>
 
         <textarea
-          onChange={e => {
-            setMessage(e.target.value)
-          }}
-          value={message}
+          onChange={changeHandler}
+          value={values.message}
           rows="5"
           name="message"
           placeholder="Your Message"
