@@ -32,8 +32,8 @@ export function useForm(
     const newValues = { ...values, [event.target.name]: event.target.value }
     const { isValid, errors } = validate(validations, newValues)
     setValues(newValues)
-    setErrors(errors)
     setValid(isValid)
+    setErrors(errors)
     setTouched({ ...touched, [event.target.name]: true })
   }
 
@@ -42,13 +42,23 @@ export function useForm(
     onSubmit(values)
   }
 
-  return { values, errors, touched, isValid, changeHandler, submitHandler }
+  return { values, changeHandler, isValid, errors, touched, submitHandler }
 }
 
+// VALIDATORS ------- //
+
 export function isRequired(value) {
+  console.log(value)
   return value != null && value.trim().length > 0
 }
 
-export function isSame(value1, value2) {
-  return value1 === value2
-}
+// export function isNumbers(value) {
+//   var phoneno = /^\d{10}$/
+//   if (inputtxt.value.match(phoneno)) {
+//     return true
+//   } else {
+//     alert("message")
+//     return false
+//   }
+//   return value
+// }

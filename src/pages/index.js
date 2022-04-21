@@ -36,7 +36,6 @@ const IndexPage = ({ data }) => {
       <OurTeam />
       <OurExperts />
       <Welcome />
-      <CEO />
       <ClientsServed logos={logos} />
       <FAQ />
     </Layout>

@@ -5,7 +5,7 @@ import axios from "axios"
 import { useForm, isRequired } from "../../utils/useForm"
 
 const ContactForm = () => {
-  const initialState = { email: "", name: "", phone: "" }
+  const initialState = { email: "", name: "", phone: "", message: "" }
   const validations = [
     ({ email }) => isRequired(email) || { email: "E-mail is required" },
     ({ name }) => isRequired(name) || { name: "Name is required" },
@@ -13,14 +13,7 @@ const ContactForm = () => {
     ({ message }) => isRequired(message) || { message: "Message is required" },
   ]
 
-  const { values, isValid, errors, changeHandler, submitHandler } = useForm(
-    initialState,
-    validations,
-    submitContact
-  )
-
-  const submitContact = e => {
-    e.preventDefault()
+  const submitContact = event => {
     console.log("Submitted")
     // console.log(name, email, phone, message, service)
     // const data = {
@@ -45,8 +38,14 @@ const ContactForm = () => {
     //   })
   }
 
+  const { values, isValid, errors, changeHandler, submitHandler } = useForm(
+    initialState,
+    validations,
+    submitContact
+  )
+
   return (
-    <form action="" method="POST" onSubmit={submitContact}>
+    <form action="" method="POST" onSubmit={submitHandler}>
       <div className="mb-6">
         <input
           onChange={changeHandler}
@@ -54,7 +53,6 @@ const ContactForm = () => {
           type="text"
           name="name"
           placeholder="Full Name"
-          required
           className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
         />
       </div>
@@ -68,7 +66,6 @@ const ContactForm = () => {
           type="email"
           name="email"
           placeholder="you@email.com"
-          required
           className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
         />
       </div>
@@ -82,7 +79,6 @@ const ContactForm = () => {
           type="text"
           name="phone"
           placeholder="91 1234-567"
-          required
           className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
         />
       </div>
@@ -110,7 +106,6 @@ const ContactForm = () => {
         <label htmlFor="message" className="block mb-2 text-sm text-secondary">
           Your Message
         </label>
-
         <textarea
           onChange={changeHandler}
           value={values.message}
@@ -118,11 +113,11 @@ const ContactForm = () => {
           name="message"
           placeholder="Your Message"
           className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-          required
         ></textarea>
       </div>
       <div className="mb-6">
         <button
+          disabled={!isValid}
           type="submit"
           className="w-full px-2 py-4 text-primary font-bold bg-secondary hover:bg-yellow-300 rounded-md focus:bg-indigo-600 focus:outline-none"
         >
