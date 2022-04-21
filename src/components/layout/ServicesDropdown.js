@@ -1,8 +1,6 @@
 import React from "react"
 
 const ServicesDropdown = React.forwardRef((services, serviceRef) => {
-  console.log(services.services)
-
   return (
     <div
       id="dropdown"

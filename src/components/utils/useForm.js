@@ -25,6 +25,7 @@ export function useForm(
   const [errors, setErrors] = useState(initialErrors)
   const [isValid, setValid] = useState(initialIsValid)
   const [touched, setTouched] = useState({})
+  const [showErrors, setShowErrors] = useState(false)
 
   // element onChange
   // get input vals --> check validations + get errorMsgs --> check input touched
@@ -35,30 +36,26 @@ export function useForm(
     setValid(isValid)
     setErrors(errors)
     setTouched({ ...touched, [event.target.name]: true })
+    console.log(values)
   }
 
   const submitHandler = event => {
     event.preventDefault()
-    onSubmit(values)
+    console.log(errors)
+    if (isValid) {
+      onSubmit(values)
+    } else {
+      setShowErrors(true)
+    }
   }
 
-  return { values, changeHandler, isValid, errors, touched, submitHandler }
+  return {
+    values,
+    changeHandler,
+    isValid,
+    errors,
+    touched,
+    showErrors,
+    submitHandler,
+  }
 }
-
-// VALIDATORS ------- //
-
-export function isRequired(value) {
-  console.log(value)
-  return value != null && value.trim().length > 0
-}
-
-// export function isNumbers(value) {
-//   var phoneno = /^\d{10}$/
-//   if (inputtxt.value.match(phoneno)) {
-//     return true
-//   } else {
-//     alert("message")
-//     return false
-//   }
-//   return value
-// }
