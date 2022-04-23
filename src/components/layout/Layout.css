@@ -3,7 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-family: "inter", sans-serif;
+  [type="text"],
+  [type="password"],
+  [type="email"],
+  [type="number"],
+  [type="url"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"],
+  [type="time"],
+  [type="search"],
+  [type="tel"],
+  [type="checkbox"],
+  [type="radio"],
+  select,
+  select[multiple],
+  textarea {
+    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-primary focus:ring-primary;
   }
 }

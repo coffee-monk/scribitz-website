@@ -9,9 +9,10 @@ module.exports = {
         tertiary: "#8D230F",
         video: "#11404a",
         navy: "#011A27",
-        white: "#e5d1d1",
+        softWhite: "#e5d1d1",
         black: "#000000",
       },
     },
   },
+  plugins: [require("@tailwindcss/forms")],
 }
