@@ -13,6 +13,9 @@ module.exports = {
         black: "#000000",
       },
     },
+    fontFamily: {
+      sans: ['"Inter"', "system-ui"],
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 }
