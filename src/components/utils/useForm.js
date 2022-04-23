@@ -11,6 +11,7 @@ function validate(validations, values) {
   }
 }
 
+// https://dimitr.im/form-validation-react-hooks
 export function useForm(
   initialState = {},
   validations = [],
@@ -41,9 +42,9 @@ export function useForm(
 
   const submitHandler = event => {
     event.preventDefault()
-    console.log(errors)
     if (isValid) {
       onSubmit(values)
+      setShowErrors(true)
     } else {
       setShowErrors(true)
     }

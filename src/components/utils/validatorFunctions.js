@@ -7,6 +7,5 @@ export function isEmail(value) {
 }
 
 export function isSelected(value) {
-  console.log(value)
   return value !== "default"
 }
