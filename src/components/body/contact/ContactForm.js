@@ -61,43 +61,53 @@ const ContactForm = () => {
   } = useForm(initialState, validations, submitContact)
 
   return (
-    <div className="bg-slate-50 p-6 rounded-lg shadow w-full max-w-3xl mt-4">
+    <div className="w-full max-w-3xl p-6 mt-4 rounded-lg shadow bg-white">
       <div id="title">
-        <h1 className="text-center text-2xl font-bold mx-auto">Contact Form</h1>
-        <p className="text-sm text-center mx-auto text-gray-600 mb-5 w-full">
+        <h1 className="mx-auto text-2xl font-bold text-center">Contact Form</h1>
+        <p className="w-full mx-auto mb-5 text-sm text-center text-gray-600">
           Reach out to our Sales Team!
         </p>
       </div>
 
       <form action="" method="POST" onSubmit={submitHandler}>
-        <div id="name" className="grid grid-cols-2 gap-4">
-          <div className="w-full">
-            <label htmlFor="name" className="text-sm">
-              Name<span className="text-red-600">*</span>
-            </label>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="relative w-full">
             <input
+              id="name"
               onChange={changeHandler}
               value={values.name}
               type="text"
               name="name"
               placeholder="Full Name"
+              className="peer"
             />
+            <label
+              htmlFor="name"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+            >
+              Full Name<span className="text-red-600">*</span>
+            </label>
             {showErrors && errors.name && (
-              <p className="text-red-600 font-bold">{errors.name}</p>
+              <p className="font-bold text-red-600">{errors.name}</p>
             )}
           </div>
 
-          <div id="company" className="w-full">
-            <label htmlFor="company" className="text-sm ">
-              Company
-            </label>
+          <div className="relative w-full">
             <input
+              id="company"
               onChange={changeHandler}
               value={values.company}
               type="text"
               name="company"
               placeholder="Your Company"
+              className="peer"
             />
+            <label
+              htmlFor="company"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+            >
+              Company
+            </label>
           </div>
         </div>
 
@@ -114,7 +124,7 @@ const ContactForm = () => {
               placeholder="you@email.com"
             />
             {showErrors && errors.email && (
-              <p className="text-red-600 font-bold">{errors.email}</p>
+              <p className="font-bold text-red-600">{errors.email}</p>
             )}
           </div>
 
@@ -130,13 +140,13 @@ const ContactForm = () => {
               placeholder="XXX XXX XXXX"
             />
             {showErrors && errors.phone && (
-              <p className="text-red-600 font-bold">{errors.phone}</p>
+              <p className="font-bold text-red-600">{errors.phone}</p>
             )}
           </div>
         </div>
 
         <div id="service" className="mt-4">
-          <label htmlFor="service" className="text-sm  mr-2">
+          <label htmlFor="service" className="mr-2 text-sm">
             Choose a Service<span className="text-red-600">*</span>
           </label>
           <select onChange={changeHandler} name="service" className="bg-white">
@@ -147,7 +157,7 @@ const ContactForm = () => {
             <option value="translation">Translation</option>
           </select>
           {showErrors && errors.service && (
-            <p className="text-red-600 font-bold">{errors.service}</p>
+            <p className="font-bold text-red-600">{errors.service}</p>
           )}
         </div>
 
