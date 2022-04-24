@@ -85,7 +85,7 @@ const ContactForm = () => {
               htmlFor="name"
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
-              Full Name<span className="text-red-600">*</span>
+              Full Name<span className="text-base text-red-600">*</span>
             </label>
             {showErrors && errors.name && (
               <p className="font-bold text-red-600">{errors.name}</p>
@@ -111,34 +111,44 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div id="email" className="grid grid-cols-2 gap-4">
-          <div className="mt-4">
-            <label htmlFor="email" className="text-sm">
-              Email Address<span className="text-red-600">*</span>
-            </label>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="relative mt-4">
             <input
+              id="email"
               onChange={changeHandler}
               value={values.email}
               type="email"
               name="email"
               placeholder="you@email.com"
+              className="peer"
             />
+            <label
+              htmlFor="email"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+            >
+              Email Address<span className="text-base text-red-600">*</span>
+            </label>
             {showErrors && errors.email && (
               <p className="font-bold text-red-600">{errors.email}</p>
             )}
           </div>
 
-          <div id="phone" className="mt-4">
-            <label htmlFor="phone" className="text-sm ">
-              Phone Number<span className="text-red-600">*</span>
-            </label>
+          <div className="relative mt-4">
             <input
+              id="phone"
               onChange={changeHandler}
               value={values.phone}
               type="text"
               name="phone"
               placeholder="XXX XXX XXXX"
+              className="peer"
             />
+            <label
+              htmlFor="phone"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+            >
+              Phone Number<span className="text-base text-red-600">*</span>
+            </label>
             {showErrors && errors.phone && (
               <p className="font-bold text-red-600">{errors.phone}</p>
             )}
@@ -146,10 +156,14 @@ const ContactForm = () => {
         </div>
 
         <div id="service" className="mt-4">
-          <label htmlFor="service" className="mr-2 text-sm">
-            Choose a Service<span className="text-red-600">*</span>
+          <label htmlFor="service" className="ml-2 text-sm">
+            Choose a Service<span className="text-base text-red-600">*</span>
           </label>
-          <select onChange={changeHandler} name="service" className="bg-white">
+          <select
+            onChange={changeHandler}
+            name="service"
+            className="text-gray-600 bg-white"
+          >
             <option value="default">-- Select Service --</option>
             <option value="transcription">Transcription</option>
             <option value="closed-captioning">Closed-Captioning</option>
@@ -162,7 +176,7 @@ const ContactForm = () => {
         </div>
 
         <div id="message" className="mt-4">
-          <label htmlFor="message" className="text-sm">
+          <label htmlFor="message" className="ml-2 text-sm">
             Message
           </label>
           <textarea
@@ -171,8 +185,10 @@ const ContactForm = () => {
             rows="5"
             name="message"
             placeholder="Please share any questions or considerations"
+            className="placeholder-gray-400 focus:placeholder-transparent py-2"
           ></textarea>
         </div>
+
         <div className="mt-4">
           <button
             type="submit"
