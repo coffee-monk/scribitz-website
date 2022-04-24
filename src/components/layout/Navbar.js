@@ -12,15 +12,25 @@ import { debounce } from "../utils/debounce"
 import Logo from "../../images/components/Navbar/scribitz-final-logo.svg"
 import useOutsideClick from "../utils/useOutsideClick"
 
+import { useLocation } from "@reach/router"
+
 const Navbar = () => {
+  // get page URL
+  const locationURL = useLocation()
+
   const [navbarMobile, setNavbarMobile] = useState(false)
   const [services, setServices] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(false)
-  const [opacity, setOpacity] = useState(false)
+  // check if homepage
+  const [opacity, setOpacity] = useState(
+    locationURL.pathname === "/" ? false : true
+  )
 
   const servicesRef = useRef()
   const navbarMobileRef = useRef()
+
+  console.log()
 
   // close services dropdown if click outside
   useOutsideClick(servicesRef, () => {
@@ -42,8 +52,8 @@ const Navbar = () => {
         prevScrollPos - currentScrollPosition > 50) ||
         currentScrollPosition < 80
     )
-    // nav bg opacity
-    setOpacity(currentScrollPosition >= 80)
+    // nav bg opacity - check if at top or not homepage
+    setOpacity(currentScrollPosition >= 80 || locationURL.pathname !== "/")
     // close dropdown on scroll
     if (
       prevScrollPos - currentScrollPosition > 50 ||

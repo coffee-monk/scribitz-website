@@ -41,8 +41,11 @@ const ContactPage = () => {
     <Layout>
       <section
         id="contact-page"
-        className="flex flex-col items-center justify-around bg-gradient-to-br from-white via-navy to-navy w-full py-16 px-4"
+        className="flex flex-col items-center justify-around bg-gradient-to-b from-white to-navy w-full py-16 px-4"
       >
+        <h1 className="text-primary text-4xl font-bold mt-14 mb-6">
+          Contact Our Sales Team or Ask a Question!
+        </h1>
         <ContactForm />
       </section>
     </Layout>

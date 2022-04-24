@@ -30,7 +30,14 @@ const ContactForm = () => {
 
   const submitContact = event => {
     if (isValid) {
-      console.log(values)
+      // get current date (year/month/day)
+      const today = new Date()
+      const date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate()
       const data = {
         Name: values.name,
         Company: values.company,
@@ -38,6 +45,7 @@ const ContactForm = () => {
         Phone: values.phone,
         Service: values.service,
         Message: values.message,
+        Date: date,
       }
       axios
         .post(
@@ -61,14 +69,7 @@ const ContactForm = () => {
   } = useForm(initialState, validations, submitContact)
 
   return (
-    <div className="w-full max-w-3xl p-6 mt-4 rounded-lg shadow bg-white">
-      <div id="title">
-        <h1 className="mx-auto text-2xl font-bold text-center">Contact Form</h1>
-        <p className="w-full mx-auto mb-5 text-sm text-center text-gray-600">
-          Reach out to our Sales Team!
-        </p>
-      </div>
-
+    <div className="w-full max-w-3xl p-8 mt-4 rounded-lg shadow bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
         <div className="grid grid-cols-2 gap-4">
           <div className="relative w-full">
@@ -88,7 +89,7 @@ const ContactForm = () => {
               Full Name<span className="text-base text-red-600">*</span>
             </label>
             {showErrors && errors.name && (
-              <p className="font-bold text-red-600">{errors.name}</p>
+              <p className="text-red-600 ml-2">{errors.name}</p>
             )}
           </div>
 
@@ -112,7 +113,7 @@ const ContactForm = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="relative mt-4">
+          <div className="relative mt-6">
             <input
               id="email"
               onChange={changeHandler}
@@ -129,11 +130,11 @@ const ContactForm = () => {
               Email Address<span className="text-base text-red-600">*</span>
             </label>
             {showErrors && errors.email && (
-              <p className="font-bold text-red-600">{errors.email}</p>
+              <p className="text-red-600 ml-2">{errors.email}</p>
             )}
           </div>
 
-          <div className="relative mt-4">
+          <div className="relative mt-6">
             <input
               id="phone"
               onChange={changeHandler}
@@ -150,12 +151,12 @@ const ContactForm = () => {
               Phone Number<span className="text-base text-red-600">*</span>
             </label>
             {showErrors && errors.phone && (
-              <p className="font-bold text-red-600">{errors.phone}</p>
+              <p className="text-red-600 ml-2">{errors.phone}</p>
             )}
           </div>
         </div>
 
-        <div id="service" className="mt-4">
+        <div id="service" className="mt-6">
           <label htmlFor="service" className="ml-2 text-sm">
             Choose a Service<span className="text-base text-red-600">*</span>
           </label>
@@ -171,11 +172,11 @@ const ContactForm = () => {
             <option value="translation">Translation</option>
           </select>
           {showErrors && errors.service && (
-            <p className="font-bold text-red-600">{errors.service}</p>
+            <p className="text-red-600 ml-2">{errors.service}</p>
           )}
         </div>
 
-        <div id="message" className="mt-4">
+        <div id="message" className="mt-6">
           <label htmlFor="message" className="ml-2 text-sm">
             Message
           </label>
@@ -192,7 +193,9 @@ const ContactForm = () => {
         <div className="mt-4">
           <button
             type="submit"
-            className="w-full px-2 py-4 text-white font-bold bg-teal-600 hover:bg-teal-700 rounded-md focus:bg-teal-900"
+            className={`${
+              isValid ? "opacity-100 focus:bg-teal-900" : "opacity-50"
+            } w-full px-2 py-4 text-white font-bold bg-teal-600 hover:bg-teal-700 rounded-md`}
           >
             Send Contact Info
           </button>
