@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 
 import axios from "axios"
+
+import { CheckCircleIcon } from "@heroicons/react/solid"
 
 import { useForm } from "../../utils/useForm"
 import { isRequired, isEmail, isSelected } from "../../utils/validatorFunctions"
 
 const ContactForm = () => {
+  const [showSubmitMsg, setShowSubmitMsg] = useState(false)
+
   const initialState = {
     email: "",
     name: "",
@@ -16,8 +20,7 @@ const ContactForm = () => {
   }
   const validations = [
     // email
-    ({ email }) =>
-      isEmail(email) || { email: "Requires format 'you@example.com'" },
+    ({ email }) => isEmail(email) || { email: "Format: 'you@example.com'" },
     ({ email }) => isRequired(email) || { email: "E-mail is required" },
     // name
     ({ name }) => isRequired(name) || { name: "Name is required" },
@@ -54,10 +57,12 @@ const ContactForm = () => {
         )
         .then(res => {
           console.log("finish")
+          setShowSubmitMsg(true)
         })
     }
   }
 
+  // useForm to manage form state & activity
   const {
     values,
     isValid,
@@ -68,6 +73,16 @@ const ContactForm = () => {
     submitHandler,
   } = useForm(initialState, validations, submitContact)
 
+  const getSubmitButtonStyle = (isValid, showSubmitMsg) => {
+    if (showSubmitMsg) {
+      return "opacity-50 bg-teal-900"
+    } else if (isValid) {
+      return "opacity-100 focus:bg-teal-900 hover:bg-teal-700"
+    } else {
+      return "opacity-50"
+    }
+  }
+
   return (
     <div className="w-full max-w-3xl p-8 mt-4 rounded-lg shadow bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
@@ -76,6 +91,7 @@ const ContactForm = () => {
             <input
               id="name"
               onChange={changeHandler}
+              autoComplete="off"
               value={values.name}
               type="text"
               name="name"
@@ -97,6 +113,7 @@ const ContactForm = () => {
             <input
               id="company"
               onChange={changeHandler}
+              autoComplete="off"
               value={values.company}
               type="text"
               name="company"
@@ -117,6 +134,7 @@ const ContactForm = () => {
             <input
               id="email"
               onChange={changeHandler}
+              autoComplete="off"
               value={values.email}
               type="email"
               name="email"
@@ -127,7 +145,8 @@ const ContactForm = () => {
               htmlFor="email"
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
             >
-              Email Address<span className="text-base text-red-600">*</span>
+              Email Address
+              <span className="text-base text-red-600">*</span>
             </label>
             {showErrors && errors.email && (
               <p className="text-red-600 ml-2">{errors.email}</p>
@@ -138,6 +157,7 @@ const ContactForm = () => {
             <input
               id="phone"
               onChange={changeHandler}
+              autoComplete="off"
               value={values.phone}
               type="text"
               name="phone"
@@ -192,13 +212,22 @@ const ContactForm = () => {
 
         <div className="mt-4">
           <button
+            disabled={showSubmitMsg}
             type="submit"
-            className={`${
-              isValid ? "opacity-100 focus:bg-teal-900" : "opacity-50"
-            } w-full px-2 py-4 text-white font-bold bg-teal-600 hover:bg-teal-700 rounded-md`}
+            className={
+              getSubmitButtonStyle(isValid, showSubmitMsg) +
+              " w-full px-2 py-4 text-white font-bold bg-teal-600 rounded-md"
+            }
           >
             Send Contact Info
           </button>
+
+          {showSubmitMsg && isValid && (
+            <div className="flex items-center justify-center border border-green-500 rounded-lg text-green-500 bg-green-100/50 p-2 mt-6">
+              <CheckCircleIcon className="w-8 mr-4" />
+              <p className="font-bold">Success, Contact Info Submitted!</p>
+            </div>
+          )}
         </div>
       </form>
     </div>
