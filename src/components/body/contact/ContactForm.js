@@ -73,6 +73,7 @@ const ContactForm = () => {
     submitHandler,
   } = useForm(initialState, validations, submitContact)
 
+  // set button style depending on form state
   const getSubmitButtonStyle = (isValid, showSubmitMsg) => {
     if (showSubmitMsg) {
       return "opacity-50 bg-teal-900"
@@ -100,7 +101,7 @@ const ContactForm = () => {
             />
             <label
               htmlFor="name"
-              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
               Full Name<span className="text-base text-red-600">*</span>
             </label>
@@ -122,7 +123,7 @@ const ContactForm = () => {
             />
             <label
               htmlFor="company"
-              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
               Company
             </label>
@@ -143,7 +144,7 @@ const ContactForm = () => {
             />
             <label
               htmlFor="email"
-              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
               Email Address
               <span className="text-base text-red-600">*</span>
@@ -166,7 +167,7 @@ const ContactForm = () => {
             />
             <label
               htmlFor="phone"
-              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
               Phone Number<span className="text-base text-red-600">*</span>
             </label>
@@ -178,7 +179,8 @@ const ContactForm = () => {
 
         <div id="service" className="mt-6">
           <label htmlFor="service" className="ml-2 text-sm">
-            Choose a Service<span className="text-base text-red-600">*</span>
+            Choose a Service
+            <span className="text-base text-red-600 cursor-text">*</span>
           </label>
           <select
             onChange={changeHandler}
@@ -197,13 +199,13 @@ const ContactForm = () => {
         </div>
 
         <div id="message" className="mt-6">
-          <label htmlFor="message" className="ml-2 text-sm">
+          <label htmlFor="message" className="ml-2 text-sm cursor-text">
             Message
           </label>
           <textarea
             onChange={changeHandler}
             value={values.message}
-            rows="5"
+            rows="4"
             name="message"
             placeholder="Please share any questions or considerations"
             className="placeholder-gray-400 focus:placeholder-transparent py-2"
