@@ -56,14 +56,10 @@ const Showcase = () => {
         className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
       >
         <h1 className="hidden sm:block text-5xl font-bold text-white">
-          Your Content,
-          <br />
-          Accessible Everywhere
+          Your Audio Made Accessible
         </h1>
-        <h2 className="my-4 text-2xl font-bold text-secondary">
-          Captions, Transcription, & Translation Services
-          <br />
-          to Make Your Videos Easily Accessible
+        <h2 className="my-4 text-xl font-bold text-secondary">
+          Transcribing, Captioning, & Translating Videos and Live Events
         </h2>
 
         <ul

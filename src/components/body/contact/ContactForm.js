@@ -199,7 +199,7 @@ const ContactForm = () => {
         </div>
 
         <div id="message" className="mt-6">
-          <label htmlFor="message" className="ml-2 text-sm cursor-text">
+          <label htmlFor="message" className="ml-2 text-sm">
             Message
           </label>
           <textarea

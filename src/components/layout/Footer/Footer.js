@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import CompanyInfo from "./CompanyInfo"
@@ -8,12 +8,16 @@ import FooterCity from "./FooterCity"
 
 import links from "./data-links"
 
+import { useLocation } from "@reach/router"
+
 const Footer = () => {
+  const locationURL = useLocation()
+
   return (
     <footer className="bg-navy p-4">
       <FooterCity />
 
-      <FooterTop />
+      {locationURL.pathname !== "/contact/" && <FooterTop />}
       <div id="links">
         <div className="max-w-3xl mx-auto text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 py-8 border-t border-white/30">
           <CompanyInfo />

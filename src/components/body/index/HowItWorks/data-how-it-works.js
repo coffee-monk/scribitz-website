@@ -14,12 +14,12 @@ const data = [
   {
     icon: <RiFolderUploadLine className={iconStyles} />,
     header: "SEND FILES",
-    points: ["Send files online", "Any filetype"],
+    points: ["Send files online", "Any file type"],
   },
   {
     icon: <AiOutlineFileDone className={iconStyles} />,
     header: "GET ORDER",
-    points: ["Receive online", "Editing as needed"],
+    points: ["Receive online", "Suggest edits"],
   },
 ]
 
