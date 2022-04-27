@@ -7,15 +7,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-7ZXW0ET3BZ", // Google Analytics / GA
+          "G-8N711WMB7Q", // Google Analytics / GA
         ],
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
           head: true,
         },
       },
     },
-
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
