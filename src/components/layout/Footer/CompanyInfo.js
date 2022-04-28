@@ -17,7 +17,7 @@ const data = {
     },
     {
       icon: <PhoneIcon className={companyInfoStyle} />,
-      text: "+1 (647) 973 6725",
+      text: "+1 (647) 366 9901",
     },
   ],
 }
