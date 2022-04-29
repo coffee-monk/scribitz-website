@@ -20,7 +20,7 @@ const OurTeam = () => {
           src="../../../images/components/OurExperts/OurTeam/laptop-captions.png"
           alt="laptop-captions"
         />
-        <div className="grid grid-cols-2 gap-4 md:block mx-auto text-primary text-base sm:text-lg">
+        <div className="grid sm:grid-cols-2 gap-4 md:block mx-auto text-primary text-base sm:text-lg">
           <p className="p-2">
             Our team of human professionals is trained in the most{" "}
             <span className="font-bold">up-to-date techniques</span> in order to
