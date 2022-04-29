@@ -45,7 +45,7 @@ const ContactPage = () => {
       >
         <h1 className="text-teal-600 text-2xl sm:text-3xl md:text-4xl text-center font-bold mt-14 mb-6">
           Contact Our Sales Team
-          <span className="hidden sm:inline-block">or Ask a Question</span>!
+          <span className="hidden sm:inline-block"> or Ask a Question</span>!
         </h1>
         <ContactForm />
       </section>
