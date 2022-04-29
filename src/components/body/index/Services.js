@@ -61,7 +61,7 @@ const Services = () => {
                 </p>
               </div>
 
-              <div className="flex justify-end items-center text-3xl sm:text-5xl">
+              <div className="flex justify-end items-center text-4xl sm:text-5xl">
                 {service.icon1}
                 <BsArrowRightShort className="text-white" />
                 {service.icon2}
