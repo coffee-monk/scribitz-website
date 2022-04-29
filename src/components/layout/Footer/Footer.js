@@ -19,7 +19,7 @@ const Footer = () => {
 
       {locationURL.pathname !== "/contact/" && <FooterTop />}
       <div id="links">
-        <div className="max-w-3xl mx-auto text-white grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 py-8 border-t border-white/30">
+        <div className="max-w-3xl mx-auto text-white grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-4 py-8 border-t border-white/30">
           <CompanyInfo />
 
           {links.map((column, i) => (

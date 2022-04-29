@@ -24,7 +24,7 @@ const data = {
 
 const CompanyInfo = () => {
   return (
-    <ul className="flex flex-col">
+    <ul className="flex flex-col col-span-2">
       <h1 className="mb-4 text-base sm:text-lg font-bold text-secondary">
         {data.header}
       </h1>
