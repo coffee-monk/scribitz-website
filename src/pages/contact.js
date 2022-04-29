@@ -43,7 +43,7 @@ const ContactPage = () => {
         id="contact-page"
         className="flex flex-col items-center justify-around bg-gradient-to-b from-white to-navy w-full py-16 px-4"
       >
-        <h1 className="text-teal-600 text-4xl font-bold mt-14 mb-6">
+        <h1 className="text-teal-600 text-2xl sm:text-3xl md:text-4xl text-center font-bold mt-14 mb-6">
           Contact Our Sales Team or Ask a Question!
         </h1>
         <ContactForm />

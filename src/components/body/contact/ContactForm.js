@@ -87,7 +87,7 @@ const ContactForm = () => {
   return (
     <div className="w-full max-w-3xl p-8 mt-4 rounded-lg shadow bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-4">
           <div className="relative w-full">
             <input
               id="name"
@@ -130,7 +130,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 md:gap-4">
           <div className="relative mt-6">
             <input
               id="email"
