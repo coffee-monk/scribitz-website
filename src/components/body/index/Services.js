@@ -56,7 +56,7 @@ const Services = () => {
             >
               <div className="flex flex-col justify-between items-start">
                 <h1 className="sm:text-xl font-bold">{service.service}</h1>
-                <p className="text-sm sm:text-base text-white sm:pr-10">
+                <p className="text-sm sm:text-base text-white">
                   {service.caption}
                 </p>
               </div>
