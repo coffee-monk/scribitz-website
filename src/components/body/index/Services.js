@@ -52,14 +52,16 @@ const Services = () => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-6 shadow shadow-2xl rounded-lg"
+              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-2 sm:p-4 shadow shadow-2xl rounded-lg"
             >
               <div className="flex flex-col justify-between items-start">
-                <h1 className="text-xl font-bold">{service.service}</h1>
-                <p className="text-white font-bold pr-10">{service.caption}</p>
+                <h1 className="sm:text-xl font-bold">{service.service}</h1>
+                <p className="text-xs sm:text-base text-white sm:pr-10">
+                  {service.caption}
+                </p>
               </div>
 
-              <div className="flex justify-end items-center text-6xl">
+              <div className="flex justify-end items-center text-3xl sm:text-5xl">
                 {service.icon1}
                 <BsArrowRightShort className="text-white" />
                 {service.icon2}

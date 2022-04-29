@@ -28,17 +28,17 @@ const OurExperts = () => {
                 <h1 className="text-xl font-bold text-center text-secondary mt-2 z-20">
                   {subject.name}
                 </h1>
-                <p className="text-left text-rose-50 mt-2 z-20">
+                <p className="text-left text-rose-50 text-sm md:text-sm lg:text-base mt-2 z-20">
                   {subject.description}
                 </p>
 
-                <ul className="flex flex-col items-start justify-start text-white mt-4 z-20">
+                <ul className="flex flex-col items-start justify-start text-white text-xs lg:text-sm mt-4 z-20">
                   {subject.points.map((point, i) => (
                     <li
                       key={i}
                       className="flex items-start justify-start text-left"
                     >
-                      <span className="text-secondary text-xl mr-1">
+                      <span className="text-secondary text-xs lg:text-sm mr-1">
                         &#8226;
                       </span>
                       <p>{point}</p>

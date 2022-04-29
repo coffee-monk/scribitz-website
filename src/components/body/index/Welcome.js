@@ -24,27 +24,12 @@ const Welcome = () => {
         </h2>
       </div>
 
-      <div className="max-w-3xl grid grid-cols-2 gap-4 mx-auto mt-8">
-        <div className="text-secondary">
-          <h1 className="text-xl text-center font-bold mb-3">Values</h1>
-          <ul className="flex flex-col justify-between items-left text-white">
-            {values.map((value, i) => (
-              <li
-                className="flex items-center justify-start shadow-lg p-2"
-                key={i}
-              >
-                <IoCheckmarkCircle className="flex-none mr-4 text-3xl text-secondary" />
-                <p>{value.value}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-
+      <div className="max-w-3xl grid sm:grid-cols-2 gap-4 mx-auto mt-8">
         <div className="flex flex-col items-center justify-start ">
           <h1 className="text-xl font-bold text-secondary text-center mb-3">
             Mission
           </h1>
-          <div className="shadow-lg rounded-xl h-full p-2">
+          <div className="rounded-xl h-full p-2 text-sm lg:text-base">
             <p className="text-white mb-2">
               To help businesses and organisations save time and create a
               hearing-friendly digital world. We provide{" "}
@@ -56,6 +41,21 @@ const Welcome = () => {
               local accessibility standards.{" "}
             </p>
           </div>
+        </div>
+
+        <div className="text-secondary">
+          <h1 className="text-xl text-center font-bold mb-3">Values</h1>
+          <ul className="flex flex-col justify-between items-left text-white text-sm lg:text-base">
+            {values.map((value, i) => (
+              <li
+                className="flex items-center justify-start p-1 sm:p-2"
+                key={i}
+              >
+                <IoCheckmarkCircle className="flex-none mr-4 text-3xl text-secondary" />
+                <p>{value.value}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 

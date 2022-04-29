@@ -22,7 +22,7 @@ const ClientsServed = ({ logos }) => {
 
         <div
           id="Client-Logos"
-          className="grid grid-cols-3 md:grid-cols-4 gap-8 py-8"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 py-8"
         >
           {logos.map((logo, i) => (
             <div key={i} className="flex justify-around items-center">

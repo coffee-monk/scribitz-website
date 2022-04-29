@@ -25,10 +25,15 @@ const data = {
 const CompanyInfo = () => {
   return (
     <ul className="flex flex-col">
-      <h1 className="mb-4 text-lg font-bold text-secondary">{data.header}</h1>
+      <h1 className="mb-4 text-base sm:text-lg font-bold text-secondary">
+        {data.header}
+      </h1>
 
       {data.rows.map((row, i) => (
-        <li key={i} className="flex items-center justify-start pb-3">
+        <li
+          key={i}
+          className="flex items-center justify-start pb-3 text-sm sm:text-base"
+        >
           {row.icon}
           <p href="#">{row.text}</p>
         </li>

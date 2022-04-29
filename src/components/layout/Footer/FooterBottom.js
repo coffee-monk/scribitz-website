@@ -16,9 +16,9 @@ const Social = () => {
   return (
     <div
       id="Social"
-      className="flex items-center justify-between w-full text-white mx-auto max-w-3xl border-t border-white/30"
+      className="flex items-center justify-between w-full max-w-3xl mx-auto text-white border-t border-white/30"
     >
-      <div className="flex flex-col items-left justify-between max-w-3xl mt-4">
+      <div className="flex flex-col justify-between max-w-3xl mt-4 items-left">
         <div id="social-media-icons" className="flex items-start justify-start">
           {social.map((org, i) => (
             <a key={i} href={org.address}>
@@ -27,9 +27,9 @@ const Social = () => {
           ))}
         </div>
 
-        <p className="mt-3">
-          Scribitz Inc <span>&#169; </span> {new Date().getFullYear()} . All
-          Rights Reserved
+        <p className="mt-3 text-sm sm:text-base">
+          Scribitz Inc <span>&#169; </span> {new Date().getFullYear()}
+          <span className="hidden sm:inline-block"> . All Rights Reserved</span>
         </p>
       </div>
       <button onClick={scrollToTop}>

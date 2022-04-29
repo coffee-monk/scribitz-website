@@ -24,7 +24,7 @@ const Footer = () => {
 
           {links.map((column, i) => (
             <ul key={i} className="flex flex-col">
-              <h1 className="mb-4 text-lg font-bold text-secondary">
+              <h1 className="mb-4 text-base sm:text-lg font-bold text-secondary">
                 {column.header}
               </h1>
 
@@ -32,7 +32,10 @@ const Footer = () => {
                 if (row.pageLink) {
                   return (
                     <li key={i} className="pb-3">
-                      <Link to="#" className="text-gray-400 hover:underline">
+                      <Link
+                        to="#"
+                        className="text-gray-400 hover:underline text-sm sm:text-base"
+                      >
                         {row.text}
                       </Link>
                     </li>
@@ -40,7 +43,10 @@ const Footer = () => {
                 } else {
                   return (
                     <li key={i} className="pb-3">
-                      <a href="#" className="text-gray-400 hover:underline">
+                      <a
+                        href="#"
+                        className="text-gray-400 hover:underline text-sm sm:text-base"
+                      >
                         {row.text}
                       </a>
                     </li>

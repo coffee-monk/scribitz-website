@@ -51,7 +51,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="max-w-3xl h-[600px] mx-auto mt-10 relative overflow-hidden rounded-lg shadow-2xl">
+    <div className="max-w-3xl h-[400px] sm:h-[500px] mx-auto mt-10 relative overflow-hidden rounded-lg shadow-2xl">
       {data.map((obj, index) => {
         return (
           <div
@@ -62,7 +62,7 @@ const Slider = () => {
                 : "w-full h-full absolute opacity-0 transition-opacity duration-1000 ease-in"
             }
           >
-            <div className="absolute w-[85%] rounded-lg p-3 text-xl text-slate-50 bottom-[40px] left-1/2 -translate-x-1/2 bg-gray-800/80">
+            <div className="absolute w-[85%] rounded-lg p-3 text-xs sm:text-base md:text-lg text-slate-50 bottom-[40px] left-1/2 -translate-x-1/2 bg-gray-800/80">
               <h1>{obj.caption}</h1>
             </div>
             <img

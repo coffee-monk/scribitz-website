@@ -15,12 +15,12 @@ const OurTeam = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 justify-between items-center rounded rounded-lg px-4 py-10">
+      <div className="grid md:grid-cols-2 gap-6 justify-between items-center rounded rounded-lg px-4 py-10">
         <StaticImage
           src="../../../images/components/OurExperts/OurTeam/laptop-captions.png"
           alt="laptop-captions"
         />
-        <div className="mx-auto text-primary text-lg">
+        <div className="mx-auto text-primary text-base lg:text-lg">
           <p className="p-2">
             Our team of human professionals is trained in the most{" "}
             <span className="font-bold">up-to-date techniques</span> in order to

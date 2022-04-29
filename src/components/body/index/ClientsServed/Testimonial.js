@@ -18,7 +18,7 @@ const Testimonial = () => {
             alt="laptop-captions"
           />
 
-          <div className="ml-4">
+          <div className="ml-4 text-xs sm:text-base">
             <h1 className="font-bold text-gray-700">Matthew Wheatley</h1>
             <h2 className="text-gray-500">Senior Associate</h2>
           </div>
@@ -31,15 +31,15 @@ const Testimonial = () => {
         />
       </div>
 
-      <p className="text-gray-700 mt-4">
-        <RiDoubleQuotesL className="text-gray-400 text-2xl mr-2 inline" />
+      <p className="text-gray-700 mt-4 text-xs sm:text-base">
+        <RiDoubleQuotesL className="text-gray-400 text-base sm:text-2xl mr-2 inline" />
         With the start of exclusively virtual meetings (due to the pandemic) we
         started recording the meetings. To make them accessible we needed to add
         captions. We did not have in-house staff that had experience creating
         captioning files in a format that could be added to the meeting
         recordings (i.e. SRT files). We now have a reliable source for creating
         the captioning files we require.
-        <RiDoubleQuotesR className="text-gray-400 text-2xl ml-1 inline" />
+        <RiDoubleQuotesR className="text-gray-400 text-base sm:text-2xl ml-1 inline" />
       </p>
     </div>
   )
