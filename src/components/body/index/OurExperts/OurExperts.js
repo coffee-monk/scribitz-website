@@ -20,7 +20,7 @@ const OurExperts = () => {
           {subjects.map((subject, i) => (
             <div
               key={i}
-              className="relative before:absolute before:w-full before:h-full before:bg-primary before:opacity-95 before:z-10"
+              className="relative before:absolute before:w-full before:h-full before:bg-[#10414d] before:opacity-90 before:z-10"
             >
               {subject.img}
               <div className="flex flex-col items-left justify-start text-center p-4">

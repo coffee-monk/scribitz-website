@@ -11,7 +11,7 @@ import {
   OfficeBuildingIcon,
 } from "@heroicons/react/outline"
 
-const iconStyles = "w-14 text-secondary z-20 mx-auto"
+const iconStyles = "hidden sm:block w-14 text-secondary z-20 mx-auto"
 
 const data = [
   {
