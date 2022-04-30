@@ -1,6 +1,6 @@
 import React from "react"
 
-import videoURL from "../../../videos/typing.mp4"
+import videoURL from "../../../videos/typing-cropped-compressed-2.mp4"
 
 import {
   BadgeCheckIcon,
