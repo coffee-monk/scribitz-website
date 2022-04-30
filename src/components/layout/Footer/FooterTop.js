@@ -12,8 +12,8 @@ const FooterTop = () => {
           </h1>
 
           <p className="mb-4 text-sm sm:text-base">
-            Contact our sales team and submit your project with confidence. With
-            Scribitz you ensure that your captions are regulatory compliant.
+            Contact our sales team and submit your project with confidence.
+            Ensure that your captions are regulatory compliant.
           </p>
 
           <Link

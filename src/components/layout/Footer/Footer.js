@@ -44,7 +44,7 @@ const Footer = () => {
                   return (
                     <li key={i} className="pb-3">
                       <a
-                        href="#"
+                        href={row.address}
                         className="text-gray-400 hover:underline text-sm sm:text-base"
                       >
                         {row.text}

@@ -6,15 +6,15 @@ const iconStyle = "mr-2 text-gray-400 hover:text-white"
 
 const data = [
   {
-    address: "www.facebook.com",
+    address: "https://www.facebook.com",
     icon: <FaFacebookSquare size="1.75em" className={iconStyle} />,
   },
   {
-    address: "www.twitter.com",
+    address: "https://twitter.com/ScribitzCC",
     icon: <FaTwitterSquare size="1.75em" className={iconStyle} />,
   },
   {
-    address: "www.linkedIn.com",
+    address: "https://www.linkedin.com/company/scribitz/",
     icon: <FaLinkedin size="1.75em" className={iconStyle} />,
   },
 ]

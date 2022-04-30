@@ -34,11 +34,11 @@ const data = [
       },
       {
         text: "LinkedIn",
-        address: "#",
+        address: "https://www.linkedin.com/company/scribitz/",
       },
       {
         text: "Twitter",
-        address: "#",
+        address: "https://twitter.com/ScribitzCC",
       },
     ],
   },
