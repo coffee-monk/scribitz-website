@@ -107,19 +107,19 @@ const Navbar = () => {
               setServices(!services)
             }}
             className={`${
-              services ? "bg-secondary text-primary" : ""
-            } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:bg-secondary hover:text-primary hover:cursor-pointer`}
+              services ? "text-yellow-300" : ""
+            } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
           >
             Services
             <ChevronDownIcon className="w-6 h-5 ml-2" />
             <ServicesDropdown services={services} ref={servicesRef} />
           </li>
-          <li className="p-2 ml-4 font-bold rounded-lg hover:bg-secondary hover:text-primary hover:cursor-pointer">
+          <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
             About
           </li>
           <li>
             <Link to="/contact/">
-              <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100">
+              <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100 transition delay-75">
                 Contact
               </button>
             </Link>

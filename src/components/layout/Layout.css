@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* for contact form floating labels */
   [type="text"],
   [type="password"],
   [type="email"],
@@ -21,5 +22,10 @@
   select[multiple],
   textarea {
     @apply w-full p-3 border-gray-300 rounded-lg shadow-sm focus:border-primary placeholder-transparent focus:ring-primary;
+  }
+
+  /* dropdown services fade out schedule */
+  .fadeOut {
+    transition: opacity 200ms ease-in, visibility 0ms ease-in 200ms;
   }
 }
