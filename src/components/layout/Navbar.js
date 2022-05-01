@@ -21,7 +21,7 @@ const Navbar = () => {
   const [navbarMobile, setNavbarMobile] = useState(false)
   const [services, setServices] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   // check if homepage
   const [opacity, setOpacity] = useState(
     locationURL.pathname === "/" ? false : true

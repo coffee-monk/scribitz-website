@@ -25,6 +25,7 @@
   }
 
   /* dropdown services fade out schedule */
+  /* https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1 */
   .fadeOut {
     transition: opacity 200ms ease-in, visibility 0ms ease-in 200ms;
   }
