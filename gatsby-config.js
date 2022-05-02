@@ -4,15 +4,20 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingIds: [
-          "G-8N711WMB7Q", // Google Analytics / GA
-        ],
-        pluginConfig: {
-          head: true,
-        },
+        id: "GTM-PTT3DGX",
+        includeInDevelopment: false,
       },
+      // resolve: `gatsby-plugin-google-gtag`,
+      // options: {
+      //   trackingIds: [
+      //     "G-8N711WMB7Q", // Google Analytics / GA
+      //   ],
+      //   pluginConfig: {
+      //     head: true,
+      //   },
+      // },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
