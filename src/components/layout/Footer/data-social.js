@@ -6,7 +6,7 @@ const iconStyle = "mr-2 text-gray-400 hover:text-white"
 
 const data = [
   {
-    address: "https://www.facebook.com",
+    address: "https://www.facebook.com/profile.php?id=100080995683229",
     icon: <FaFacebookSquare size="1.75em" className={iconStyle} />,
   },
   {

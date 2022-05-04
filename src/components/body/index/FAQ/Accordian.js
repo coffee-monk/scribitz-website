@@ -14,13 +14,13 @@ const Accordian = ({ question, answer }) => {
         <ChevronUpIcon
           className={`transform ${
             showAnswer ? "rotate-180" : ""
-          } transition duration-500 ease-out-in w-5 h-5 ml-2 text-primary border-2 border-primary rounded-full flex-none ml-4`}
+          } transition duration-500 ease-in-out w-5 h-5 ml-2 text-primary border-2 border-primary rounded-full flex-none ml-4`}
         />
       </h1>
       <p
         className={`${
           showAnswer ? "max-h-40" : "max-h-0"
-        } overflow-hidden transition-[max-height] duration-500 ease-out-in text-sm sm:text-base md:text-lg text-gray-800 w-5/6`}
+        } overflow-hidden transition-[max-height] duration-500 ease-in-out text-sm sm:text-base md:text-lg text-gray-800 w-5/6`}
       >
         <br />
 

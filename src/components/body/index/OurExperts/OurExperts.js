@@ -7,10 +7,9 @@ const OurExperts = () => {
     <section id="Our-Experts" className="bg-white-50">
       <div className="bg-slate-200 py-10">
         <div id="title" className="flex flex-col items-center justify-between">
-          <h1 className="text-2xl font-bold text-tertiary">OUR EXPERTS</h1>
-          <h2 className="text-3xl font-bold text-primary text-center">
-            SPECIALIZED HUMAN & LIVE CLOSED CAPTIONERS
-          </h2>
+          <h1 className="text-4xl font-bold text-primary text-center">
+            Our Captioners are Subject Specialists
+          </h1>
         </div>
 
         <div

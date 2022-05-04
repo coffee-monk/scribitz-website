@@ -9,10 +9,9 @@ const OurTeam = () => {
         id="title"
         className="flex flex-col items-center justify-between px-4 mt-8"
       >
-        <h1 className="text-2xl font-bold text-tertiary">OUR EXPERTS</h1>
-        <h2 className="text-3xl font-bold text-primary text-center">
-          SPECIALIZED HUMAN & LIVE CLOSED CAPTIONERS
-        </h2>
+        <h1 className="text-4xl font-bold text-primary text-center">
+          Our Captioners are People
+        </h1>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6 justify-between items-center rounded rounded-lg px-4 py-10">

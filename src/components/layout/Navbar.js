@@ -9,7 +9,7 @@ import NavbarMobile from "./NavbarMobile"
 
 import { debounce } from "../utils/debounce"
 
-import Logo from "../../images/components/Navbar/scribitz-final-logo.svg"
+import Logo from "../../images/components/Navbar/scribitz-logo.svg"
 import useOutsideClick from "../utils/useOutsideClick"
 
 import { useLocation } from "@reach/router"
@@ -76,6 +76,23 @@ const Navbar = () => {
     }
   }, [prevScrollPos, visible, handleScroll])
 
+  // <li
+  //   onClick={() => {
+  //     setServices(!services)
+  //   }}
+  //   className={`${
+  //     services ? "text-yellow-300" : ""
+  //   } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
+  // >
+  //   Services
+  //   <ChevronDownIcon className="w-6 h-5 ml-2" />
+  //   <ServicesDropdown services={services} ref={servicesRef} />
+  // </li>
+
+  // <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
+  //   About
+  // </li>
+
   return (
     <nav
       id="navbar"
@@ -102,21 +119,6 @@ const Navbar = () => {
         />
 
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
-          <li
-            onClick={() => {
-              setServices(!services)
-            }}
-            className={`${
-              services ? "text-yellow-300" : ""
-            } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
-          >
-            Services
-            <ChevronDownIcon className="w-6 h-5 ml-2" />
-            <ServicesDropdown services={services} ref={servicesRef} />
-          </li>
-          <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
-            About
-          </li>
           <li>
             <Link to="/contact/">
               <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100 transition delay-75">

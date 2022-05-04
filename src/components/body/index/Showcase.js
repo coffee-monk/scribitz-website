@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "gatsby"
+
 import videoURL from "../../../videos/typing-cropped-compressed-2.mp4"
 
 import {
@@ -78,12 +80,12 @@ const Showcase = () => {
           ))}
         </ul>
 
-        <button className="flex justify-between items-center m-3 rounded-lg text-white bg-tertiary hover:bg-red-700 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
-          <IoRocketSharp
-            size="1.25em"
-            className="text-white hover:text-red-400 mr-3"
-          />
-          GET A QUOTE!
+        <button className="flex justify-between items-center m-3 rounded-lg bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
+          <IoRocketSharp size="1.25em" className="text-pink-300 mr-3" />
+
+          <Link className="text-pink-300" to="/contact/">
+            Contact Us!
+          </Link>
         </button>
       </div>
     </section>
