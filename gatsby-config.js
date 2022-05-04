@@ -10,17 +10,17 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-66LJPD73NH", // Google Analytics / GA
-        ],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       "G-66LJPD73NH", // Google Analytics / GA
+    //     ],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
