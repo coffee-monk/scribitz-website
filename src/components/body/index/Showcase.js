@@ -83,7 +83,7 @@ const Showcase = () => {
         <button className="flex justify-between items-center m-3 rounded-lg bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
           <IoRocketSharp size="1.25em" className="text-pink-300 mr-3" />
 
-          <Link className="text-pink-300" to="/contact/">
+          <Link className="text-white" to="/contact/">
             Contact Us!
           </Link>
         </button>
