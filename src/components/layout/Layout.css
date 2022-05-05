@@ -21,7 +21,7 @@
   select,
   select[multiple],
   textarea {
-    @apply w-full p-3 border-gray-300 rounded-lg shadow-sm focus:border-primary placeholder-transparent focus:ring-primary;
+    @apply w-full p-3 border-gray-300 rounded-lg shadow-sm focus:border-teal-400 placeholder-transparent focus:ring-teal-400;
   }
 
   /* dropdown services fade out schedule */
