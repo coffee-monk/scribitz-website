@@ -7,10 +7,10 @@ const WelcomeToScribitz = () => {
     <section className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 justify-between items-center px-4 py-10">
       <StaticImage
         className="rounded-lg"
-        src="../images/components/AboutPage/office-team.jpg"
+        src="../../../images/components/AboutPage/office-team.jpg"
         alt="office-team"
       />
-      <div className="grid sm:grid-cols-2  gap-4 md:block mx-auto text-primary">
+      <div className="grid sm:grid-cols-2 gap-4 md:block mx-auto text-primary">
         <p className="pb-2">
           At Scribitz, together with our clients, we’ve served the Deaf and Hard
           of Hearing community for over 15 years. Removing barriers to clear
