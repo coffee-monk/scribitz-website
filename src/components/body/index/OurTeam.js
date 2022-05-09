@@ -5,17 +5,15 @@ import { StaticImage } from "gatsby-plugin-image"
 const OurTeam = () => {
   return (
     <section className="mx-auto max-w-4xl">
-      <div
+      <h1
         id="title"
-        className="flex flex-col items-center justify-between px-4 mt-8"
+        className="text-4xl font-bold text-primary text-center pt-10"
       >
-        <h1 className="text-4xl font-bold text-primary text-center">
-          Our Captioners are People
-        </h1>
-      </div>
-
+        Our Captioners are People
+      </h1>
       <div className="grid md:grid-cols-2 gap-6 justify-between items-center rounded rounded-lg px-4 py-10">
         <StaticImage
+          className="rounded-lg"
           src="../../../images/components/OurExperts/OurTeam/laptop-captions.png"
           alt="laptop-captions"
         />

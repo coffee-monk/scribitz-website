@@ -89,10 +89,6 @@ const Navbar = () => {
   //   <ServicesDropdown services={services} ref={servicesRef} />
   // </li>
 
-  // <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
-  //   About
-  // </li>
-
   return (
     <nav
       id="navbar"
@@ -119,6 +115,9 @@ const Navbar = () => {
         />
 
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
+          <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
+            <Link to="/about/">About</Link>
+          </li>
           <li>
             <Link to="/contact/">
               <button className="flex justify-between items-center px-4 py-2 ml-4 font-bold text-primary bg-secondary rounded-full hover:bg-yellow-300 hover:cursor-pointer focus:ring-2 focus:ring-yellow-100 transition delay-75">
