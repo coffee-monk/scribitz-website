@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 
 import { MenuAlt3Icon } from "@heroicons/react/solid"
-import { ChevronDownIcon } from "@heroicons/react/solid"
 
-import ServicesDropdown from "./ServicesDropdown"
 import NavbarMobile from "./NavbarMobile"
 
 import { debounce } from "../utils/debounce"
@@ -24,7 +22,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true)
   // check if homepage
   const [opacity, setOpacity] = useState(
-    locationURL.pathname === "/" ? false : true
+    locationURL.pathname === "/" || "/about/" ? false : true
   )
 
   const servicesRef = useRef()
@@ -53,7 +51,7 @@ const Navbar = () => {
         currentScrollPosition < 80
     )
     // nav bg opacity - check if at top or not homepage
-    setOpacity(currentScrollPosition >= 80 || locationURL.pathname !== "/")
+    setOpacity(currentScrollPosition >= 80)
     // close dropdown on scroll
     if (
       prevScrollPos - currentScrollPosition > 50 ||
@@ -92,7 +90,7 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className={`fixed z-30 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-20 before:transition before:ease-in before:duration-500 ${
+      className={`fixed z-50 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-20 before:transition before:ease-in before:duration-500 ${
         visible ? "" : "-translate-y-full"
       } + " " + ${
         opacity
@@ -115,8 +113,12 @@ const Navbar = () => {
         />
 
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
-          <li className="p-2 ml-4 font-bold rounded-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75">
-            <Link to="/about/">About</Link>
+          <li className="">
+            <Link to="/about/">
+              <div className="ml-4 p-2 font-bold hover:text-yellow-300 hover:cursor-pointer transition delay-75">
+                About
+              </div>
+            </Link>
           </li>
           <li>
             <Link to="/contact/">

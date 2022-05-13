@@ -35,12 +35,15 @@ const ContactForm = () => {
     if (isValid) {
       // get current date (year/month/day)
       const today = new Date()
-      const date =
-        today.getFullYear() +
-        "-" +
-        (today.getMonth() + 1) +
-        "-" +
-        today.getDate()
+      const day = today.getDate()
+      const month = today.getMonth() + 1
+      const year = today.getFullYear()
+      const hours = today.getHours()
+      const minutes =
+        today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes()
+
+      const date = day + "/" + month + "/" + year + "/" + hours + ":" + minutes
+
       const data = {
         Name: values.name,
         Company: values.company,
@@ -48,7 +51,7 @@ const ContactForm = () => {
         Phone: values.phone,
         Service: values.service,
         Message: values.message,
-        Date: date,
+        Date_D_M_Y_Time: date,
       }
       axios
         .post(
@@ -103,10 +106,10 @@ const ContactForm = () => {
               htmlFor="name"
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
-              Full Name<span className="text-base text-red-600">*</span>
+              Full Name<span className="text-base text-pink-600">*</span>
             </label>
             {showErrors && errors.name && (
-              <p className="text-red-600 ml-2">{errors.name}</p>
+              <p className="text-pink-600 ml-2">{errors.name}</p>
             )}
           </div>
 
@@ -147,10 +150,10 @@ const ContactForm = () => {
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
               Email Address
-              <span className="text-base text-red-600">*</span>
+              <span className="text-base text-pink-600">*</span>
             </label>
             {showErrors && errors.email && (
-              <p className="text-red-600 ml-2">{errors.email}</p>
+              <p className="text-pink-600 ml-2">{errors.email}</p>
             )}
           </div>
 
@@ -169,10 +172,10 @@ const ContactForm = () => {
               htmlFor="phone"
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text"
             >
-              Phone Number<span className="text-base text-red-600">*</span>
+              Phone Number<span className="text-base text-pink-600">*</span>
             </label>
             {showErrors && errors.phone && (
-              <p className="text-red-600 ml-2">{errors.phone}</p>
+              <p className="text-pink-600 ml-2">{errors.phone}</p>
             )}
           </div>
         </div>
@@ -180,7 +183,7 @@ const ContactForm = () => {
         <div id="service" className="mt-6">
           <label htmlFor="service" className="ml-2 text-sm">
             Choose a Service
-            <span className="text-base text-red-600 cursor-text">*</span>
+            <span className="text-base text-pink-600 cursor-text">*</span>
           </label>
           <select
             onChange={changeHandler}
@@ -194,7 +197,7 @@ const ContactForm = () => {
             <option value="translation">Translation</option>
           </select>
           {showErrors && errors.service && (
-            <p className="text-red-600 ml-2">{errors.service}</p>
+            <p className="text-pink-600 ml-2">{errors.service}</p>
           )}
         </div>
 

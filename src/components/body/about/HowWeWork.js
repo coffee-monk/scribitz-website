@@ -38,30 +38,32 @@ const HowWeWork = () => {
   ]
 
   return (
-    <section id="how-we-work" className="mx-auto max-w-4xl">
-      <h1
-        id="title"
-        className="text-4xl font-bold text-primary text-center py-10"
-      >
-        How We Work
-      </h1>
-      <ul
-        id="how-we-work-list"
-        className="m-4 grid grid-cols-2 gap-4 font-bold"
-      >
-        {values.map((value, i) => (
-          <li
-            key={i}
-            className="flex justify-start items-start p-4 text-primary rounded-lg  backdrop-blur-sm"
-          >
-            {value.icon}
-            <div>
-              <h1 className="mb-2">{value.title}</h1>
-              <p className="font-normal text-sm">{value.caption}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <section id="how-we-work" className="bg-slate-100 w-full">
+      <div className="mx-auto max-w-4xl">
+        <h1
+          id="title"
+          className="text-4xl font-bold text-primary text-center py-10"
+        >
+          How We Work
+        </h1>
+        <ul
+          id="how-we-work-list"
+          className="p-4 grid grid-cols-2 gap-4 font-bold"
+        >
+          {values.map((value, i) => (
+            <li
+              key={i}
+              className="flex justify-start items-start p-4 text-primary rounded-lg  backdrop-blur-sm"
+            >
+              {value.icon}
+              <div>
+                <h1 className="text-lg mb-2">{value.title}</h1>
+                <p className="font-normal">{value.caption}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

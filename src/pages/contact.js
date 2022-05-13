@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import { StaticImage } from "gatsby-plugin-image"
+
 import Layout from "../components/layout/Layout"
 import ContactForm from "../components/body/contact/ContactForm"
 
@@ -41,16 +43,23 @@ const ContactPage = () => {
     <Layout>
       <section
         id="contact-page"
-        className="flex flex-col items-center justify-around bg-gradient-to-b from-white to-navy w-full py-16 px-4"
+        className="relative w-full h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"
       >
-        <h1 className="text-teal-600 text-2xl sm:text-3xl md:text-4xl text-center font-bold mt-14 mb-4">
-          Contact Our Sales Team
-          <span className="hidden sm:inline-block">
-            &nbsp;or Ask a Question
-          </span>
-          !
-        </h1>
-        <ContactForm />
+        <StaticImage
+          className="!absolute w-full h-full -z-20"
+          src="../../src/images/components/AboutPage/laptop-mobile-desk.jpg/"
+          alt="office-team"
+        />
+        <div className="flex flex-col items-center justify-around w-full py-16 px-4">
+          <h1 className="text-secondary text-2xl sm:text-3xl md:text-4xl text-center font-bold mt-14 mb-4">
+            Contact Our Sales Team
+            <span className="hidden sm:inline-block">
+              &nbsp;or Ask a Question
+            </span>
+            !
+          </h1>
+          <ContactForm />
+        </div>
       </section>
     </Layout>
   )

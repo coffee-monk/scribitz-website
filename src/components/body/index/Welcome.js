@@ -3,7 +3,7 @@ import Carousel from "./Carousel/Carousel"
 
 import { IoCheckmarkCircle } from "react-icons/io5"
 
-const Welcome = () => {
+const Welcome = ({ title, subTitle }) => {
   const values = [
     { value: "Ally to the Deaf & Hard of Hearing" },
     { value: "Diverse & Inclusive Culture" },
@@ -18,10 +18,10 @@ const Welcome = () => {
         id="title"
         className="flex flex-col items-center justify-between px-4 mt-8"
       >
-        <h1 className="text-2xl font-bold text-white">ABOUT US</h1>
-        <h2 className="text-3xl font-bold text-center text-secondary">
-          WELCOME TO SCRIBITZ!
-        </h2>
+        <h2 className="text-2xl font-bold text-white">{subTitle}</h2>
+        <h1 className="text-3xl font-bold text-center text-secondary">
+          {title}
+        </h1>
       </div>
 
       <div className="max-w-3xl grid sm:grid-cols-2 gap-4 mx-auto mt-8">

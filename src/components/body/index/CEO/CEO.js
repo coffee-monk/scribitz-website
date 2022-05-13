@@ -9,7 +9,7 @@ const CEO = () => {
         <div id="title" className="flex flex-col items-center justify-between">
           <h1 className="text-2xl font-bold text-white">OUR TEAM</h1>
           <h2 className="text-3xl font-bold text-center text-secondary">
-            MEET THE SCRIBITZ FOUNDERS
+            MEET THE SCRIBITZ FOUNDERS!
           </h2>
         </div>
 
@@ -20,7 +20,7 @@ const CEO = () => {
               <h1 className="mt-4 text-xl font-bold text-secondary">
                 {director.name}
               </h1>
-              <p className="mt-2 text-xl text-center text-slate-50">
+              <p className="mt-2 text-sm text-center text-slate-50">
                 {director.title}
               </p>
             </div>

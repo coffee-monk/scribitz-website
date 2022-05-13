@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
       <HowItWorks />
       <OurTeam />
       <OurExperts />
-      <Welcome />
+      <Welcome title="WELCOME TO SCRIBITZ!" subTitle="ABOUT US" />
       <ClientsServed logos={logos} />
       <FAQ />
     </Layout>

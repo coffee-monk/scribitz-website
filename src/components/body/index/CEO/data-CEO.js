@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const data = [
   {
     name: "Rene Suarez",
-    title: "CEO & Co-Founder",
+    title: "Founder & Chief Executive Officer",
     img: (
       <StaticImage
         className="w-full rounded-full bg-secondary border-4 border-secondary"
@@ -16,7 +16,7 @@ const data = [
   },
   {
     name: "Michael Lo",
-    title: "CEO & Co-Founder",
+    title: "Chief Human Resources Officer",
     img: (
       <StaticImage
         className="w-full rounded-full bg-secondary border-4 border-secondary"

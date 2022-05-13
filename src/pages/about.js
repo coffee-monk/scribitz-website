@@ -24,18 +24,10 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <section id="about-page" className="mx-auto pt-14">
-        <div
-          id="title"
-          className="flex flex-col items-center justify-between px-4 pt-10"
-        >
-          <h1 className="text-4xl font-bold text-primary text-center">
-            Welcome to Scribitz
-          </h1>
-        </div>
+      <section id="about-page" className="mx-auto">
         <WelcomeToScribitz />
         <HowWeWork />
-        <Welcome />
+        <Welcome title="OUR MISSION & VALUES" />
         <CEO />
         <ClientsServed logos={logos} />
         <RegulatoryCompliant />

@@ -20,7 +20,7 @@ const data = [
     img: (
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/OurExperts/Subjects/it-black.jpg"
+        src="../../../../images/components/OurExperts/Subjects/urban-planning-black.jpg"
         alt=""
       />
     ),
