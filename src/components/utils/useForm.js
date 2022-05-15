@@ -31,7 +31,10 @@ export function useForm(
   // element onChange
   // get input vals --> check validations + get errorMsgs --> check input touched
   const changeHandler = event => {
-    const newValues = { ...values, [event.target.name]: event.target.value }
+    const newValues = {
+      ...values,
+      [event.target.name]: event.target.checked || event.target.value,
+    }
     const { isValid, errors } = validate(validations, newValues)
     setValues(newValues)
     setValid(isValid)

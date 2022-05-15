@@ -17,6 +17,7 @@ const ContactForm = () => {
     service: "default",
     message: "",
     company: "",
+    promo_opt_out: false,
   }
   const validations = [
     // email
@@ -51,6 +52,7 @@ const ContactForm = () => {
         Phone: values.phone,
         Service: values.service,
         Message: values.message,
+        Promo_Opt_Out: values.promo_opt_out === true ? "yes" : "no",
         Date_D_M_Y_Time: date,
       }
       axios
@@ -180,25 +182,42 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div id="service" className="mt-6">
-          <label htmlFor="service" className="ml-2 text-sm">
-            Choose a Service
-            <span className="text-base text-pink-600 cursor-text">*</span>
-          </label>
-          <select
-            onChange={changeHandler}
-            name="service"
-            className="text-gray-600 bg-white"
-          >
-            <option value="default">-- Select Service --</option>
-            <option value="transcription">Transcription</option>
-            <option value="closed-captioning">Closed-Captioning</option>
-            <option value="live-captioning">Live-Captions</option>
-            <option value="translation">Translation</option>
-          </select>
-          {showErrors && errors.service && (
-            <p className="text-pink-600 ml-2">{errors.service}</p>
-          )}
+        <div className="grid md:grid-cols-2 md:gap-4">
+          <div id="service" className="mt-6">
+            <label htmlFor="service" className="ml-2 text-sm">
+              Choose a Service
+              <span className="text-base text-pink-600 cursor-text">*</span>
+            </label>
+            <select
+              onChange={changeHandler}
+              name="service"
+              className="text-gray-600 bg-white"
+            >
+              <option value="default">-- Select Service --</option>
+              <option value="transcription">Transcription</option>
+              <option value="closed-captioning">Closed-Captioning</option>
+              <option value="live-captioning">Live-Captions</option>
+              <option value="translation">Translation</option>
+            </select>
+            {showErrors && errors.service && (
+              <p className="text-pink-600 ml-2">{errors.service}</p>
+            )}
+          </div>
+
+          <div className="flex items-center mt-12 justify-around">
+            <div>
+              <input
+                id="promotions"
+                onChange={changeHandler}
+                type="checkbox"
+                name="promo_opt_out"
+                className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
+              />
+              <label htmlFor="promo_opt_out" className="text-sm">
+                Opt-out of email promotions?
+              </label>
+            </div>
+          </div>
         </div>
 
         <div id="message" className="mt-6">
