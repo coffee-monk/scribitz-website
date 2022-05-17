@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
 
 import CompanyInfo from "./CompanyInfo"
 import FooterBottom from "./FooterBottom"

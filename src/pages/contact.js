@@ -1,64 +1,82 @@
-import React, { useState } from "react"
+import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
+
+import { LocationMarkerIcon, MailIcon, PhoneIcon } from "@heroicons/react/solid"
 
 import Layout from "../components/layout/Layout"
 import ContactForm from "../components/body/contact/ContactForm"
 
-import axios from "axios"
-
 const ContactPage = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [message, setMessage] = useState("")
-  const [service, setService] = useState("")
+  const iconStyles = "w-7"
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log(name, email, phone, message, service)
-    const data = {
-      Name: name,
-      Email: email,
-      Phone: phone,
-      Service: service,
-      Message: message,
-    }
-    axios
-      .post(
-        "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
-        data
-      )
-      .then(res => {
-        console.log(res)
-        setName("")
-        setEmail("")
-        setPhone("")
-        setMessage("")
-        setService("")
-      })
+  const data = {
+    header: "COMPANY",
+    rows: [
+      {
+        icon: <PhoneIcon className={iconStyles} />,
+        text: "+1 (647) 366 9901",
+      },
+      {
+        icon: <MailIcon className={iconStyles} />,
+        text: "info@scribitz.com",
+      },
+      {
+        icon: <LocationMarkerIcon className={iconStyles} />,
+        text: "Toronto, Canada",
+      },
+    ],
   }
 
   return (
     <Layout>
       <section
         id="contact-page"
-        className="relative w-full before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"
+        className="relative w-full mx-auto xl:h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"
       >
         <StaticImage
           className="!absolute w-full h-full -z-20"
           src="../../src/images/components/AboutPage/laptop-mobile-desk.jpg/"
           alt="office-team"
         />
-        <div className="flex flex-col items-center justify-around w-full py-16 px-4">
-          <h1 className="text-secondary text-2xl sm:text-3xl md:text-4xl text-center font-bold mt-14 mb-4">
-            Contact Our Sales Team
-            <span className="hidden sm:inline-block">
-              &nbsp;or Ask a Question
-            </span>
-            !
-          </h1>
-          <ContactForm />
+        <div
+          id="contact-showcase"
+          className="container mx-auto grid lg:grid-cols-2  items-center justify-between h-full pt-14"
+        >
+          <div className="mx-auto py-10">
+            <div className="flex flex-col items-left justify-around w-full py-16 px-4 max-w-lg">
+              <h1 className="text-secondary text-center sm:text-left text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
+                Contact Us!
+              </h1>
+              <p className="text-white text-xl mb-8">
+                Fill out the contact form to get in touch with our sales team.
+                Feel free to send us any questions or considerations.
+              </p>
+              <h2 className="text-secondary text-xl font-bold mb-5">
+                Or reach us directly by phone or email
+              </h2>
+              <div className="flex flex-col justify-between">
+                {data.rows.map((row, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center justify-start pb-3 text-sm sm:text-base"
+                  >
+                    <div
+                      id="contact-icon"
+                      className="text-secondary p-3 mr-4 rounded-full border border-secondary"
+                    >
+                      {row.icon}
+                    </div>
+                    <p className="text-white text-lg">{row.text}</p>
+                  </li>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div id="contact-form-div" className="px-4 py-4">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </Layout>
