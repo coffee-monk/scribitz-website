@@ -58,6 +58,7 @@ const Navbar = () => {
       currentScrollPosition - prevScrollPos > 50
     ) {
       setServices(false)
+      setNavbarMobile(false)
     }
     setPrevScrollPos(currentScrollPosition)
   }, 70)
