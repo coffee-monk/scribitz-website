@@ -49,7 +49,7 @@ const ContactPage = () => {
               className="absolute w-full -left-60 h-full bg-primary opacity-40 rounded-full filter blur-3xl -z-10"
             />
             <div className="flex flex-col items-left justify-around w-full py-10 px-4 xl:max-w-lg">
-              <h1 className="text-secondary text-center sm:text-left text-3xl sm:text-5xl font-bold mb-4">
+              <h1 className="text-secondary text-center sm:text-left text-5xl font-bold mb-4">
                 Contact Us!
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
