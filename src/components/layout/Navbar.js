@@ -109,8 +109,8 @@ const Navbar = () => {
             setNavbarMobile(!navbarMobile)
           }}
           className={`${
-            navbarMobile ? "text-primary bg-secondary " : "text-secondary"
-          }     w-10 h-10 p-2 rounded cursor-pointer hover:text-primary hover:bg-secondary sm:hidden`}
+            navbarMobile ? "text-primary bg-secondary" : "text-secondary"
+          }     w-10 h-10 p-2 rounded cursor-pointer sm:hidden`}
         />
 
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
