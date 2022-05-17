@@ -43,7 +43,11 @@ const ContactPage = () => {
           id="contact-showcase"
           className="container mx-auto grid lg:grid-cols-2  items-center justify-between h-full pt-14"
         >
-          <div className="mx-auto py-10">
+          <div id="contact-us" className="relative mx-auto py-10">
+            <div
+              id="text-bg-blur"
+              className="absolute w-full -left-80 h-full bg-primary opacity-50 rounded-full filter blur-3xl -z-10"
+            />
             <div className="flex flex-col items-left justify-around w-full py-16 px-4 max-w-lg">
               <h1 className="text-secondary text-center sm:text-left text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
                 Contact Us!
