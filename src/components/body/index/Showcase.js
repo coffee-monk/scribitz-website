@@ -57,10 +57,10 @@ const Showcase = () => {
         id="name"
         className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
       >
-        <h1 className="hidden sm:block text-5xl font-bold text-white">
+        <h1 className="text-3xl sm:text-5xl font-bold text-white">
           Your Audio Made Accessible
         </h1>
-        <h2 className="my-4 text-xl font-bold text-secondary">
+        <h2 className="my-4 md:text-xl font-bold text-secondary">
           Transcribing, Captioning, & Translating Videos and Live Events
         </h2>
 
