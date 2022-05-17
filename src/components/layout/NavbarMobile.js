@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
+import { Link } from "gatsby"
+
 const NavbarMobile = React.forwardRef((props, navMobileRef) => {
   const [services, setServices] = useState(false)
 
@@ -46,13 +48,14 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
         </li>
       </ul>
       <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
-        Pricing
+        <Link to="/about/">
+          <div className="w-full h-full">About</div>
+        </Link>
       </li>
       <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
-        About
-      </li>
-      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
-        Contact
+        <Link to="/contact/">
+          <div className="w-full h-full">Contact</div>
+        </Link>
       </li>
     </ul>
   )
