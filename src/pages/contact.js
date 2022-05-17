@@ -41,7 +41,7 @@ const ContactPage = () => {
         />
         <div
           id="contact-showcase"
-          className="container mx-auto grid lg:grid-cols-2 items-center justify-between h-full pt-14"
+          className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-14"
         >
           <div id="contact-us" className="relative mx-auto py-10">
             <div
@@ -52,7 +52,7 @@ const ContactPage = () => {
               <h1 className="text-secondary text-center sm:text-left text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
                 Contact Us!
               </h1>
-              <p className="text-white text-xl mb-8">
+              <p className="text-white text-xl mb-8 max-w-lg">
                 Fill out the contact form to get in touch with our sales team.
                 Feel free to send us any questions or considerations.
               </p>
