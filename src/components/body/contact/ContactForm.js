@@ -92,7 +92,7 @@ const ContactForm = () => {
   return (
     <div className="w-full p-6 rounded-lg shadow bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
-        <div className="grid md:grid-cols-2 gap-6 md:gap-4">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-4">
           <div className="relative w-full">
             <input
               id="name"
@@ -135,7 +135,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 md:gap-4">
+        <div className="grid sm:grid-cols-2 sm:gap-4">
           <div className="relative mt-6">
             <input
               id="email"
@@ -183,6 +183,21 @@ const ContactForm = () => {
         </div>
 
         <div className="grid md:grid-cols-2 md:gap-4">
+          <div className="flex items-center mt-12 justify-around">
+            <div>
+              <input
+                id="promotions"
+                onChange={changeHandler}
+                type="checkbox"
+                name="promo_opt_out"
+                className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
+              />
+              <label htmlFor="promo_opt_out" className="text-sm">
+                Opt-out of email promotions?
+              </label>
+            </div>
+          </div>
+
           <div id="service" className="mt-6">
             <label htmlFor="service" className="ml-2 text-sm">
               Choose a Service
@@ -202,21 +217,6 @@ const ContactForm = () => {
             {showErrors && errors.service && (
               <p className="text-pink-600 ml-2">{errors.service}</p>
             )}
-          </div>
-
-          <div className="flex items-center mt-12 justify-around">
-            <div>
-              <input
-                id="promotions"
-                onChange={changeHandler}
-                type="checkbox"
-                name="promo_opt_out"
-                className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
-              />
-              <label htmlFor="promo_opt_out" className="text-sm">
-                Opt-out of email promotions?
-              </label>
-            </div>
           </div>
         </div>
 

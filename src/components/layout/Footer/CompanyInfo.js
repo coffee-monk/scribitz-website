@@ -8,16 +8,16 @@ const data = {
   header: "COMPANY",
   rows: [
     {
-      icon: <LocationMarkerIcon className={companyInfoStyle} />,
-      text: "Toronto, Canada",
-    },
-    {
       icon: <MailIcon className={companyInfoStyle} />,
       text: "info@scribitz.com",
     },
     {
       icon: <PhoneIcon className={companyInfoStyle} />,
       text: "+1 (647) 366 9901",
+    },
+    {
+      icon: <LocationMarkerIcon className={companyInfoStyle} />,
+      text: "Toronto, Canada",
     },
   ],
 }

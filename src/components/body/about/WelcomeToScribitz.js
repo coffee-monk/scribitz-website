@@ -44,7 +44,7 @@ const WelcomeToScribitz = () => {
           </div>
         </div>
 
-        <div id="showcase-cartoon" className="mx-auto p-12">
+        <div id="showcase-cartoon" className="mx-auto pt-4 md:pt-12 p-12">
           <StaticImage
             className="z-40 max-w-sm"
             src="../../../images/components/AboutPage/authentication.svg"

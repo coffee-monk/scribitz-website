@@ -11,6 +11,8 @@ import OurTeam from "../components/body/index/OurTeam"
 import OurExperts from "../components/body/index/OurExperts/OurExperts"
 import Welcome from "../components/body/index/Welcome"
 import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
+import RegulatoryCompliant from "../components/body/index/RegulatoryCompliant"
+
 import FAQ from "../components/body/index/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
@@ -36,6 +38,7 @@ const IndexPage = ({ data }) => {
       <OurExperts />
       <Welcome title="WELCOME TO SCRIBITZ!" subTitle="ABOUT US" />
       <ClientsServed logos={logos} />
+      <RegulatoryCompliant />
       <FAQ />
     </Layout>
   )

@@ -19,12 +19,12 @@ const ContactPage = () => {
     header: "COMPANY",
     rows: [
       {
-        icon: <DeviceMobileIcon className={iconStyles} />,
-        text: "+1 (647) 366 9901",
-      },
-      {
         icon: <MailIcon className={iconStyles} />,
         text: "info@scribitz.com",
+      },
+      {
+        icon: <DeviceMobileIcon className={iconStyles} />,
+        text: "+1 (647) 366 9901",
       },
       {
         icon: <LocationMarkerIcon className={iconStyles} />,
@@ -59,7 +59,8 @@ const ContactPage = () => {
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
                 Fill out the contact form to get in touch with our sales team.
-                Feel free to send us any questions or considerations.
+                Feel free to reach out to us with any questions or
+                considerations.
               </p>
               <h2 className="text-secondary text-xl font-bold mb-5">
                 Or reach us directly by phone or email
