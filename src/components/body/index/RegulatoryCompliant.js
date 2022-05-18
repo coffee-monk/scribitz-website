@@ -6,7 +6,7 @@ const RegulatoryCompliant = () => {
   return (
     <section
       id="RegulatoryCompliant"
-      className="p-14 bg-gradient-to-b from-navy to-primary"
+      className="p-4 sm:p-14 bg-gradient-to-b from-navy to-primary"
     >
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold text-secondary">
@@ -16,14 +16,11 @@ const RegulatoryCompliant = () => {
           MAKE SURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
         </h2>
         <div className="grid grid-cols-2 gap-6">
-          <div>
-            <p className="hidden sm:block text-white">
-              We know there's value in the content you create, that's why our
-              team works hard to make your captions compliant with the
-              regulatory standards and guidelines: WCAG 3.0, AODA, ADA, FCC, and
-              others!
-            </p>
-          </div>
+          <p className="hidden sm:block text-white">
+            We know there's value in the content you create, that's why our team
+            works hard to make your captions compliant with the regulatory
+            standards and guidelines: WCAG 3.0, AODA, ADA, FCC, and others!
+          </p>
 
           <div className="flex flex-col items-center justify-start">
             <p className="hidden sm:block text-secondary font-bold text-center">
