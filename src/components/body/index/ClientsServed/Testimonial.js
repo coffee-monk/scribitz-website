@@ -31,7 +31,7 @@ const Testimonial = () => {
         />
       </div>
 
-      <p className="text-gray-700 mt-4 text-xs sm:text-base">
+      <p className="text-gray-700 mt-4 text-sm sm:text-base">
         <RiDoubleQuotesL className="text-gray-400 text-base sm:text-2xl mr-2 inline" />
         With the start of exclusively virtual meetings (due to the pandemic) we
         started recording the meetings. To make them accessible we needed to add

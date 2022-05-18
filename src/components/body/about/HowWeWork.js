@@ -9,7 +9,7 @@ import {
 
 const HowWeWork = () => {
   const iconStyles =
-    "flex-none text-secondary bg-primary w-16 mr-5 hidden rounded-full p-2 sm:block"
+    "flex-none text-secondary bg-primary w-16 mr-5 rounded-full p-2 sm:block mb-4 sm:mb-4"
 
   const values = [
     {
@@ -48,17 +48,21 @@ const HowWeWork = () => {
         </h1>
         <ul
           id="how-we-work-list"
-          className="p-4 grid grid-cols-2 gap-4 font-bold"
+          className="p-4 grid sm:grid-cols-2 gap-4 font-bold"
         >
           {values.map((value, i) => (
             <li
               key={i}
-              className="flex justify-start items-start p-4 text-primary rounded-lg  backdrop-blur-sm"
+              className="flex flex-col md:flex-row justify-start items-center md:items-start p-4 text-primary rounded-lg backdrop-blur-sm"
             >
               {value.icon}
               <div>
-                <h1 className="text-lg mb-2">{value.title}</h1>
-                <p className="font-normal">{value.caption}</p>
+                <h1 className="text-lg mb-2 text-center md:text-left">
+                  {value.title}
+                </h1>
+                <p className="font-normal text-center md:text-left">
+                  {value.caption}
+                </p>
               </div>
             </li>
           ))}
