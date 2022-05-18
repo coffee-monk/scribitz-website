@@ -29,7 +29,7 @@ const Welcome = ({ title, subTitle }) => {
           <h1 className="text-xl font-bold text-secondary text-center mb-3">
             Mission
           </h1>
-          <div className="rounded-xl h-full p-2 text-sm lg:text-base">
+          <div className="rounded-xl h-full p-2 text-base">
             <p className="text-white mb-2">
               To help businesses and organisations save time and create a
               hearing-friendly digital world. We provide{" "}
@@ -45,7 +45,7 @@ const Welcome = ({ title, subTitle }) => {
 
         <div className="text-secondary">
           <h1 className="text-xl text-center font-bold mb-3">Values</h1>
-          <ul className="flex flex-col justify-between items-left text-white text-sm lg:text-base">
+          <ul className="flex flex-col justify-between items-left text-white text-base">
             {values.map((value, i) => (
               <li
                 className="flex items-center justify-start p-1 sm:p-2"

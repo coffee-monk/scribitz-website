@@ -5,12 +5,12 @@ import { getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout/Layout"
 import Showcase from "../components/body/index/Showcase"
-import Welcome from "../components/body/index/Welcome"
-import OurExperts from "../components/body/index/OurExperts/OurExperts"
-import OurTeam from "../components/body/index/OurTeam"
-import HowItWorks from "../components/body/index/HowItWorks/HowItWorks"
-import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
 import Services from "../components/body/index/Services"
+import HowItWorks from "../components/body/index/HowItWorks/HowItWorks"
+import OurTeam from "../components/body/index/OurTeam"
+import OurExperts from "../components/body/index/OurExperts/OurExperts"
+import Welcome from "../components/body/index/Welcome"
+import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
 import FAQ from "../components/body/index/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
