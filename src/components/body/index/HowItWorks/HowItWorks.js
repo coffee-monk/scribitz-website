@@ -13,7 +13,7 @@ const HowItWorks = () => {
           </h2>
         </div>
 
-        <ul className="p-6 mx-auto mt-8 shadow-2xl grid sm:grid-cols-3 gap-5 md:gap-10">
+        <ul className="p-6 pb-10 sm:pb-6 mx-auto mt-8 shadow-2xl grid sm:grid-cols-3 gap-5 md:gap-10">
           {data.map((step, i) => (
             <li
               key={i}
