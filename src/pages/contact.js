@@ -2,7 +2,12 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-import { LocationMarkerIcon, MailIcon, PhoneIcon } from "@heroicons/react/solid"
+import {
+  LocationMarkerIcon,
+  MailIcon,
+  PhoneIcon,
+  DeviceMobileIcon,
+} from "@heroicons/react/solid"
 
 import Layout from "../components/layout/Layout"
 import ContactForm from "../components/body/contact/ContactForm"
@@ -14,7 +19,7 @@ const ContactPage = () => {
     header: "COMPANY",
     rows: [
       {
-        icon: <PhoneIcon className={iconStyles} />,
+        icon: <DeviceMobileIcon className={iconStyles} />,
         text: "+1 (647) 366 9901",
       },
       {
@@ -46,7 +51,7 @@ const ContactPage = () => {
           <div id="contact-us" className="relative mx-auto py-10">
             <div
               id="text-bg-blur"
-              className="absolute w-full -left-60 h-full bg-primary opacity-40 rounded-full filter blur-3xl -z-10"
+              className="absolute w-full -left-60 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
             />
             <div className="flex flex-col items-left justify-around w-full py-10 px-4 xl:max-w-lg">
               <h1 className="text-secondary text-5xl font-bold mb-4">
