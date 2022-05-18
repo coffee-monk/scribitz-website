@@ -17,7 +17,7 @@ const FAQ = () => {
         </h2>
       </div>
 
-      <ul className="max-w-2xl mx-auto mt-10 mb-10 shadow-2xl">
+      <ul className="max-w-2xl mx-auto mt-10 shadow-2xl">
         {data.map((question, i) => (
           <Accordian
             key={i}

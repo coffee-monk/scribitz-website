@@ -22,7 +22,7 @@ const RegulatoryCompliant = () => {
             standards and guidelines: WCAG 3.0, AODA, ADA, FCC, and others!
           </p>
 
-          <div className="flex sm:flex-col items-center justify-start">
+          <div className="flex sm:flex-col items-center justify-start mb-8">
             <p className="hidden sm:block text-secondary font-bold text-center">
               Do you need to meet accessibility regulations?
             </p>

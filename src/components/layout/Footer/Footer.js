@@ -13,7 +13,7 @@ const Footer = () => {
   const locationURL = useLocation()
 
   return (
-    <footer className="bg-navy p-4">
+    <footer className="bg-navy p-4 pt-16">
       <FooterCity />
 
       {/*locationURL.pathname !== "/contact/" && <FooterTop />*/}

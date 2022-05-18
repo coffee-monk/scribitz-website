@@ -84,11 +84,16 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div id="contact-form-div" className="px-4 py-4">
+          <div id="contact-form-div" className="hidden lg:block px-4 py-4">
             <ContactForm />
           </div>
         </div>
       </section>
+      <div className="block lg:hidden bg-gradient-to-b from-[#265b68] to-navy px-4 py-4 ">
+        <div className="mx-auto max-w-xl">
+          <ContactForm />
+        </div>
+      </div>
     </Layout>
   )
 }
