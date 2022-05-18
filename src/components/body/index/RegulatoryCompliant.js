@@ -17,7 +17,7 @@ const RegulatoryCompliant = () => {
         </h2>
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <p className="text-white">
+            <p className="hidden sm:block text-white">
               We know there's value in the content you create, that's why our
               team works hard to make your captions compliant with the
               regulatory standards and guidelines: WCAG 3.0, AODA, ADA, FCC, and
@@ -26,7 +26,7 @@ const RegulatoryCompliant = () => {
           </div>
 
           <div className="flex flex-col items-center justify-start">
-            <p className="text-secondary font-bold text-center">
+            <p className="hidden sm:block text-secondary font-bold text-center">
               Do you need to meet accessibility regulations?
             </p>
 
