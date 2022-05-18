@@ -21,14 +21,10 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
   // check if homepage
-  const [opacity, setOpacity] = useState(
-    locationURL.pathname === "/" || "/about/" ? false : true
-  )
+  const [opacity, setOpacity] = useState(false)
 
   const servicesRef = useRef()
   const navbarMobileRef = useRef()
-
-  console.log()
 
   // close services dropdown if click outside
   useOutsideClick(servicesRef, () => {
@@ -68,6 +64,8 @@ const Navbar = () => {
 
     if (window.pageYOffset === 0) {
       setVisible(true)
+    } else if (window.pageYOffset > 20) {
+      setOpacity(true)
     }
 
     return () => {
