@@ -37,7 +37,7 @@ const ContactPage = () => {
     <Layout>
       <section
         id="contact-page"
-        className="relative w-full mx-auto xl:h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"
+        className="relative w-full mx-auto min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"
       >
         <StaticImage
           className="!absolute w-full h-full -z-20"

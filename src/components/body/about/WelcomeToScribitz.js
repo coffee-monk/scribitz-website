@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const WelcomeToScribitz = () => {
   return (
-    <section className="relative xl:h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
+    <section className="relative min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
       <StaticImage
         className="!absolute w-full h-full"
         src="../../../images/components/AboutPage/office-team.jpg"
