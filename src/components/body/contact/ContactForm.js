@@ -90,7 +90,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-full p-6 rounded-lg shadow bg-white">
+    <div className="w-full p-6 rounded-lg shadow-2xl bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-4">
           <div className="relative w-full">

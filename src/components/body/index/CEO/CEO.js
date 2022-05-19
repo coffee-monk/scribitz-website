@@ -13,14 +13,14 @@ const CEO = () => {
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-3 gap-12">
+        <div className="mt-10 grid sm:grid-cols-3 gap-14">
           {directors.map((director, i) => (
             <div key={i} className="flex flex-col items-center justify-start">
               {director.img}
-              <h1 className="mt-4 text-xl font-bold text-secondary">
+              <h1 className="mt-4 text-xl text-center font-bold text-secondary">
                 {director.name}
               </h1>
-              <p className="mt-2 text-sm text-center text-slate-50">
+              <p className="sm:mt-2 text-lg sm:text-sm text-center text-slate-50">
                 {director.title}
               </p>
             </div>
