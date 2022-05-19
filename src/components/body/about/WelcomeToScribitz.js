@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const WelcomeToScribitz = () => {
   return (
-    <section className="relative min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
+    <section className="relative grid min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
       <StaticImage
         className="!absolute w-full h-full"
         src="../../../images/components/AboutPage/office-team.jpg"
         alt="office-team"
       />
-      <div className="flex flex-col lg:flex-row container bg-black w-full h-full mx-auto items-center justify-between px-4 pt-14 z-40">
+      <div className="container flex flex-col lg:flex-row w-full h-full mx-auto items-center justify-between px-4 pt-14 z-40">
         <div className="relative mx-auto text-white z-40 py-10">
           <div
             id="text-bg-blur"
