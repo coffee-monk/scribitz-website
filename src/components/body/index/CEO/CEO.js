@@ -16,7 +16,7 @@ const CEO = () => {
         <div className="mt-10 grid sm:grid-cols-3 gap-14">
           {directors.map((director, i) => (
             <div key={i} className="flex flex-col items-center justify-start">
-              {director.img}
+              <div className="w-3/4">{director.img}</div>
               <h1 className="mt-4 text-xl text-center font-bold text-secondary">
                 {director.name}
               </h1>
