@@ -5,7 +5,7 @@ import directors from "./data-CEO"
 const CEO = () => {
   return (
     <section id="CEO" className="p-4 bg-primary">
-      <div className="max-w-3xl py-10 mx-auto">
+      <div className="max-w-3xl py-8 mx-auto">
         <div id="title" className="flex flex-col items-center justify-between">
           <h1 className="text-2xl font-bold text-white">OUR TEAM</h1>
           <h2 className="text-3xl font-bold text-center text-secondary">

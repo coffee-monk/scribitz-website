@@ -59,7 +59,9 @@ const Welcome = ({ title, subTitle }) => {
         </div>
       </div>
 
-      <Carousel />
+      <div className="mb-8">
+        <Carousel />
+      </div>
     </section>
   )
 }
