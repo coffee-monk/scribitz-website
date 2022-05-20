@@ -58,8 +58,8 @@ const ContactPage = () => {
                 Contact Us
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
-                Fill out the contact form to get in touch with our sales team.
-                Feel free to reach out to us with any questions or
+                Fill out the contact form below to get in touch with our sales
+                team. Feel free to reach out to us with any questions or
                 considerations.
               </p>
               <h2 className="text-secondary text-xl font-bold mb-5">

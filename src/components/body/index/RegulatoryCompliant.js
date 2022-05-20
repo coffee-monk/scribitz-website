@@ -11,10 +11,10 @@ const RegulatoryCompliant = () => {
       className="p-4 sm:p-14 bg-gradient-to-b from-navy to-primary"
     >
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-bold text-secondary text-center sm:text-left">
+        <h1 className="text-3xl sm:text-2xl font-bold text-secondary text-center sm:text-left">
           SUBMIT YOUR PROJECT WITH CONFIDENCE
         </h1>
-        <h2 className="text-3xl font-bold text-white pt-1 pb-4 sm:pb-8 text-center sm:text-left">
+        <h2 className="text-xl sm:text-3xl font-bold text-white pt-1 pb-4 sm:pb-8 text-center sm:text-left">
           MAKE SURE YOUR CAPTIONS ARE REGULATORY COMPLIANT
         </h2>
         <div className="grid sm:grid-cols-2 gap-6">
