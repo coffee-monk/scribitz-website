@@ -17,7 +17,7 @@ const ContactForm = () => {
     service: "default",
     message: "",
     company: "",
-    promo_opt_out: false,
+    get_updates: false,
   }
   const validations = [
     // email
@@ -52,7 +52,7 @@ const ContactForm = () => {
         Phone: values.phone,
         Service: values.service,
         Message: values.message,
-        Promo_Opt_Out: values.promo_opt_out === true ? "yes" : "no",
+        Get_Updates: values.get_updates === true ? "yes" : "no",
         Date_D_M_Y_Time: date,
       }
       axios
@@ -189,10 +189,10 @@ const ContactForm = () => {
                 id="promotions"
                 onChange={changeHandler}
                 type="checkbox"
-                name="promo_opt_out"
+                name="get_updates"
                 className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
               />
-              <label htmlFor="promo_opt_out" className="text-sm">
+              <label htmlFor="get_updates" className="text-sm">
                 Opt-out of email promotions?
               </label>
             </div>
