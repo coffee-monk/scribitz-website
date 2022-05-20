@@ -55,18 +55,18 @@ const Showcase = () => {
 
       <div
         id="name"
-        className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
+        className="flex flex-col items-center justify-between max-w-3xl mt-12 z-10"
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-white px-4">
           Your Audio Made Accessible
         </h1>
         <h2 className="my-4 md:text-xl font-bold text-secondary px-4">
-          Transcribing, Captioning, & Translating Videos and Live Events
+          Transcription &#8226; Captions &#8226; Translation &#8226; Live Events
         </h2>
 
         <ul
           id="Company-Values"
-          className="m-4 grid grid-cols-2 gap-10 font-bold lg:mx-10 p-4"
+          className="m-4 grid grid-cols-2 gap-12 font-bold lg:mx-10 p-4"
         >
           {values.map(value => (
             <li
@@ -86,7 +86,7 @@ const Showcase = () => {
           ))}
         </ul>
 
-        <button className="flex justify-between items-center m-3 rounded-lg bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold rounded text-lg px-5 py-2.5 text-center">
+        <button className="flex justify-between items-center m-3 rounded-full bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold text-lg px-5 py-2.5 text-center">
           <IoRocketSharp size="1.25em" className="text-white mr-3" />
 
           <Link className="text-white" to="/contact/">
