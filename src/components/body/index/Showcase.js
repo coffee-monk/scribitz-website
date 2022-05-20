@@ -14,27 +14,27 @@ import {
 import { IoRocketSharp } from "react-icons/io5"
 
 const Showcase = () => {
-  const iconStyles = "text-yellow w-5 mb-2 hidden sm:block"
+  const iconStyles = "flex-none text-yellow w-10 mr-4 hidden sm:block z-10"
 
   const values = [
     {
       name: "99%+ ACCURACY",
-      caption: "Powered by Human Experts",
+      caption: "Verified by Human Experts",
       icon: <SearchIcon className={iconStyles} />,
     },
     {
       name: "100% COMPLIANCE",
-      caption: "WCAG 3.0, AODA, & FCC Compliant",
+      caption: "WCAG 3.0, AODA, ADA",
       icon: <BadgeCheckIcon className={iconStyles} />,
     },
     {
       name: "RELIABLE TURNOVER",
-      caption: "Ready Within 24-36 Hours",
+      caption: "Ready within 24-36 Hours",
       icon: <ClockIcon className={iconStyles} />,
     },
     {
       name: "15+ YEARS EXPERIENCE",
-      caption: "Experience with 20+ Subjects",
+      caption: "20+ Subjects",
       icon: <BriefcaseIcon className={iconStyles} />,
     },
   ]
@@ -57,7 +57,7 @@ const Showcase = () => {
         id="name"
         className="flex flex-col items-center justify-between max-w-2xl mt-12 z-10"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white px-4">
           Your Audio Made Accessible
         </h1>
         <h2 className="my-4 md:text-xl font-bold text-secondary px-4">
@@ -66,16 +66,22 @@ const Showcase = () => {
 
         <ul
           id="Company-Values"
-          className="m-4 grid grid-cols-2 gap-4 font-bold lg:mx-10"
+          className="m-4 grid grid-cols-2 gap-10 font-bold lg:mx-10 p-4"
         >
           {values.map(value => (
             <li
               key={value.name}
-              className="flex flex-col justify-start items-center p-4 shadow-xl rounded-lg text-secondary backdrop-blur-sm bg-primary/30"
+              className="relative flex justify-start items-start rounded-lg text-secondary backdrop-blur-sm"
             >
+              <div
+                id="text-bg-blur"
+                className="absolute w-full h-full bg-primary opacity-50 rounded-full filter blur-3xl"
+              />
               {value.icon}
-              <span className="items-center">{value.name}</span>
-              <p className="font-normal text-white">{value.caption}</p>
+              <div className="relative text-left">
+                <span className="items-center">{value.name}</span>
+                <p className="font-normal text-white">{value.caption}</p>
+              </div>
             </li>
           ))}
         </ul>
