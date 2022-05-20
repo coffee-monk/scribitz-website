@@ -184,7 +184,7 @@ const ContactForm = () => {
 
         <div className="grid md:grid-cols-2 md:gap-4">
           <div className="flex items-center mt-12 justify-around">
-            <div>
+            <div className="flex items-center justify-between">
               <input
                 id="promotions"
                 onChange={changeHandler}
