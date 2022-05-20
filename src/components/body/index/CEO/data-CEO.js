@@ -8,7 +8,7 @@ const data = [
     title: "Founder & Chief Executive Officer",
     img: (
       <StaticImage
-        className="w-full rounded-full bg-secondary border-4 border-secondary"
+        className="w-full rounded-full bg-secondary border-8 border-secondary shadow-xl"
         src="../../../../images/components/CEO/portrait.jpg"
         alt=""
       />
@@ -19,8 +19,8 @@ const data = [
     title: "Chief Human Resources Officer",
     img: (
       <StaticImage
-        className="w-full rounded-full bg-secondary border-4 border-secondary"
-        src="../../../../images/components/CEO/portrait.jpg"
+        className="w-full rounded-full bg-secondary border-8 border-secondary shadow-xl"
+        src="../../../../images/components/CEO/michael-lo.png"
         alt=""
       />
     ),
@@ -30,7 +30,7 @@ const data = [
     title: "Chief Technology Officer",
     img: (
       <StaticImage
-        className="w-full rounded-full bg-secondary border-4 border-secondary"
+        className="w-full rounded-full bg-secondary border-8 border-secondary shadow-xl"
         src="../../../../images/components/CEO/portrait.jpg"
         alt=""
       />

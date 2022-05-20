@@ -55,7 +55,7 @@ const ContactPage = () => {
             />
             <div className="flex flex-col items-left justify-around w-full py-10 px-4 xl:max-w-lg">
               <h1 className="text-secondary text-5xl font-bold mb-4">
-                Contact Us!
+                Contact Us
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
                 Fill out the contact form to get in touch with our sales team.

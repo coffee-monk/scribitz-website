@@ -48,7 +48,7 @@ const Showcase = () => {
         autoPlay
         loop
         muted
-        className="absolute min-w-full min-h-full top-0 left-0 object-cover"
+        className="absolute min-w-full min-h-full top-0 left-0 object-cover bg-primary"
       >
         <source src={videoURL} type="video/mp4"></source>
       </video>
