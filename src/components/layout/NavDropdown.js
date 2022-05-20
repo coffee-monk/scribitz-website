@@ -6,6 +6,7 @@ const NavbarMobile = () => {
 
   return (
     <ul className="text-lg text-primary bg-slate-100 sm:hidden">
+      {/*
       <li
         onClick={() => setServices(!services)}
         className={`${
@@ -15,6 +16,7 @@ const NavbarMobile = () => {
         Services
         <ChevronDownIcon className="w-6 h-5 ml-2" />
       </li>
+    */}
       <ul className={`${services ? "" : "hidden"}`}>
         <li
           className="p-4 pl-14

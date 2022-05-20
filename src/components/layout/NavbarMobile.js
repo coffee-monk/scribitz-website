@@ -12,6 +12,7 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
       ref={navMobileRef}
       className="text-lg text-primary bg-slate-100 sm:hidden"
     >
+      {/*
       <li
         onClick={() => setServices(!services)}
         className={`${
@@ -20,6 +21,12 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
       >
         Services
         <ChevronDownIcon className="w-6 h-5 ml-2" />
+      </li>
+    */}
+      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200 border-t border-primary">
+        <Link to="/">
+          <div className="w-full h-full">Home</div>
+        </Link>
       </li>
       <ul className={`${services ? "" : "hidden"}`}>
         <li

@@ -61,7 +61,8 @@ const Showcase = () => {
           Your Audio Made Accessible
         </h1>
         <h2 className="my-4 md:text-xl font-bold text-secondary px-4">
-          Transcription &#8226; Captions &#8226; Translation &#8226; Live Events
+          Transcription &#8226; Captions &#8226; Translation &#8226;{" "}
+          <span className="whitespace-nowrap">Live Events</span>
         </h2>
 
         <ul
@@ -75,10 +76,10 @@ const Showcase = () => {
             >
               <div
                 id="text-bg-blur"
-                className="absolute w-full h-full bg-primary opacity-50 rounded-full filter blur-3xl"
+                className="absolute w-full h-full bg-primary opacity-60 rounded-full filter blur-3xl"
               />
               {value.icon}
-              <div className="relative text-left">
+              <div className="relative text-center sm:text-left">
                 <span className="items-center">{value.name}</span>
                 <p className="font-normal text-white">{value.caption}</p>
               </div>
