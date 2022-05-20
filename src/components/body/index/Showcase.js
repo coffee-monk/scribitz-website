@@ -14,7 +14,7 @@ import {
 import { IoRocketSharp } from "react-icons/io5"
 
 const Showcase = () => {
-  const iconStyles = "flex-none text-yellow w-10 mr-4 hidden sm:block z-10"
+  const iconStyles = "flex-none text-yellow w-12 mr-4 hidden sm:block z-10"
 
   const values = [
     {
