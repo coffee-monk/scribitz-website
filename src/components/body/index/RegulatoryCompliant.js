@@ -25,11 +25,11 @@ const RegulatoryCompliant = () => {
           </p>
 
           <div className="flex sm:flex-col items-center justify-center sm:justify-start mb-8">
-            <p className="hidden sm:block text-secondary font-bold text-center mb-2">
+            <p className="hidden sm:block text-secondary font-bold text-center mb-3">
               Do you need to meet accessibility regulations?
             </p>
             <Link to="/contact/">
-              <button className="flex items-center justify-between rounded-full sm:m-auto bg-secondary text-primary hover:bg-yellow-300 focus:ring-2 focus:ring-white text-lg font-bold rounded w-lg text-lg px-5 py-2.5 text-center">
+              <button className="flex items-center justify-between rounded-full sm:m-auto bg-secondary text-primary hover:bg-yellow-300 focus:ring-2 focus:ring-white text-lg font-bold w-lg text-lg px-5 py-2.5 text-center">
                 <IoRocketSharp size="1.25em" className="text-primary mr-3" />
                 CONTACT US
               </button>

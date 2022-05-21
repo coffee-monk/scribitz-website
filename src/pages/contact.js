@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -7,14 +7,17 @@ import {
   MailIcon,
   PhoneIcon,
   DeviceMobileIcon,
+  ArrowCircleDownIcon,
+  ChevronDoubleDownIcon,
 } from "@heroicons/react/solid"
 
 import Layout from "../components/layout/Layout"
 import ContactForm from "../components/body/contact/ContactForm"
 
 const ContactPage = () => {
-  const iconStyles = "w-7"
+  const scrollToRef = useRef()
 
+  const iconStyles = "w-7"
   const data = {
     header: "COMPANY",
     rows: [
@@ -53,7 +56,7 @@ const ContactPage = () => {
               id="text-bg-blur"
               className="absolute w-full -left-60 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
             />
-            <div className="flex flex-col items-left justify-around w-full py-10 px-4 xl:max-w-lg">
+            <div className="flex flex-col items-left justify-start w-full py-10 px-4 xl:max-w-lg">
               <h1 className="text-secondary text-5xl font-bold mb-4">
                 Contact Us
               </h1>
@@ -81,6 +84,14 @@ const ContactPage = () => {
                   </li>
                 ))}
               </div>
+              <button
+                onClick={() => {
+                  scrollToRef.current.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="mx-auto mt-6"
+              >
+                <ChevronDoubleDownIcon className="lg:hidden w-16 cursor-pointer text-pink-600 hover:text-pink-500" />
+              </button>
             </div>
           </div>
 
@@ -89,7 +100,10 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      <div className="block lg:hidden bg-gradient-to-b from-[#265b68] to-navy px-4 py-4 ">
+      <div
+        ref={scrollToRef}
+        className="lg:hidden bg-gradient-to-b from-[#265b68] to-navy px-4 py-4 "
+      >
         <div className="mx-auto max-w-xl">
           <ContactForm />
         </div>

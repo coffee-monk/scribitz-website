@@ -87,13 +87,12 @@ const Showcase = () => {
           ))}
         </ul>
 
-        <button className="flex justify-between items-center m-3 rounded-full bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold text-lg px-5 py-2.5 text-center">
-          <IoRocketSharp size="1.25em" className="text-white mr-3" />
-
-          <Link className="text-white" to="/contact/">
+        <Link className="text-white" to="/contact/">
+          <button className="flex justify-between items-center m-3 rounded-full bg-pink-700 hover:bg-pink-600 focus:ring-2 focus:ring-red-300 text-lg font-bold text-lg px-5 py-2.5 text-center">
+            <IoRocketSharp size="1.25em" className="text-white mr-3" />
             Contact Us!
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </section>
   )
