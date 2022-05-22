@@ -11,7 +11,7 @@ const WelcomeToScribitz = () => {
         alt="office-team"
       />
       <div className="container flex flex-col lg:flex-row w-full h-full mx-auto items-center justify-between px-4 pt-14 z-40">
-        <div className="relative mx-auto text-white z-40 py-10">
+        <div className="relative mx-auto text-white z-40 lg:pb-10 pt-4 lg:pt-10">
           <div
             id="text-bg-blur"
             className="absolute w-full -top-20 -left-60 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
@@ -43,9 +43,9 @@ const WelcomeToScribitz = () => {
           </div>
         </div>
 
-        <div id="showcase-cartoon" className="mx-auto pt-0 md:pt-12 p-12">
+        <div id="showcase-cartoon" className="mx-auto pt-0 lg:pt-12 p-12">
           <StaticImage
-            className="z-40 max-w-sm"
+            className="z-40 w-40 lg:w-full md:max-w-sm"
             src="../../../images/components/AboutPage/authentication.svg"
             alt="office-team"
           />

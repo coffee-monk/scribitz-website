@@ -51,10 +51,10 @@ const ContactPage = () => {
           id="contact-showcase"
           className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-14"
         >
-          <div id="contact-us" className="relative mx-auto py-10">
+          <div id="contact-us" className="relative mx-auto py-4 lg:py-10">
             <div
               id="text-bg-blur"
-              className="absolute w-full -left-60 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
+              className="absolute w-full -left-40 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
             />
             <div className="flex flex-col items-left justify-start w-full py-10 px-4 xl:max-w-lg">
               <h1 className="text-secondary text-5xl font-bold mb-4">
@@ -70,9 +70,9 @@ const ContactPage = () => {
                 >
                   contact form
                 </span>{" "}
-                <span className="sm:hidden">below </span>to get in touch with
-                our sales team. Feel free to reach out to us with any questions
-                or considerations.
+                <span className="hidden">below </span>to get in touch with our
+                sales team. Feel free to reach out to us with any questions or
+                considerations.
               </p>
               <h2 className="text-secondary text-xl font-bold mb-5">
                 Or reach us directly by phone or email
@@ -97,9 +97,9 @@ const ContactPage = () => {
                 onClick={() => {
                   scrollToRef.current.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="mx-auto mt-6"
+                className="mx-auto mt-12"
               >
-                <ChevronDoubleDownIcon className="lg:hidden w-16 cursor-pointer text-white hover:text-gray-300" />
+                <ChevronDoubleDownIcon className="lg:hidden w-20 cursor-pointer text-white hover:text-gray-300" />
               </button>
             </div>
           </div>
