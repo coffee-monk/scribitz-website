@@ -23,11 +23,11 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
         <ChevronDownIcon className="w-6 h-5 ml-2" />
       </li>
     */}
-      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200 border-t border-primary">
-        <Link to="/">
+      <Link to="/">
+        <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200 border-t border-primary">
           <div className="w-full h-full">Home</div>
-        </Link>
-      </li>
+        </li>
+      </Link>
       <ul className={`${services ? "" : "hidden"}`}>
         <li
           className="p-4 pl-14
@@ -54,16 +54,16 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
           Translation
         </li>
       </ul>
-      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
-        <Link to="/about/">
+      <Link to="/about/">
+        <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
           <div className="w-full h-full">About</div>
-        </Link>
-      </li>
-      <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
-        <Link to="/contact/">
+        </li>
+      </Link>
+      <Link to="/contact/">
+        <li className="p-4 font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200">
           <div className="w-full h-full">Contact</div>
-        </Link>
-      </li>
+        </li>
+      </Link>
     </ul>
   )
 })

@@ -51,7 +51,7 @@ const ContactPage = () => {
           id="contact-showcase"
           className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-14"
         >
-          <div id="contact-us" className="relative mx-auto py-4 lg:py-10">
+          <div id="contact-us" className="relative mx-auto py-6 lg:py-10">
             <div
               id="text-bg-blur"
               className="absolute w-full -left-40 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"

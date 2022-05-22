@@ -20,7 +20,7 @@ const WelcomeToScribitz = () => {
             id="text-bg-blur"
             className="absolute w-full -bottom-20 -left-40 h-full bg-primary opacity-30 rounded-full filter blur-3xl -z-10"
           />
-          <div className="max-w-lg py-10">
+          <div className="max-w-lg pt-12 lg:pb-10">
             <h1 className="text-5xl font-bold text-secondary mb-4 z-40">
               About Scribitz
             </h1>
