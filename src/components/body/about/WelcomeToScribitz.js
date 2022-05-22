@@ -24,12 +24,11 @@ const WelcomeToScribitz = () => {
             <h1 className="text-5xl font-bold text-secondary mb-4 z-40">
               About Scribitz
             </h1>
-            <div>
-              <p className="text-white text-xl z-40 mb-4">
-                <p className="text-3xl text-white font-bold mb-4">
-                  We are committed to making communication accessible to
-                  everyone
-                </p>
+            <div className="text-white">
+              <p className="text-3xl font-bold mb-4">
+                We are committed to making communication accessible to everyone
+              </p>
+              <p className="text-xl z-40 mb-4">
                 Our team of professionals delivers 99%+ accurate closed captions
                 and transcripts, removing barriers and maximizing your reach,
                 improving your SEO and maximizing your ROI
