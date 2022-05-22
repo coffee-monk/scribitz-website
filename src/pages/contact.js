@@ -79,10 +79,7 @@ const ContactPage = () => {
               </h2>
               <div className="flex flex-col justify-between">
                 {data.rows.map((row, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center justify-start pb-3 text-sm sm:text-base"
-                  >
+                  <li key={i} className="flex items-center justify-start pb-3">
                     <div
                       id="contact-icon"
                       className="text-secondary p-3 mr-4 rounded-full border border-secondary"
