@@ -61,9 +61,18 @@ const ContactPage = () => {
                 Contact Us
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
-                Fill out the contact form below to get in touch with our sales
-                team. Feel free to reach out to us with any questions or
-                considerations.
+                Fill out the{" "}
+                <span
+                  onClick={() => {
+                    scrollToRef.current.scrollIntoView({ behavior: "smooth" })
+                  }}
+                  className="font-bold hover:text-gray-300 cursor-pointer sm:hover:text-white sm:cursor-auto"
+                >
+                  contact form
+                </span>{" "}
+                <span className="sm:hidden">below </span>to get in touch with
+                our sales team. Feel free to reach out to us with any questions
+                or considerations.
               </p>
               <h2 className="text-secondary text-xl font-bold mb-5">
                 Or reach us directly by phone or email
@@ -90,7 +99,7 @@ const ContactPage = () => {
                 }}
                 className="mx-auto mt-6"
               >
-                <ChevronDoubleDownIcon className="lg:hidden w-16 cursor-pointer text-pink-600 hover:text-pink-500" />
+                <ChevronDoubleDownIcon className="lg:hidden w-16 cursor-pointer text-white hover:text-gray-300" />
               </button>
             </div>
           </div>

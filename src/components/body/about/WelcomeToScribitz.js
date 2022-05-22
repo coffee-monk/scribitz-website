@@ -26,13 +26,19 @@ const WelcomeToScribitz = () => {
             </h1>
             <div>
               <p className="text-white text-xl z-40 mb-4">
-                We are committed to making communication accessible to everyone.
+                <p className="text-3xl text-white font-bold mb-4">
+                  We are committed to making communication accessible to
+                  everyone
+                </p>
                 Our team of professionals delivers 99%+ accurate closed captions
                 and transcripts, removing barriers and maximizing your reach,
-                improving your SEO and maximizing your ROI.
+                improving your SEO and maximizing your ROI
               </p>
-              <p className="text-xl">
-                All our captions are WCAG 3.0, AODA, & ADA compliant.
+              <p className="text-lg">
+                All our captions are{" "}
+                <span className="text-secondary">WCAG 3.0</span>,{" "}
+                <span className="text-secondary">AODA</span>, &
+                <span className="text-secondary"> ADA</span> compliant
               </p>
             </div>
           </div>
