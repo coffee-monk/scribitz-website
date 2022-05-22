@@ -26,7 +26,7 @@ const HowWeWork = () => {
     },
     {
       title: "Regulatory Compliant Captions",
-      caption: "All our captions are WCAG 3.0, AODA, ADA & FCC compliant",
+      caption: "All our captions are WCAG 3.0, AODA, & ADA compliant",
       icon: <BadgeCheckIcon className={iconStyles} />,
     },
     {

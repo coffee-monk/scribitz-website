@@ -26,16 +26,10 @@ const WelcomeToScribitz = () => {
             </h1>
             <div>
               <p className="text-white text-xl z-40 mb-4">
-                At Scribitz, together with our clients, we’ve served the Deaf
-                and Hard of Hearing community for over 15 years. Removing
-                barriers to clear communication and client participation is our
-                passion and our main driving force.
-              </p>
-              <p className="text-xl text-white mb-4">
-                We are committed to making knowledge accessible to everyone. We
-                make your videos widely accessible using human professionals to
-                deliver 99%+ accuracy closed captions and transcription
-                services.
+                We are committed to making communication accessible to everyone.
+                Our team of professionals delivers 99%+ accurate closed captions
+                and transcripts, removing barriers and maximizing your reach,
+                improving your SEO and maximizing your ROI.
               </p>
               <p className="text-xl">
                 All our captions are WCAG 3.0, AODA, & ADA compliant.
@@ -44,7 +38,7 @@ const WelcomeToScribitz = () => {
           </div>
         </div>
 
-        <div id="showcase-cartoon" className="mx-auto pt-4 md:pt-12 p-12">
+        <div id="showcase-cartoon" className="mx-auto pt-0 md:pt-12 p-12">
           <StaticImage
             className="z-40 max-w-sm"
             src="../../../images/components/AboutPage/authentication.svg"
