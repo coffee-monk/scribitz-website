@@ -16,8 +16,6 @@ import RegulatoryCompliant from "../components/body/index/RegulatoryCompliant"
 import FAQ from "../components/body/index/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-
   // ClientsServed Logo Images
   const logos = []
   data.allFile.nodes.map(node => {
