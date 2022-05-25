@@ -5,8 +5,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { BsArrowRightShort } from "react-icons/bs"
+import { BiWebcam } from "react-icons/bi"
 import { CgFileDocument } from "react-icons/cg"
-import { FaRegFileAudio } from "react-icons/fa"
+import { FaRegClosedCaptioning } from "react-icons/fa"
 import { IoRocketSharp } from "react-icons/io5"
 
 const LiveCaptionsShowcase = () => {
@@ -29,9 +30,9 @@ const LiveCaptionsShowcase = () => {
                 Live-Captions
               </h1>
               <div className="flex items-center justify-end text-4xl sm:text-5xl">
-                <FaRegFileAudio className="text-secondary" />
+                <BiWebcam className="text-secondary" />
                 <BsArrowRightShort className="text-white" />
-                <CgFileDocument className="text-secondary" />
+                <FaRegClosedCaptioning className="text-secondary" />
               </div>
             </div>
 
