@@ -6,11 +6,11 @@ import { getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout/Layout"
 import WelcomeToScribitz from "../components/body/about/WelcomeToScribitz"
 import HowWeWork from "../components/body/about/HowWeWork"
-import Welcome from "../components/body/index/Welcome"
-import CEO from "../components/body/index/CEO/CEO"
+import Welcome from "../components/body/general/Welcome"
+import CEO from "../components/body/about/CEO/CEO"
 import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
-import RegulatoryCompliant from "../components/body/index/RegulatoryCompliant"
-import FAQ from "../components/body/index/FAQ/FAQ"
+import RegulatoryCompliant from "../components/body/general/RegulatoryCompliant"
+import FAQ from "../components/body/general/FAQ/FAQ"
 
 const AboutPage = ({ data }) => {
   // ClientsServed Logo Images

@@ -4,16 +4,15 @@ import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout/Layout"
-import Showcase from "../components/body/index/Showcase"
+import IndexShowcase from "../components/body/index/IndexShowcase"
 import Services from "../components/body/index/Services"
-import HowItWorks from "../components/body/index/HowItWorks/HowItWorks"
-import OurTeam from "../components/body/index/OurTeam"
-import OurExperts from "../components/body/index/OurExperts/OurExperts"
-import Welcome from "../components/body/index/Welcome"
+import HowItWorks from "../components/body/general/HowItWorks/HowItWorks"
+import OurCaptioners from "../components/body/index/OurCaptioners"
+import SubjectSpecialists from "../components/body/general/SubjectSpecialists/SubjectSpecialists"
+import Welcome from "../components/body/general/Welcome"
 import ClientsServed from "../components/body/index/ClientsServed/ClientsServed"
-import RegulatoryCompliant from "../components/body/index/RegulatoryCompliant"
-
-import FAQ from "../components/body/index/FAQ/FAQ"
+import RegulatoryCompliant from "../components/body/general/RegulatoryCompliant"
+import FAQ from "../components/body/general/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
   // ClientsServed Logo Images
@@ -29,11 +28,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Showcase />
+      <IndexShowcase />
       <Services />
       <HowItWorks />
-      <OurTeam />
-      <OurExperts />
+      <OurCaptioners />
+      <SubjectSpecialists />
       <Welcome title="WELCOME TO SCRIBITZ!" subTitle="ABOUT US" />
       <ClientsServed logos={logos} />
       <RegulatoryCompliant />
