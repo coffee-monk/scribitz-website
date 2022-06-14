@@ -38,7 +38,7 @@ const LiveCaptionsShowcase = () => {
 
             <div className="text-white">
               <p className="mb-4 text-3xl font-bold">
-                Get Captions For Your Live Events in Real Time
+                Get Real-Time Captions For Your Live Events
               </p>
               <p className="z-40 mb-4 text-xl">
                 Our team of professionals delivers 99%+ accurate closed captions

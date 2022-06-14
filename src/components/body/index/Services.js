@@ -52,7 +52,7 @@ const Services = () => {
           {services.map((service, i) => (
             <div
               key={i}
-              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-2 sm:p-4 shadow shadow-2xl rounded-lg"
+              className="grid grid-cols-2 bg-primary/40 justify-between w-full h-full p-2 sm:p-6 shadow-2xl rounded-lg"
             >
               <div className="flex flex-col justify-between items-start">
                 <h1 className="sm:text-xl font-bold">{service.service}</h1>

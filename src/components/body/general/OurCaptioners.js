@@ -4,14 +4,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const OurTeam = () => {
   return (
-    <section className="mx-auto max-w-4xl">
+    <section className="max-w-4xl mx-auto">
       <h1
         id="title"
-        className="text-4xl font-bold text-primary text-center pt-10"
+        className="pt-10 text-4xl font-bold text-center text-primary"
       >
         Our Captioners are People
       </h1>
-      <div className="grid md:grid-cols-2 gap-6 justify-between items-center rounded rounded-lg px-4 py-10">
+      <div className="items-center justify-between px-4 py-10 rounded rounded-lg grid md:grid-cols-2 gap-6">
         <StaticImage
           className="rounded-lg"
           src="../../../images/components/OurExperts/OurTeam/laptop-captions.png"
@@ -27,7 +27,7 @@ const OurTeam = () => {
           <p className="p-2">
             We deliver your captions{" "}
             <span className="font-bold">compliance-ready</span>, so your videos
-            are ready for presention to government agencies and institutions
+            are ready for presentation to government agencies and institutions
           </p>
         </div>
       </div>
