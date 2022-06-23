@@ -3,6 +3,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 
+import SEO from "../components/layout/SEO"
 import Layout from "../components/layout/Layout"
 import IndexShowcase from "../components/body/index/IndexShowcase"
 import Services from "../components/body/index/Services"
@@ -15,7 +16,7 @@ import RegulatoryCompliant from "../components/body/general/RegulatoryCompliant"
 import FAQ from "../components/body/general/FAQ/FAQ"
 
 const IndexPage = ({ data }) => {
-  // ClientsServed Logo Images
+  // Client Logo Images
   const logos = []
   data.allFile.nodes.map(node => {
     logos.push({
@@ -24,10 +25,9 @@ const IndexPage = ({ data }) => {
     })
   })
 
-  console.log(logos)
-
   return (
     <Layout>
+      <SEO title="Home" />
       <IndexShowcase />
       <Services />
       <HowItWorks />

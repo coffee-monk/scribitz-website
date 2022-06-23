@@ -17,14 +17,18 @@ const ContactForm = () => {
     service: "default",
     message: "",
     company: "",
+    city: "",
     get_promo: false,
   }
+
   const validations = [
+    // name
+    ({ name }) => isRequired(name) || { name: "Name is required" },
     // email
     ({ email }) => isEmail(email) || { email: "Format: 'you@example.com'" },
     ({ email }) => isRequired(email) || { email: "E-mail is required" },
-    // name
-    ({ name }) => isRequired(name) || { name: "Name is required" },
+    // City
+    ({ city }) => isRequired(city) || { city: "City is required" },
     // phone
     ({ phone }) => isRequired(phone) || { phone: "Phone is required" },
     // services
@@ -32,7 +36,7 @@ const ContactForm = () => {
       isSelected(service) || { service: "Please choose a service" },
   ]
 
-  const submitContact = event => {
+  const submitContact = e => {
     if (isValid) {
       // get current date (year/month/day)
       const today = new Date()
@@ -42,19 +46,23 @@ const ContactForm = () => {
       const hours = today.getHours()
       const minutes =
         today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes()
-
+      // format date
       const date = day + "/" + month + "/" + year + "/" + hours + ":" + minutes
 
+      // form data
       const data = {
         Name: values.name,
-        Company: values.company,
+        City: values.city,
         Email: values.email,
         Phone: values.phone,
         Service: values.service,
+        Company: values.company,
         Message: values.message,
         Get_Promo: values.get_promo === true ? "yes" : "no",
         Date_D_M_Y_Time: date,
       }
+
+      // submit form data
       axios
         .post(
           "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
@@ -78,7 +86,7 @@ const ContactForm = () => {
     submitHandler,
   } = useForm(initialState, validations, submitContact)
 
-  // set button style depending on form state
+  // set submit button style based on validation state
   const getSubmitButtonStyle = (isValid, showSubmitMsg) => {
     if (showSubmitMsg) {
       return "opacity-50 bg-teal-900"
@@ -93,9 +101,10 @@ const ContactForm = () => {
     <div className="w-full p-6 rounded-lg shadow-2xl bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-4">
+          {/* Full Name */}
           <div className="relative w-full">
             <input
-              id="name"
+              id="full-name"
               onChange={changeHandler}
               autoComplete="off"
               value={values.name}
@@ -115,27 +124,32 @@ const ContactForm = () => {
             )}
           </div>
 
+          {/* City */}
           <div className="relative w-full">
             <input
-              id="company"
+              id="city"
               onChange={changeHandler}
               autoComplete="off"
-              value={values.company}
+              value={values.city}
               type="text"
-              name="company"
-              placeholder="Your Company"
+              name="city"
+              placeholder="Your City"
               className="peer"
             />
             <label
-              htmlFor="company"
+              htmlFor="city"
               className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text pointer-events-none"
             >
-              Company
+              City<span className="text-base text-pink-600">*</span>
             </label>
+            {showErrors && errors.city && (
+              <p className="text-pink-600 ml-2">{errors.city}</p>
+            )}
           </div>
         </div>
 
         <div className="grid sm:grid-cols-2 sm:gap-4">
+          {/* Email */}
           <div className="relative mt-6">
             <input
               id="email"
@@ -159,6 +173,7 @@ const ContactForm = () => {
             )}
           </div>
 
+          {/* Phone */}
           <div className="relative mt-6">
             <input
               id="phone"
@@ -182,22 +197,8 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 md:gap-4">
-          <div className="flex items-center mt-12 justify-around">
-            <div className="flex items-center justify-between">
-              <input
-                id="promotions"
-                onChange={changeHandler}
-                type="checkbox"
-                name="get_promo"
-                className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
-              />
-              <label htmlFor="get_promo" className="text-sm">
-                Get updates & special offers?
-              </label>
-            </div>
-          </div>
-
+        <div className="grid md:grid-cols-2 md:gap-4 items-end">
+          {/* Services */}
           <div id="service" className="mt-6">
             <label htmlFor="service" className="ml-2 text-sm">
               Choose a Service
@@ -218,9 +219,36 @@ const ContactForm = () => {
               <p className="text-pink-600 ml-2">{errors.service}</p>
             )}
           </div>
+
+          {/* Company */}
+          <div className="relative w-full mt-6">
+            <input
+              id="company"
+              onChange={changeHandler}
+              autoComplete="off"
+              value={values.company}
+              type="text"
+              name="company"
+              placeholder="Your Company"
+              className="peer"
+            />
+            <label
+              htmlFor="company"
+              className="absolute bg-white text-gray-600 pl-2 pr-1 transition-all left-2 -top-3.5 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm cursor-text pointer-events-none"
+            >
+              Company
+            </label>
+            {/* included for spacing if service select error */}
+            {showErrors && errors.service && (
+              <p className="text-transparent ml-2 select-none cursor-default">
+                {errors.service}
+              </p>
+            )}
+          </div>
         </div>
 
-        <div id="message" className="mt-6">
+        {/* Message */}
+        <div id="message" className="mt-4">
           <label htmlFor="message" className="ml-2 text-sm">
             Message
           </label>
@@ -234,7 +262,24 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        <div className="mt-4">
+        {/* Promotions */}
+        <div className="flex items-center mt-5 justify-around">
+          <div className="flex items-center justify-between">
+            <input
+              id="promotions"
+              onChange={changeHandler}
+              type="checkbox"
+              name="get_promo"
+              className="w-5 h-5 mr-4 text-teal-600 focus:ring-teal-500"
+            />
+            <label htmlFor="get_promo" className="text-sm">
+              Receive email updates & special offers?
+            </label>
+          </div>
+        </div>
+
+        {/* Button */}
+        <div className="mt-6">
           <button
             disabled={showSubmitMsg}
             type="submit"

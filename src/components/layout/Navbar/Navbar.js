@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 
-import { MenuAlt3Icon } from "@heroicons/react/solid"
+import { MenuAlt3Icon, ChevronDownIcon } from "@heroicons/react/solid"
+
+import Logo from "../../../images/components/Navbar/scribitz-logo.svg"
 
 import NavbarMobile from "./NavbarMobile"
+import ServicesDropdown from "./ServicesDropdown"
 
-import { debounce } from "../utils/debounce"
-
-import Logo from "../../images/components/Navbar/scribitz-logo.svg"
-import useOutsideClick from "../utils/useOutsideClick"
+import { debounce } from "../../utils/debounce"
+import useOutsideClick from "../../utils/useOutsideClick"
 
 import { useLocation } from "@reach/router"
 
@@ -73,19 +74,6 @@ const Navbar = () => {
     }
   }, [prevScrollPos, visible, handleScroll])
 
-  // <li
-  //   onClick={() => {
-  //     setServices(!services)
-  //   }}
-  //   className={`${
-  //     services ? "text-yellow-300" : ""
-  //   } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
-  // >
-  //   Services
-  //   <ChevronDownIcon className="w-6 h-5 ml-2" />
-  //   <ServicesDropdown services={services} ref={servicesRef} />
-  // </li>
-
   return (
     <nav
       id="navbar"
@@ -112,6 +100,18 @@ const Navbar = () => {
         />
 
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
+          <li
+            onClick={() => {
+              setServices(!services)
+            }}
+            className={`${
+              services ? "text-yellow-300" : ""
+            } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
+          >
+            Services
+            <ChevronDownIcon className="w-6 h-5 ml-2" />
+            <ServicesDropdown services={services} ref={servicesRef} />
+          </li>
           <li className="">
             <Link to="/about/">
               <div className="ml-4 p-2 font-bold hover:text-yellow-300 hover:cursor-pointer transition delay-75">

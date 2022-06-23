@@ -58,7 +58,7 @@ const ContactPage = () => {
             />
             <div className="flex flex-col items-left justify-start w-full py-10 px-4 xl:max-w-lg">
               <h1 className="text-secondary text-5xl font-bold mb-4">
-                Contact Us
+                Contact Sales
               </h1>
               <p className="text-white text-xl mb-8 max-w-lg">
                 Fill out the{" "}
@@ -71,8 +71,7 @@ const ContactPage = () => {
                   contact form
                 </span>{" "}
                 <span className="hidden">below </span>to get in touch with our
-                sales team. Feel free to reach out to us with any questions or
-                considerations.
+                sales team. Please send us any questions or considerations.
               </p>
               <h2 className="text-secondary text-xl font-bold mb-5">
                 Or reach us directly by phone or email

@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Scribitz`,
+    titleTemplate: "%s · Scribitz",
+    description: `Regulatory Compliant Transcription & Closed-Captioning Services`,
+    url: `https://www.scribitz.io`,
+    image: "./src/images/components/Navbar/scribitz-final-logo.svg",
   },
   plugins: [
     {
@@ -10,17 +14,6 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [
-    //       "G-66LJPD73NH", // Google Analytics / GA
-    //     ],
-    //     pluginConfig: {
-    //       head: true,
-    //     },
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
