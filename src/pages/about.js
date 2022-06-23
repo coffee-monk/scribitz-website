@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout/Layout"
+import SEO from "../components/layout/SEO"
 import WelcomeToScribitz from "../components/body/about/WelcomeToScribitz"
 import HowWeWork from "../components/body/about/HowWeWork"
 import Welcome from "../components/body/general/Welcome"
@@ -24,15 +25,17 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <section id="about-page" className="mx-auto">
-        <WelcomeToScribitz />
-        <HowWeWork />
-        <Welcome title="OUR MISSION & VALUES" />
-        <CEO />
-        <ClientsServed logos={logos} />
-        <RegulatoryCompliant />
-        <FAQ />
-      </section>
+      <SEO
+        title="About"
+        description="Here at Scribitz we are committed to making communication accessible to everyone"
+      />
+      <WelcomeToScribitz />
+      <HowWeWork />
+      <Welcome title="OUR MISSION & VALUES" />
+      <CEO />
+      <ClientsServed logos={logos} />
+      <RegulatoryCompliant />
+      <FAQ />
     </Layout>
   )
 }

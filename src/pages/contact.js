@@ -5,13 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import {
   LocationMarkerIcon,
   MailIcon,
-  PhoneIcon,
   DeviceMobileIcon,
-  ArrowCircleDownIcon,
   ChevronDoubleDownIcon,
 } from "@heroicons/react/solid"
 
 import Layout from "../components/layout/Layout"
+import SEO from "../components/layout/SEO"
 import ContactForm from "../components/body/contact/ContactForm"
 
 const ContactPage = () => {
@@ -38,6 +37,10 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact"
+        description="Contact our sales team or reach out to us with any questions or concerns"
+      />
       <section
         id="contact-page"
         className="relative grid w-full mx-auto min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10"

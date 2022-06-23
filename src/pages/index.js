@@ -27,7 +27,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        description="At Scribitz we offer transcription, closed-caption, live-caption, and translation services that comply with local accessibility regulations"
+      />
       <IndexShowcase />
       <Services />
       <HowItWorks />
