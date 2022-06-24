@@ -4,8 +4,12 @@ import axios from "axios"
 
 import { CheckCircleIcon } from "@heroicons/react/solid"
 
-import { useForm } from "../../utils/useForm"
-import { isRequired, isEmail, isSelected } from "../../utils/validatorFunctions"
+import { useForm } from "../../../utils/useForm"
+import {
+  isRequired,
+  isEmail,
+  isSelected,
+} from "../../../utils/validatorFunctions"
 
 const ContactForm = () => {
   const [showSubmitMsg, setShowSubmitMsg] = useState(false)
