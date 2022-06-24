@@ -14,7 +14,7 @@ const TranslationPage = () => {
   return (
     <Layout>
       <SEO
-        title="Translation Services"
+        title="Translation"
         description="We offer translation services for your content that meet local accessibility standards and regulations"
       />
       <TranslationShowcase />
