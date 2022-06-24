@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import CompanyInfo from "./CompanyInfo"
 import FooterBottom from "./FooterBottom"
@@ -7,11 +8,7 @@ import FooterCity from "./FooterCity"
 
 import links from "./data-links"
 
-import { useLocation } from "@reach/router"
-
 const Footer = () => {
-  const locationURL = useLocation()
-
   return (
     <footer className="bg-navy p-4 pt-16">
       <FooterCity />
@@ -28,12 +25,15 @@ const Footer = () => {
               </h1>
 
               {column.rows.map((row, i) => {
-                if (row.pageLink) {
+                if (row.Link) {
                   return (
                     <li key={i} className="pb-3">
-                      <h1 className="text-white text-sm sm:text-base">
+                      <Link
+                        to={`/${row.address}/`}
+                        className="text-gray-400 hover:underline text-sm sm:text-base"
+                      >
                         {row.text}
-                      </h1>
+                      </Link>
                     </li>
                   )
                 } else {

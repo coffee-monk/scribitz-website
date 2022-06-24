@@ -5,23 +5,23 @@ const data = [
     rows: [
       {
         text: "Transcription",
-        address: "#",
-        pageLink: true,
+        address: "transcription-services",
+        Link: true,
       },
       {
-        text: "Live-Transcription",
-        address: "#",
-        pageLink: true,
+        text: "Live-Captions",
+        address: "live-caption-services",
+        Link: true,
       },
       {
         text: "Closed-Captions",
-        address: "#",
-        pageLink: true,
+        address: "closed-caption-services",
+        Link: true,
       },
       {
         text: "Translation",
-        address: "#",
-        pageLink: true,
+        address: "translation-services",
+        Link: true,
       },
     ],
   },
