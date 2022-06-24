@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const ServicesDropdown = React.forwardRef((services, serviceRef) => {
+const ServicesDropdown = React.forwardRef((visibility, serviceRef) => {
+  // destructure and rename prop
+  const { visibility: servicesDropdownShow } = visibility
   return (
     <div
       id="dropdown"
@@ -9,7 +11,7 @@ const ServicesDropdown = React.forwardRef((services, serviceRef) => {
       ref={serviceRef}
       className={
         `${
-          services.services
+          servicesDropdownShow
             ? "transition-opacity duration-200"
             : "fadeOut invisible opacity-0"
         } absolute left-0 top-16 delay-0` + " shadow-xl"

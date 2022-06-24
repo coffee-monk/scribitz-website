@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Scribitz`,
-    titleTemplate: "%s · Scribitz",
+    titleTemplate: "%s | Scribitz",
     description: `Regulatory Compliant Transcription & Closed-Captioning Services`,
     url: `https://www.scribitz.io`,
     image: "./src/images/components/Navbar/scribitz-final-logo.svg",
