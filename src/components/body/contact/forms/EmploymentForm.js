@@ -5,11 +5,7 @@ import axios from "axios"
 import { CheckCircleIcon } from "@heroicons/react/solid"
 
 import { useForm } from "../../../utils/useForm"
-import {
-  isRequired,
-  isEmail,
-  isSelected,
-} from "../../../utils/validatorFunctions"
+import { isRequired, isEmail } from "../../../utils/validatorFunctions"
 
 const ContactForm = () => {
   const [showSubmitMsg, setShowSubmitMsg] = useState(false)
@@ -28,13 +24,10 @@ const ContactForm = () => {
 
   const validations = [
     // name
-    ({ name }) => isRequired(name) || { name: "Name is required" },
+    ({ first_name }) => isRequired(first_name) || { name: "Name is required" },
     // email
     ({ email }) => isEmail(email) || { email: "Format: 'you@example.com'" },
     ({ email }) => isRequired(email) || { email: "E-mail is required" },
-    // services
-    ({ service }) =>
-      isSelected(service) || { service: "Please choose a service" },
   ]
 
   const submitContact = e => {
@@ -50,9 +43,11 @@ const ContactForm = () => {
       // format date
       const date = day + "/" + month + "/" + year + "/" + hours + ":" + minutes
 
+      console.log(values)
+
       // form data
       const data = {
-        Full_Name: values.full_name,
+        First_Name: values.first_name,
         Last_Name: values.last_name,
         Email: values.email,
         Country: values.country,
@@ -64,10 +59,12 @@ const ContactForm = () => {
         Date_D_M_Y_Time: date,
       }
 
+      console.log(data)
+
       // submit form data
       axios
         .post(
-          "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
+          "https://sheet.best/api/sheets/85827ea6-22b5-4e69-bf1c-5baa89ae91a0",
           data
         )
         .then(res => {

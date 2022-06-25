@@ -66,6 +66,8 @@ const ContactForm = () => {
         Date_D_M_Y_Time: date,
       }
 
+      console.log(data)
+
       // submit form data
       axios
         .post(
