@@ -12,20 +12,22 @@ import { debounce } from "../../utils/debounce"
 import useOutsideClick from "../../utils/useOutsideClick"
 
 const Navbar = () => {
-  const [navbarMobile, setNavbarMobile] = useState(false)
-  const [servicesDropdownShow, setServicesDropdownShow] = useState(false)
-  const [servicesLinkHover, setServicesLinkHover] = useState(false)
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  // Navbar
   const [visible, setVisible] = useState(true)
-  // clear opacity at top of screen
   const [opacity, setOpacity] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  // Navbar Mobile
+  const [navbarMobile, setNavbarMobile] = useState(false)
+  // Services Dropdown
+  const [servicesDropdown, setServicesDropdown] = useState(false)
+  const [servicesLinkHover, setServicesLinkHover] = useState(false)
 
   const servicesDropdownRef = useRef()
   const navbarMobileRef = useRef()
 
   // close services dropdown if click outside
   useOutsideClick(servicesDropdownRef, () => {
-    if (servicesDropdownShow) setServicesDropdownShow(false)
+    if (servicesDropdown) setServicesDropdown(false)
   })
 
   // close mobile nav if click outside
@@ -37,31 +39,37 @@ const Navbar = () => {
   // https://www.devtwins.com/blog/sticky-navbar-hides-scroll
   const handleScroll = debounce(() => {
     const currentScrollPosition = window.pageYOffset
-    // nav hide on scroll down
+    // nav hide on scroll down or if at top
     setVisible(
       (prevScrollPos > currentScrollPosition &&
         prevScrollPos - currentScrollPosition > 50) ||
         currentScrollPosition < 80
     )
+
     // nav bg opacity - check if at top or not homepage
     setOpacity(currentScrollPosition >= 80)
+
     // close dropdown on scroll
     if (
       prevScrollPos - currentScrollPosition > 50 ||
       currentScrollPosition - prevScrollPos > 50
     ) {
-      setServicesDropdownShow(false)
+      setServicesDropdown(false)
       setNavbarMobile(false)
     }
     setPrevScrollPos(currentScrollPosition)
   }, 70)
 
+  // set event listener and initial state
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
 
+    // if window at top, show nav
     if (window.pageYOffset === 0) {
       setVisible(true)
-    } else if (window.pageYOffset > 20) {
+    }
+    // if window scroll from top, add background opacity
+    if (window.pageYOffset > 20) {
       setOpacity(true)
     }
 
@@ -97,7 +105,7 @@ const Navbar = () => {
           <li
             id="services-dropdown"
             onClick={() => {
-              setServicesDropdownShow(!servicesDropdownShow)
+              setServicesDropdown(!servicesDropdown)
             }}
             onMouseOver={() => {
               setServicesLinkHover(true)
@@ -106,13 +114,13 @@ const Navbar = () => {
               setServicesLinkHover(false)
             }}
             className={`${
-              servicesDropdownShow ? "text-yellow-300" : ""
+              servicesDropdown ? "text-yellow-300" : ""
             } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
           >
             Services
             <ChevronDownIcon
               className={`transform ${
-                servicesDropdownShow
+                servicesDropdown
                   ? "-rotate-180 text-yellow-300 border-yellow-300"
                   : ""
               } 
@@ -120,7 +128,7 @@ const Navbar = () => {
                 transition duration-500 ease-in-out w-5 h-5 ml-2 text-secondary border-2 border-secondary rounded-full flex-none ml-3`}
             />
             <ServicesDropdown
-              visibility={servicesDropdownShow}
+              visibility={servicesDropdown}
               ref={servicesDropdownRef}
             />
           </li>

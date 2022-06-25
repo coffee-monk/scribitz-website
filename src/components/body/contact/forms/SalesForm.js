@@ -73,7 +73,6 @@ const ContactForm = () => {
           data
         )
         .then(res => {
-          console.log("finish")
           setShowSubmitMsg(true)
         })
     }
@@ -102,7 +101,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-full p-6 rounded-lg shadow-2xl bg-white">
+    <div id="sales-form" className="w-full p-6 rounded-lg shadow-2xl bg-white">
       <form action="" method="POST" onSubmit={submitHandler}>
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-4">
           {/* Full Name */}
@@ -201,8 +200,8 @@ const ContactForm = () => {
           </div>
         </div>
 
+        {/* Services */}
         <div className="grid md:grid-cols-2 md:gap-4 items-end">
-          {/* Services */}
           <div id="service" className="mt-6">
             <label htmlFor="service" className="ml-2 text-sm">
               Choose a Service

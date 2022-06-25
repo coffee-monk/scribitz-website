@@ -8,7 +8,7 @@ import {
   ChevronDoubleDownIcon,
 } from "@heroicons/react/solid"
 
-import ContactForm from "./forms/ContactForm"
+import SalesForm from "./forms/SalesForm"
 
 const ContactSales = () => {
   const scrollToRef = useRef()
@@ -94,7 +94,7 @@ const ContactSales = () => {
           </div>
 
           <div id="contact-form-div" className="hidden lg:block px-4 py-4">
-            <ContactForm />
+            <SalesForm />
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@ const ContactSales = () => {
         className="lg:hidden bg-gradient-to-b from-[#265b68] to-navy px-4 py-4 "
       >
         <div className="mx-auto max-w-xl">
-          <ContactForm />
+          <SalesForm />
         </div>
       </div>
     </section>
