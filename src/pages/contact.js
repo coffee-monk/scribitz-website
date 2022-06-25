@@ -13,7 +13,7 @@ const ContactPage = () => {
         description="Contact our sales team or inquire about employment opportunities"
       />
       <ContactSales />
-      <ContactEmployment />
+      {/*<ContactEmployment />*/}
     </Layout>
   )
 }
