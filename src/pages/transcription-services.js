@@ -15,7 +15,7 @@ const TranscriptionPage = () => {
     <Layout>
       <SEO
         title="Transcription"
-        description="We offer closed-caption services for your video content that meet local accessibility standards and regulations"
+        description="We offer closed-caption services for your video content that meet local accessibility standards and regulations."
       />
       <TranscriptionShowcase />
       <Buffer />

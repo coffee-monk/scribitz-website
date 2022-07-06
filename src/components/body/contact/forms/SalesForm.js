@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 
-import axios from "axios"
-
 import { CheckCircleIcon } from "@heroicons/react/solid"
 
 import { useForm } from "../../../utils/useForm"
@@ -11,7 +9,13 @@ import {
   isSelected,
 } from "../../../utils/validatorFunctions"
 
-const ContactForm = () => {
+// https://dev.to/emekaugbanu/how-to-store-form-data-to-google-sheets-using-reactjsgatsbyjs-or-nextjs-248l
+import SteinStore from "stein-js-client"
+const store = new SteinStore(
+  "https://api.steinhq.com/v1/storages/62b90055bca21f053ea0865c"
+)
+
+const SalesForm = () => {
   const [showSubmitMsg, setShowSubmitMsg] = useState(false)
 
   const initialState = {
@@ -26,16 +30,16 @@ const ContactForm = () => {
   }
 
   const validations = [
-    // name
+    // Name
     ({ name }) => isRequired(name) || { name: "Name is required" },
-    // email
+    // Email
     ({ email }) => isEmail(email) || { email: "Format: 'you@example.com'" },
     ({ email }) => isRequired(email) || { email: "E-mail is required" },
     // City
     ({ city }) => isRequired(city) || { city: "City is required" },
-    // phone
+    // Phone
     ({ phone }) => isRequired(phone) || { phone: "Phone is required" },
-    // services
+    // Services
     ({ service }) =>
       isSelected(service) || { service: "Please choose a service" },
   ]
@@ -53,28 +57,22 @@ const ContactForm = () => {
       // format date
       const date = day + "/" + month + "/" + year + "/" + hours + ":" + minutes
 
-      // form data
-      const data = {
-        Name: values.name,
-        City: values.city,
-        Email: values.email,
-        Phone: values.phone,
-        Service: values.service,
-        Company: values.company,
-        Message: values.message,
-        Get_Promo: values.get_promo === true ? "yes" : "no",
-        Date_D_M_Y_Time: date,
-      }
-
-      console.log(data)
-
-      // submit form data
-      axios
-        .post(
-          "https://sheet.best/api/sheets/0c84fd7a-b868-482d-968e-fc668d1dbc4d",
-          data
-        )
+      store
+        .append("Leads", [
+          {
+            Name: values.name,
+            City: values.city,
+            Email: values.email,
+            Phone: values.phone,
+            Service: values.service,
+            Company: values.company,
+            Message: values.message,
+            Get_Promo: values.get_promo === true ? "yes" : "no",
+            Date_D_M_Y_Time: date,
+          },
+        ])
         .then(res => {
+          console.log(res)
           setShowSubmitMsg(true)
         })
     }
@@ -308,4 +306,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default SalesForm

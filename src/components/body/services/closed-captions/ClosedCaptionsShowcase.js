@@ -13,7 +13,7 @@ const ClosedCaptionsShowcase = () => {
     <section className="relative grid min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/ServicePages/transcription/services-showcase-gray.jpg"
+        src="../../../../images/components/ServicePages/services-showcase.jpg"
         alt="office-team"
       />
       <div className="container z-40 flex flex-col items-center justify-between w-full h-full px-4 mx-auto lg:flex-row pt-14">

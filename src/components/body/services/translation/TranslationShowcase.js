@@ -14,7 +14,7 @@ const TranslationShowcase = () => {
     <section className="relative grid min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:z-10">
       <StaticImage
         className="!absolute w-full h-full"
-        src="../../../../images/components/ServicePages/transcription/services-showcase-gray.jpg"
+        src="../../../../images/components/ServicePages/services-showcase.jpg"
         alt="office-team"
       />
       <div className="container flex flex-col lg:flex-row w-full h-full mx-auto items-center justify-between px-4 pt-14 z-40">

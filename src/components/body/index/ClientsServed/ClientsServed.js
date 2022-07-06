@@ -5,8 +5,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Testimonial from "./Testimonial"
 
 const ClientsServed = ({ logos }) => {
-  console.log(logos)
-
   return (
     <section id="Clients-Served" className="p-4 bg-white-50">
       <div className="max-w-3xl mx-auto">

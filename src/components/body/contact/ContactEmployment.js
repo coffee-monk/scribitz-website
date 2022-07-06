@@ -30,10 +30,6 @@ const ContactEmployment = () => {
         icon: <AcademicCapIcon className={iconStyles} />,
         text: "Diverse knowledge backgrounds",
       },
-      {
-        icon: <CurrencyDollarIcon className={iconStyles} />,
-        text: "Competitive Pay",
-      },
     ],
   }
 
@@ -42,12 +38,13 @@ const ContactEmployment = () => {
       <div className="relative grid w-full mx-auto min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10">
         <StaticImage
           className="!absolute w-full h-full -z-20"
-          src="../../src/images/components/AboutPage/laptop-mobile-desk.jpg/"
+          src="../../../images/components/Employment/digital-nomad-laptop.jpg"
           alt="office-team"
         />
+        {/* Text + Form */}
         <div
           id="contact-showcase"
-          className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full"
+          className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-14"
         >
           <div id="contact-us" className="relative mx-auto py-6 lg:py-10">
             <div

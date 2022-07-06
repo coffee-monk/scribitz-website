@@ -27,7 +27,7 @@ const AboutPage = ({ data }) => {
     <Layout>
       <SEO
         title="About"
-        description="Here at Scribitz we are committed to making communication accessible to everyone"
+        description="Here at Scribitz we are committed to making communication accessible to everyone."
       />
       <WelcomeToScribitz />
       <HowWeWork />

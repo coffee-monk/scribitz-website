@@ -11,3 +11,8 @@ export function isEmail(value) {
 export function isSelected(value) {
   return value !== "default"
 }
+
+// checkbox input - choose at least one -------------------
+export function someCheckboxSelected(...args) {
+  return args.some(arg => arg === true)
+}

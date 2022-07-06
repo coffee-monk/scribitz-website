@@ -15,7 +15,7 @@ const ClosedCaptionsPage = () => {
     <Layout>
       <SEO
         title="Closed-Captions"
-        description="We offer closed-caption services for your video content that meet local accessibility standards and regulations"
+        description="We offer closed-caption services for your video content that meet local accessibility standards and regulations."
       />
       <ClosedCaptionsShowcase />
       <Buffer />

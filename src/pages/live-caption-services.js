@@ -14,7 +14,7 @@ const LiveCaptionsPage = () => {
     <Layout>
       <SEO
         title="Live-Captions"
-        description="We offer live-caption services for real-time video content and live-events that meet local accessibility standards and regulations"
+        description="We offer live-caption services for real-time video content and live-events that meet local accessibility standards and regulations."
       />
       <LiveCaptionsShowcase />
       <HowItWorks />

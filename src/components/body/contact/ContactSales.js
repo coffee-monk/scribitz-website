@@ -37,9 +37,10 @@ const ContactSales = () => {
       <div className="relative grid w-full mx-auto min-h-screen before:absolute before:w-full before:h-full before:bg-gradient-to-br before:from-[#c5cacb] before:via-primary before:to-primary before:opacity-90 before:-z-10">
         <StaticImage
           className="!absolute w-full h-full -z-20"
-          src="../../src/images/components/AboutPage/laptop-mobile-desk.jpg/"
+          src="../../../images/components/ContactSales/laptop-mobile-desk.jpg"
           alt="office-team"
         />
+        {/* Text + Form */}
         <div
           id="contact-showcase"
           className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-14"
