@@ -300,23 +300,23 @@ const EmploymentForm = () => {
                 </span>
               </h1>
               <div className="flex flex-col justify-start mt-3 sm:flex-row align-center">
-                <div className="mr-5">
+                <div className="flex items-center justify-start mr-5">
                   <input
                     type="radio"
                     value="part-time"
                     id="part-time"
                     name="availability"
-                    className="w-4 mr-2 text-teal-600 rounded-full"
+                    className="w-4 mr-3 text-teal-600 rounded-full"
                   />{" "}
                   <label htmlFor="part-time">Part-Time</label>
                 </div>
-                <div>
+                <div className="flex items-center justify-start mt-3 sm:mt-0">
                   <input
                     type="radio"
                     value="full-time"
                     id="full-time"
                     name="availability"
-                    className="w-4 mt-3 mr-2 text-teal-600 rounded-full sm:mt-0"
+                    className="w-4 mr-3 text-teal-600 rounded-full sm:mt-0"
                   />{" "}
                   <label htmlFor="full-time">Full-Time</label>
                 </div>
@@ -340,7 +340,7 @@ const EmploymentForm = () => {
                 </span>
               </h1>
               <div className="flex justify-between mt-3 align-center">
-                <div className="w-full">
+                <div className="flex align-center justify-start w-full">
                   <input
                     onChange={changeHandler}
                     type="range"
@@ -349,7 +349,7 @@ const EmploymentForm = () => {
                     value={values.experience}
                     id="experience"
                     name="experience"
-                    className="w-2/3 mr-2 rounded-full accent-teal-600"
+                    className="w-2/3 h-5 mr-3 rounded-full accent-teal-600"
                   />{" "}
                   <label htmlFor="experience">
                     {values.experience === "10"
@@ -377,7 +377,7 @@ const EmploymentForm = () => {
             value={values.message}
             rows="3"
             name="message"
-            placeholder="Please share any questions or considerations"
+            placeholder="What would make you a stellar Scribe on our team?"
             className="py-2 placeholder-gray-400 focus:placeholder-transparent"
           ></textarea>
         </div>

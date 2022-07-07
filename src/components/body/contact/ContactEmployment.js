@@ -102,7 +102,7 @@ const ContactEmployment = () => {
       </div>
       <div
         ref={scrollToRef}
-        className="lg:hidden bg-gradient-to-b from-[#265b68] to-navy px-4 py-4 "
+        className="lg:hidden bg-gradient-to-b from-[#184e5a] to-navy px-4 py-4 "
       >
         <div className="mx-auto max-w-xl">
           <EmploymentForm />
