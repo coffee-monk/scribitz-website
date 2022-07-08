@@ -9,7 +9,7 @@ const data = [
     img: (
       <StaticImage
         className="w-full rounded-full bg-secondary border-8 border-secondary shadow-xl"
-        src="../../../../images/components/CEO/portrait.jpg"
+        src="../../../../images/components/CEO/rene-sweater.png"
         alt=""
       />
     ),
