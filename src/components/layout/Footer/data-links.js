@@ -30,7 +30,7 @@ const data = [
     rows: [
       {
         text: "Facebook",
-        address: "https://www.facebook.com/profile.php?id=100080995683229",
+        address: "https://www.facebook.com/Scribitzinc",
       },
       {
         text: "LinkedIn",
