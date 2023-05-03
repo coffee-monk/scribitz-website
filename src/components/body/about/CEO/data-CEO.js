@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
 
 const data = [
   {
@@ -31,11 +31,11 @@ const data = [
     img: (
       <StaticImage
         className="w-full rounded-full bg-secondary border-8 border-secondary shadow-xl"
-        src="../../../../images/components/CEO/portrait.jpg"
+        src="../../../../images/components/CEO/MJC/MJC-6-cropped-adjusted.png"
         alt=""
       />
     ),
   },
-]
+];
 
-export default data
+export default data;
