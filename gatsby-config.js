@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `Scribitz`,
-    titleTemplate: "%s | Scribitz",
+    titleTemplate: '%s | Scribitz',
     description: `Regulatory Compliant Transcription & Closed-Captioning Services`,
     url: `https://www.scribitz.io`,
-    image: "./src/images/components/Navbar/scribitz-final-logo.svg",
+    image: './src/images/components/Navbar/scribitz-final-logo.svg',
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: "GTM-PTT3DGX",
+        id: 'GTM-PTT3DGX',
         includeInDevelopment: false,
       },
     },
@@ -30,7 +30,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Inter`],
-        display: "swap",
+        display: 'swap',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/favicon.svg',
       },
     },
   ],

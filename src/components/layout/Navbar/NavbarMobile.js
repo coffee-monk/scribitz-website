@@ -1,15 +1,14 @@
-import React, { useState } from "react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
+import React, { useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
-const NavbarMobile = React.forwardRef((props, navMobileRef) => {
-  const [services, setServices] = useState(false)
+const NavbarMobile = () => {
+  const [services, setServices] = useState(false);
 
   return (
     <ul
-      onClick={e => e.stopPropagation()}
-      ref={navMobileRef}
+      onClick={(e) => e.stopPropagation()}
       className="text-lg text-primary bg-slate-100 sm:hidden"
     >
       {/*
@@ -65,7 +64,7 @@ const NavbarMobile = React.forwardRef((props, navMobileRef) => {
         </li>
       </Link>
     </ul>
-  )
-})
+  );
+};
 
-export default NavbarMobile
+export default NavbarMobile;

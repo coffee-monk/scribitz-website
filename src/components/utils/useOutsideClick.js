@@ -6,8 +6,7 @@ const useOutsideClick = (ref, callback) => {
       if (!ref.current.contains(e.target)) {
         callback();
       }
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {

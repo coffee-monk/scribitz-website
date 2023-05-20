@@ -17,7 +17,7 @@ const Navbar = () => {
   const [opacity, setOpacity] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   // Navbar Mobile
-  const [navbarMobile, setNavbarMobile] = useState(false);
+  const [navbarMobile, setNavbarMobile] = useState(true);
   // Services Dropdown
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const [servicesLinkHover, setServicesLinkHover] = useState(false);
@@ -93,6 +93,8 @@ const Navbar = () => {
         </Link>
 
         <MenuAlt3Icon
+          id="navbarMobileToggle"
+          ref={navbarMobileRef}
           onClick={() => {
             setNavbarMobile(!navbarMobile);
           }}
@@ -104,6 +106,7 @@ const Navbar = () => {
         <ul className="flex items-center justify-end hidden text-lg sm:flex">
           <li
             id="services-dropdown"
+            ref={servicesDropdownRef}
             onClick={() => {
               setServicesDropdown(!servicesDropdown);
             }}
@@ -148,7 +151,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {navbarMobile && <NavbarMobile ref={navbarMobileRef} />}
+      {navbarMobile && <NavbarMobile />}
     </nav>
   );
 };
