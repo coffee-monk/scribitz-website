@@ -41,24 +41,30 @@ font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
             Transcription
           </li>
         </Link>
-        <li
-          className="p-4 pl-14
-    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
-        >
-          Closed-Captioning
-        </li>
-        <li
-          className="p-4 pl-14
-    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
-        >
-          Live-Captioning
-        </li>
-        <li
-          className="p-4 pl-14
-    font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
-        >
-          Translation
-        </li>
+        <Link to="/closed-caption-services/">
+          <li
+            className="p-4 pl-14
+font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+          >
+            Closed-Captioning
+          </li>
+        </Link>
+        <Link to="/live-caption-services/">
+          <li
+            className="p-4 pl-14
+font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+          >
+            Live-Captioning
+          </li>
+        </Link>
+        <Link to="/translation-services/">
+          <li
+            className="p-4 pl-14
+font-bold border-b border-primary hover:cursor-pointer hover:bg-slate-200"
+          >
+            Translation
+          </li>
+        </Link>
       </ul>
     </ul>
   )
