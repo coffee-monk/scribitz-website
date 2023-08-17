@@ -24,7 +24,7 @@ const TranscriptionShowcase = () => {
             className="absolute w-full -top-20 -left-60 h-full bg-primary opacity-60 rounded-full filter blur-3xl -z-10"
           />
           <div className="max-w-lg pt-12 lg:pb-10">
-            <div id="title" className="flex items-start justify-between">
+            <div id="title" className="flex flex-wrap items-start justify-between">
               <h1 className="text-5xl font-bold text-secondary mb-4 z-40">
                 Transcription
               </h1>

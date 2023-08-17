@@ -25,7 +25,7 @@ const LiveCaptionsShowcase = () => {
             className="absolute w-full h-full rounded-full -top-20 -left-60 bg-primary opacity-60 filter blur-3xl -z-10"
           />
           <div className="max-w-lg pt-12 lg:pb-10">
-            <div id="title" className="flex items-start justify-between">
+            <div id="title" className="flex flex-wrap items-start justify-between">
               <h1 className="z-40 mb-4 text-5xl font-bold text-secondary">
                 Live-Captions
               </h1>
