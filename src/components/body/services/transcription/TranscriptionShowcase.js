@@ -52,7 +52,7 @@ const TranscriptionShowcase = () => {
               </p>
 
               <Link to="/contact/">
-                <button className="flex items-center justify-between rounded-full bg-teal-600 text-white hover:bg-teal-500 focus:ring-2 focus:ring-white text-lg font-bold w-lg text-lg px-5 py-2.5 text-center">
+                <button className="flex items-center justify-between rounded-full bg-teal-600 text-white hover:bg-teal-500 focus:ring-2 focus:ring-white text-lg font-bold w-lg text-lg px-5 py-2.5 mb-2 text-center">
                   <IoRocketSharp size="1.25em" className="text-white mr-3" />
                   CONTACT US
                 </button>

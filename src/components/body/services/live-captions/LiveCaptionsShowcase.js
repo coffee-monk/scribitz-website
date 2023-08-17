@@ -1,14 +1,14 @@
-import React from "react"
+import React from 'react'
 
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image'
 
-import { BsArrowRightShort } from "react-icons/bs"
-import { BiWebcam } from "react-icons/bi"
-import { CgFileDocument } from "react-icons/cg"
-import { FaRegClosedCaptioning } from "react-icons/fa"
-import { IoRocketSharp } from "react-icons/io5"
+import { BsArrowRightShort } from 'react-icons/bs'
+import { BiWebcam } from 'react-icons/bi'
+import { CgFileDocument } from 'react-icons/cg'
+import { FaRegClosedCaptioning } from 'react-icons/fa'
+import { IoRocketSharp } from 'react-icons/io5'
 
 const LiveCaptionsShowcase = () => {
   return (
@@ -26,9 +26,7 @@ const LiveCaptionsShowcase = () => {
           />
           <div className="max-w-lg pt-12 lg:pb-10">
             <div id="title" className="flex flex-wrap items-start justify-between">
-              <h1 className="z-40 mb-4 text-5xl font-bold text-secondary">
-                Live-Captions
-              </h1>
+              <h1 className="z-40 mb-4 text-5xl font-bold text-secondary">Live-Captions</h1>
               <div className="flex items-center justify-end text-4xl sm:text-5xl">
                 <BiWebcam className="text-secondary" />
                 <BsArrowRightShort className="text-white" />
@@ -37,23 +35,18 @@ const LiveCaptionsShowcase = () => {
             </div>
 
             <div className="text-white">
-              <p className="mb-4 text-3xl font-bold">
-                Get Real-Time Captions For Your Live Events
-              </p>
+              <p className="mb-4 text-3xl font-bold">Get Real-Time Captions For Your Live Events</p>
               <p className="z-40 mb-4 text-xl">
-                Our team of professionals delivers 99%+ accurate closed captions
-                and transcripts, removing barriers and maximizing your reach,
-                improving your SEO and maximizing your ROI
+                Our team of professionals delivers 99%+ accurate closed captions and transcripts, removing barriers and
+                maximizing your reach, improving your SEO and maximizing your ROI
               </p>
               <p className="mb-6 text-lg">
-                All our captions are{" "}
-                <span className="text-secondary">WCAG 3.0</span>,{" "}
-                <span className="text-secondary">AODA</span>, &
-                <span className="text-secondary"> ADA</span> compliant
+                All our captions are <span className="text-secondary">WCAG 3.0</span>,{' '}
+                <span className="text-secondary">AODA</span>, &<span className="text-secondary"> ADA</span> compliant
               </p>
 
               <Link to="/contact/">
-                <button className="flex items-center justify-between rounded-full bg-teal-600 text-white hover:bg-teal-500 focus:ring-2 focus:ring-white text-lg font-bold w-lg text-lg px-5 py-2.5 text-center">
+                <button className="flex items-center justify-between rounded-full bg-teal-600 text-white hover:bg-teal-500 focus:ring-2 focus:ring-white text-lg font-bold w-lg text-lg px-5 py-2.5 mb-6 text-center">
                   <IoRocketSharp size="1.25em" className="mr-3 text-white" />
                   CONTACT US
                 </button>
