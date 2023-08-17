@@ -1,90 +1,86 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "gatsby";
+import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'gatsby'
 
-import { MenuAlt3Icon, ChevronDownIcon } from "@heroicons/react/solid";
+import { MenuAlt3Icon, ChevronDownIcon } from '@heroicons/react/solid'
 
-import Logo from "../../../images/components/Navbar/scribitz-logo.svg";
+import Logo from '../../../images/components/Navbar/scribitz-logo.svg'
 
-import NavbarMobile from "./NavbarMobile";
-import ServicesDropdown from "./ServicesDropdown";
+import NavbarMobile from './NavbarMobile'
+import ServicesDropdown from './ServicesDropdown'
 
-import { debounce } from "../../utils/debounce";
-import useOutsideClick from "../../utils/useOutsideClick";
+import { debounce } from '../../utils/debounce'
+import useOutsideClick from '../../utils/useOutsideClick'
 
 const Navbar = () => {
   // Navbar
-  const [visible, setVisible] = useState(true);
-  const [opacity, setOpacity] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true)
+  const [opacity, setOpacity] = useState(false)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
   // Navbar Mobile
-  const [navbarMobile, setNavbarMobile] = useState(true);
+  const [navbarMobile, setNavbarMobile] = useState(false)
   // Services Dropdown
-  const [servicesDropdown, setServicesDropdown] = useState(false);
-  const [servicesLinkHover, setServicesLinkHover] = useState(false);
+  const [servicesDropdown, setServicesDropdown] = useState(false)
+  const [servicesLinkHover, setServicesLinkHover] = useState(false)
 
-  const servicesDropdownRef = useRef();
-  const navbarMobileRef = useRef();
+  const servicesDropdownRef = useRef()
+  const navbarMobileRef = useRef()
 
   // close services dropdown if click outside
   useOutsideClick(servicesDropdownRef, () => {
-    if (servicesDropdown) setServicesDropdown(false);
-  });
+    if (servicesDropdown) setServicesDropdown(false)
+  })
 
   // close mobile nav if click outside
   useOutsideClick(navbarMobileRef, () => {
-    if (navbarMobile) setNavbarMobile(false);
-  });
+    if (navbarMobile) setNavbarMobile(false)
+  })
 
   // navbar opacity on scroll
   // https://www.devtwins.com/blog/sticky-navbar-hides-scroll
   const handleScroll = debounce(() => {
-    const currentScrollPosition = window.pageYOffset;
+    const currentScrollPosition = window.pageYOffset
     // nav hide on scroll down or if at top
     setVisible(
-      (prevScrollPos > currentScrollPosition &&
-        prevScrollPos - currentScrollPosition > 50) ||
+      (prevScrollPos > currentScrollPosition && prevScrollPos - currentScrollPosition > 50) ||
         currentScrollPosition < 80
-    );
+    )
 
     // nav bg opacity - check if at top or not homepage
-    setOpacity(currentScrollPosition >= 80);
+    setOpacity(currentScrollPosition >= 80)
 
     // close dropdown on scroll
-    if (
-      prevScrollPos - currentScrollPosition > 50 ||
-      currentScrollPosition - prevScrollPos > 50
-    ) {
-      setServicesDropdown(false);
-      setNavbarMobile(false);
+    if (prevScrollPos - currentScrollPosition > 50 || currentScrollPosition - prevScrollPos > 50) {
+      setServicesDropdown(false)
+      setNavbarMobile(false)
     }
-    setPrevScrollPos(currentScrollPosition);
-  }, 70);
+    setPrevScrollPos(currentScrollPosition)
+  }, 70)
 
   // set event listener and initial state
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     // if window at top, show nav
     if (window.pageYOffset === 0) {
-      setVisible(true);
+      setVisible(true)
     }
     // if window scroll from top, add background opacity
     if (window.pageYOffset > 20) {
-      setOpacity(true);
+      setOpacity(true)
     }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos, visible, handleScroll]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [prevScrollPos, visible, handleScroll])
 
   return (
     <nav
       id="navbar"
       className={`fixed z-50 w-full text-secondary transition-all ease-in duration-150 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:-z-20 before:transition before:ease-in before:duration-500 ${
-        visible ? "" : "-translate-y-full"
+        visible ? '' : '-translate-y-full'
       } + " " + ${
-        opacity ? "before:border-b before:border-primary" : "before:opacity-0"
+        opacity ? 'before:border-b before:border-primary' : 'before:opacity-0'
       } before:backdrop-blur-md before:bg-gradient-to-r before:from-white/90 before:via-primary/60 before:to-primary/70 `}
     >
       <div className="flex items-center justify-between w-full max-w-3xl p-2 mx-auto">
@@ -96,10 +92,10 @@ const Navbar = () => {
           id="navbarMobileToggle"
           ref={navbarMobileRef}
           onClick={() => {
-            setNavbarMobile(!navbarMobile);
+            setNavbarMobile(!navbarMobile)
           }}
           className={`${
-            navbarMobile ? "text-primary bg-secondary" : "text-secondary"
+            navbarMobile ? 'text-primary bg-secondary' : 'text-secondary'
           } w-10 h-10 p-2 rounded cursor-pointer sm:hidden`}
         />
 
@@ -108,32 +104,25 @@ const Navbar = () => {
             id="services-dropdown"
             ref={servicesDropdownRef}
             onClick={() => {
-              setServicesDropdown(!servicesDropdown);
+              setServicesDropdown(!servicesDropdown)
             }}
             onMouseOver={() => {
-              setServicesLinkHover(true);
+              setServicesLinkHover(true)
             }}
             onMouseOut={() => {
-              setServicesLinkHover(false);
+              setServicesLinkHover(false)
             }}
             className={`${
-              servicesDropdown ? "text-yellow-300" : ""
+              servicesDropdown ? 'text-yellow-300' : ''
             } relative flex justify-end items-center p-2 font-bold rounded-t-lg hover:text-yellow-300 hover:cursor-pointer transition delay-75`}
           >
             Services
             <ChevronDownIcon
-              className={`transform ${
-                servicesDropdown
-                  ? "-rotate-180 text-yellow-300 border-yellow-300"
-                  : ""
-              } 
-              ${servicesLinkHover ? "text-yellow-300 border-yellow-300" : ""}
+              className={`transform ${servicesDropdown ? '-rotate-180 text-yellow-300 border-yellow-300' : ''} 
+              ${servicesLinkHover ? 'text-yellow-300 border-yellow-300' : ''}
                 transition duration-500 ease-in-out w-5 h-5 ml-2 text-secondary border-2 border-secondary rounded-full flex-none ml-3`}
             />
-            <ServicesDropdown
-              visibility={servicesDropdown}
-              ref={servicesDropdownRef}
-            />
+            <ServicesDropdown visibility={servicesDropdown} ref={servicesDropdownRef} />
           </li>
           <li>
             <Link to="/about/">
@@ -153,7 +142,7 @@ const Navbar = () => {
       </div>
       {navbarMobile && <NavbarMobile />}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
